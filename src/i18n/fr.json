@@ -1,0 +1,235 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "services": "Services",
+    "stock": "Stock",
+    "faq": "FAQ",
+    "about": "À propos",
+    "contact": "Contact"
+  },
+  "home": {
+    "hero": {
+      "headline": "Service d'Exportation de Voitures Premium",
+      "subheadline": "Exportez des voitures dans le monde entier avec notre service sécurisé et professionnel",
+      "cta": {
+        "checkStock": "Vérifiez notre stock",
+        "whatsapp": "WhatsApp nous"
+      }
+    },
+    "whyChooseUs": {
+      "title": "Pourquoi Nous Choisir",
+      "cards": [
+        {
+          "key": "car",
+          "title": "Sélection de Voitures",
+          "benefits": [
+            "Véhicules de qualité premium",
+            "Rapports d'état complets",
+            "Prix compétitifs",
+            "Documentation vérifiée"
+          ]
+        },
+        {
+          "key": "export",
+          "title": "Service d'Exportation",
+          "benefits": [
+            "Expédition mondiale",
+            "Documentation douanière",
+            "Options de paiement sécurisées",
+            "Livraison de porte à porte"
+          ]
+        },
+        {
+          "key": "service",
+          "title": "Service Client",
+          "benefits": [
+            "Support 24/7",
+            "Processus transparent",
+            "Conseils d'experts",
+            "Support après-vente"
+          ]
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Comment Ça Marche",
+      "steps": [
+        "Trouvez un lien de voiture",
+        "Envoyez le lien",
+        "Recevez rapport d'état + devis incluant commission",
+        "Signez la commande",
+        "Payez l'acompte",
+        "Récupération au showroom",
+        "Livraison optionnelle (mer/air/transporteur)"
+      ]
+    },
+    "whoWeServe": {
+      "title": "Qui Nous Servons",
+      "cards": [
+        {
+          "key": "internationalDealers",
+          "title": "Concessionnaires Internationaux",
+          "description": "Concessionnaires automobiles professionnels dans le monde"
+        },
+        {
+          "key": "privateBuyers",
+          "title": "Acheteurs Privés",
+          "description": "Passionnés de voitures individuels"
+        },
+        {
+          "key": "germanDealers",
+          "title": "Concessionnaires Allemands",
+          "description": "Accès spécialisé au marché allemand"
+        }
+      ]
+    },
+    "problemsWeSolve": {
+      "title": "Problèmes Que Nous Résolvons",
+      "list": [
+        "Le concessionnaire n'exporte pas",
+        "Prix d'exportation plus élevé",
+        "Restrictions du fabricant",
+        "Prévention de la fraude",
+        "Transferts sécurisés"
+      ]
+    },
+    "featuredStock": {
+      "title": "Stock Vedette",
+      "seeAll": "Voir tout le stock"
+    },
+    "trustStrip": {
+      "yearsInBusiness": "Années d'Activité",
+      "carsExported": "Voitures Exportées",
+      "partnerCarriers": "Transporteurs Partenaires"
+    },
+    "contactStrip": {
+      "title": "Contactez-Nous",
+      "whatsapp": "WhatsApp",
+      "email": "Email"
+    }
+  },
+  "services": {
+    "title": "Services d'Exportation",
+    "summary": "Service d'exportation net - achetez sans TVA, processus sécurisé, logistique mondiale",
+    "scenarios": {
+      "title": "Scénarios d'Exportation",
+      "new": "Neuf",
+      "used": "Occasion",
+      "private": "Privé",
+      "commercial": "Commercial",
+      "vat": "TVA",
+      "coc": "COC",
+      "documents": "Documents Requis",
+      "deposit": "Conditions d'Acompte",
+      "steps": "Étapes Post-Achat"
+    },
+    "logistics": {
+      "title": "Options Logistiques",
+      "sea": "Fret Maritime",
+      "air": "Fret Aérien",
+      "transporter": "Transporteur",
+      "transitTime": "Temps de Transit",
+      "insurance": "Assurance",
+      "preDelivery": "Vérification Pré-Livraison"
+    }
+  },
+  "stock": {
+    "title": "Stock Disponible",
+    "filters": {
+      "brand": "Marque",
+      "year": "Année",
+      "price": "Prix",
+      "fuel": "Carburant",
+      "transmission": "Transmission",
+      "sortBy": "Trier par"
+    },
+    "sorting": {
+      "newest": "Plus Récent",
+      "priceAsc": "Prix: Croissant",
+      "priceDesc": "Prix: Décroissant"
+    },
+    "card": {
+      "onRequest": "Sur Demande",
+      "whatsapp": "WhatsApp nous sur cette voiture",
+      "email": "Email nous sur cette voiture"
+    }
+  },
+  "faq": {
+    "title": "Questions Fréquemment Posées",
+    "questions": [
+      {
+        "question": "Comment fonctionne l'achat sans TVA ?",
+        "answer": "Nous gérons toute la documentation TVA et fournissons des prix nets pour les clients d'exportation."
+      },
+      {
+        "question": "Quel acompte est requis ?",
+        "answer": "Généralement 10-20% d'acompte est requis pour sécuriser votre véhicule."
+      },
+      {
+        "question": "Combien de temps dure le processus d'exportation ?",
+        "answer": "De la commande à la livraison : 2-4 semaines pour la plupart des destinations."
+      },
+      {
+        "question": "Quelles options logistiques proposez-vous ?",
+        "answer": "Fret maritime, fret aérien et transport routier vers des destinations mondiales."
+      },
+      {
+        "question": "Quels documents ai-je besoin ?",
+        "answer": "En-tête d'entreprise avec ID TVA, déclaration d'expédition, copie d'identité et procuration."
+      },
+      {
+        "question": "Proposez-vous une assurance ?",
+        "answer": "Oui, une couverture d'assurance complète pendant le transit est disponible."
+      },
+      {
+        "question": "Quelles méthodes de paiement acceptez-vous ?",
+        "answer": "Virements bancaires, services d'escrow et plateformes de paiement sécurisées."
+      },
+      {
+        "question": "Fournissez-vous des garanties ?",
+        "answer": "Oui, nous offrons des garanties étendues sur tous les véhicules exportés."
+      }
+    ]
+  },
+  "about": {
+    "title": "À Propos de Nous",
+    "intro": "Service d'exportation automobile professionnel avec des années d'expérience",
+    "values": "Nos Valeurs",
+    "region": "Régions Servies",
+    "yearsExported": "Années d'Expérience d'Exportation",
+    "compliance": "Conformité et Certifications",
+    "partners": "Nos Partenaires"
+  },
+  "contact": {
+    "title": "Contactez-Nous",
+    "whatsapp": "WhatsApp",
+    "email": "Email",
+    "address": "Adresse",
+    "openingHours": "Heures d'Ouverture",
+    "form": {
+      "name": "Nom",
+      "email": "Email",
+      "message": "Message",
+      "send": "Envoyer le Message"
+    }
+  },
+  "footer": {
+    "whatsapp": "WhatsApp",
+    "email": "Email",
+    "address": "Adresse",
+    "hours": "Heures d'Ouverture",
+    "legal": {
+      "privacy": "Politique de Confidentialité",
+      "imprint": "Mentions Légales",
+      "cookies": "Politique des Cookies"
+    }
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "success": "Succès",
+    "close": "Fermer",
+    "more": "Plus",
+    "less": "Moins"
+  }
+}

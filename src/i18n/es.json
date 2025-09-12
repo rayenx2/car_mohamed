@@ -1,0 +1,235 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "stock": "Stock",
+    "faq": "FAQ",
+    "about": "Acerca de",
+    "contact": "Contacto"
+  },
+  "home": {
+    "hero": {
+      "headline": "Servicio de Exportación de Autos Premium",
+      "subheadline": "Exporta autos a todo el mundo con nuestro servicio seguro y profesional",
+      "cta": {
+        "checkStock": "Revisa nuestro stock",
+        "whatsapp": "WhatsApp nosotros"
+      }
+    },
+    "whyChooseUs": {
+      "title": "Por Qué Elegirnos",
+      "cards": [
+        {
+          "key": "car",
+          "title": "Selección de Autos",
+          "benefits": [
+            "Vehículos de calidad premium",
+            "Reportes de estado completos",
+            "Precios competitivos",
+            "Documentación verificada"
+          ]
+        },
+        {
+          "key": "export",
+          "title": "Servicio de Exportación",
+          "benefits": [
+            "Envío mundial",
+            "Documentación aduanera",
+            "Opciones de pago seguras",
+            "Entrega puerta a puerta"
+          ]
+        },
+        {
+          "key": "service",
+          "title": "Servicio al Cliente",
+          "benefits": [
+            "Soporte 24/7",
+            "Proceso transparente",
+            "Orientación experta",
+            "Soporte post-venta"
+          ]
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Cómo Funciona",
+      "steps": [
+        "Encuentra un enlace de auto",
+        "Envía el enlace",
+        "Recibe reporte de estado + cotización incluyendo comisión",
+        "Firma la orden",
+        "Paga el depósito",
+        "Recogida en el showroom",
+        "Entrega opcional (mar/aire/transportador)"
+      ]
+    },
+    "whoWeServe": {
+      "title": "A Quién Servimos",
+      "cards": [
+        {
+          "key": "internationalDealers",
+          "title": "Concesionarios Internacionales",
+          "description": "Concesionarios de autos profesionales en todo el mundo"
+        },
+        {
+          "key": "privateBuyers",
+          "title": "Compradores Privados",
+          "description": "Entusiastas de autos individuales"
+        },
+        {
+          "key": "germanDealers",
+          "title": "Concesionarios Alemanes",
+          "description": "Acceso especializado al mercado alemán"
+        }
+      ]
+    },
+    "problemsWeSolve": {
+      "title": "Problemas Que Resolvemos",
+      "list": [
+        "El concesionario no exporta",
+        "Precio de exportación más alto",
+        "Restricciones del fabricante",
+        "Prevención de fraude",
+        "Transferencias seguras"
+      ]
+    },
+    "featuredStock": {
+      "title": "Stock Destacado",
+      "seeAll": "Ver todo el stock"
+    },
+    "trustStrip": {
+      "yearsInBusiness": "Años en el Negocio",
+      "carsExported": "Autos Exportados",
+      "partnerCarriers": "Transportistas Socios"
+    },
+    "contactStrip": {
+      "title": "Contáctanos",
+      "whatsapp": "WhatsApp",
+      "email": "Email"
+    }
+  },
+  "services": {
+    "title": "Servicios de Exportación",
+    "summary": "Servicio de exportación neto - compra sin IVA, proceso seguro, logística mundial",
+    "scenarios": {
+      "title": "Escenarios de Exportación",
+      "new": "Nuevo",
+      "used": "Usado",
+      "private": "Privado",
+      "commercial": "Comercial",
+      "vat": "IVA",
+      "coc": "COC",
+      "documents": "Documentos Requeridos",
+      "deposit": "Condiciones de Depósito",
+      "steps": "Pasos Post-Compra"
+    },
+    "logistics": {
+      "title": "Opciones Logísticas",
+      "sea": "Flete Marítimo",
+      "air": "Flete Aéreo",
+      "transporter": "Transportador",
+      "transitTime": "Tiempo de Tránsito",
+      "insurance": "Seguro",
+      "preDelivery": "Verificación Pre-Entrega"
+    }
+  },
+  "stock": {
+    "title": "Stock Disponible",
+    "filters": {
+      "brand": "Marca",
+      "year": "Año",
+      "price": "Precio",
+      "fuel": "Combustible",
+      "transmission": "Transmisión",
+      "sortBy": "Ordenar por"
+    },
+    "sorting": {
+      "newest": "Más Reciente",
+      "priceAsc": "Precio: Menor a Mayor",
+      "priceDesc": "Precio: Mayor a Menor"
+    },
+    "card": {
+      "onRequest": "A Solicitud",
+      "whatsapp": "WhatsApp nosotros sobre este auto",
+      "email": "Email nosotros sobre este auto"
+    }
+  },
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "questions": [
+      {
+        "question": "¿Cómo funciona la compra sin IVA?",
+        "answer": "Manejamos toda la documentación del IVA y proporcionamos precios netos para clientes de exportación."
+      },
+      {
+        "question": "¿Qué depósito se requiere?",
+        "answer": "Típicamente se requiere un depósito del 10-20% para asegurar tu vehículo."
+      },
+      {
+        "question": "¿Cuánto tiempo toma el proceso de exportación?",
+        "answer": "Desde la orden hasta la entrega: 2-4 semanas para la mayoría de destinos."
+      },
+      {
+        "question": "¿Qué opciones logísticas ofrecen?",
+        "answer": "Flete marítimo, flete aéreo y transporte por carretera a destinos mundiales."
+      },
+      {
+        "question": "¿Qué documentos necesito?",
+        "answer": "Membrete de empresa con ID de IVA, declaración de envío, copia de identidad y poder notarial."
+      },
+      {
+        "question": "¿Ofrecen seguro?",
+        "answer": "Sí, cobertura de seguro completa durante el tránsito está disponible."
+      },
+      {
+        "question": "¿Qué métodos de pago aceptan?",
+        "answer": "Transferencias bancarias, servicios de escrow y plataformas de pago seguras."
+      },
+      {
+        "question": "¿Proporcionan garantías?",
+        "answer": "Sí, ofrecemos garantías extendidas en todos los vehículos exportados."
+      }
+    ]
+  },
+  "about": {
+    "title": "Acerca de Nosotros",
+    "intro": "Servicio profesional de exportación de autos con años de experiencia",
+    "values": "Nuestros Valores",
+    "region": "Regiones Servidas",
+    "yearsExported": "Años de Experiencia en Exportación",
+    "compliance": "Cumplimiento y Certificaciones",
+    "partners": "Nuestros Socios"
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "whatsapp": "WhatsApp",
+    "email": "Email",
+    "address": "Dirección",
+    "openingHours": "Horarios de Apertura",
+    "form": {
+      "name": "Nombre",
+      "email": "Email",
+      "message": "Mensaje",
+      "send": "Enviar Mensaje"
+    }
+  },
+  "footer": {
+    "whatsapp": "WhatsApp",
+    "email": "Email",
+    "address": "Dirección",
+    "hours": "Horarios de Apertura",
+    "legal": {
+      "privacy": "Política de Privacidad",
+      "imprint": "Aviso Legal",
+      "cookies": "Política de Cookies"
+    }
+  },
+  "common": {
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "Éxito",
+    "close": "Cerrar",
+    "more": "Más",
+    "less": "Menos"
+  }
+}

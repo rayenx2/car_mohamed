@@ -1,0 +1,235 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "stock": "Stock",
+    "faq": "FAQ",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "home": {
+    "hero": {
+      "headline": "Premium Car Export Service",
+      "subheadline": "Export cars worldwide with our secure, professional service",
+      "cta": {
+        "checkStock": "Check our stock",
+        "whatsapp": "WhatsApp us"
+      }
+    },
+    "whyChooseUs": {
+      "title": "Why Choose Us",
+      "cards": [
+        {
+          "key": "car",
+          "title": "Car Selection",
+          "benefits": [
+            "Premium quality vehicles",
+            "Full condition reports",
+            "Competitive pricing",
+            "Verified documentation"
+          ]
+        },
+        {
+          "key": "export",
+          "title": "Export Service",
+          "benefits": [
+            "Worldwide shipping",
+            "Customs documentation",
+            "Secure payment options",
+            "Door-to-door delivery"
+          ]
+        },
+        {
+          "key": "service",
+          "title": "Customer Service",
+          "benefits": [
+            "24/7 support",
+            "Transparent process",
+            "Expert guidance",
+            "After-sales support"
+          ]
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "steps": [
+        "Find a car link",
+        "Send link to us",
+        "Receive condition report + quote incl. commission",
+        "Sign order",
+        "Pay deposit",
+        "Pickup at showroom",
+        "Optional delivery (sea/air/transporter)"
+      ]
+    },
+    "whoWeServe": {
+      "title": "Who We Serve",
+      "cards": [
+        {
+          "key": "internationalDealers",
+          "title": "International Dealers",
+          "description": "Professional car dealers worldwide"
+        },
+        {
+          "key": "privateBuyers",
+          "title": "Private Buyers",
+          "description": "Individual car enthusiasts"
+        },
+        {
+          "key": "germanDealers",
+          "title": "German Dealers",
+          "description": "Specialized German market access"
+        }
+      ]
+    },
+    "problemsWeSolve": {
+      "title": "Problems We Solve",
+      "list": [
+        "Dealer won't export",
+        "Higher export price",
+        "Manufacturer restrictions",
+        "Fraud prevention",
+        "Secure transfers"
+      ]
+    },
+    "featuredStock": {
+      "title": "Featured Stock",
+      "seeAll": "See all stock"
+    },
+    "trustStrip": {
+      "yearsInBusiness": "Years in Business",
+      "carsExported": "Cars Exported",
+      "partnerCarriers": "Partner Carriers"
+    },
+    "contactStrip": {
+      "title": "Get in Touch",
+      "whatsapp": "WhatsApp",
+      "email": "Email"
+    }
+  },
+  "services": {
+    "title": "Export Services",
+    "summary": "Net export service - buy without VAT, secure process, worldwide logistics",
+    "scenarios": {
+      "title": "Export Scenarios",
+      "new": "New",
+      "used": "Used",
+      "private": "Private",
+      "commercial": "Commercial",
+      "vat": "VAT",
+      "coc": "COC",
+      "documents": "Required Documents",
+      "deposit": "Deposit Conditions",
+      "steps": "Post-Purchase Steps"
+    },
+    "logistics": {
+      "title": "Logistics Options",
+      "sea": "Sea Freight",
+      "air": "Air Freight",
+      "transporter": "Transporter",
+      "transitTime": "Transit Time",
+      "insurance": "Insurance",
+      "preDelivery": "Pre-Delivery Check"
+    }
+  },
+  "stock": {
+    "title": "Available Stock",
+    "filters": {
+      "brand": "Brand",
+      "year": "Year",
+      "price": "Price",
+      "fuel": "Fuel",
+      "transmission": "Transmission",
+      "sortBy": "Sort by"
+    },
+    "sorting": {
+      "newest": "Newest",
+      "priceAsc": "Price: Low to High",
+      "priceDesc": "Price: High to Low"
+    },
+    "card": {
+      "onRequest": "On Request",
+      "whatsapp": "WhatsApp us about this car",
+      "email": "Email us about this car"
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "questions": [
+      {
+        "question": "How does net-of-VAT purchase work?",
+        "answer": "We handle all VAT documentation and provide net pricing for export customers."
+      },
+      {
+        "question": "What deposit is required?",
+        "answer": "Typically 10-20% deposit is required to secure your vehicle."
+      },
+      {
+        "question": "How long does the export process take?",
+        "answer": "From order to delivery: 2-4 weeks for most destinations."
+      },
+      {
+        "question": "What logistics options do you offer?",
+        "answer": "Sea freight, air freight, and road transport to worldwide destinations."
+      },
+      {
+        "question": "What documents do I need?",
+        "answer": "Business letterhead with VAT ID, shipment declaration, ID copy, and power of attorney."
+      },
+      {
+        "question": "Do you offer insurance?",
+        "answer": "Yes, comprehensive insurance coverage during transit is available."
+      },
+      {
+        "question": "What payment methods do you accept?",
+        "answer": "Bank transfers, escrow services, and secure payment platforms."
+      },
+      {
+        "question": "Do you provide warranties?",
+        "answer": "Yes, we offer extended warranties on all exported vehicles."
+      }
+    ]
+  },
+  "about": {
+    "title": "About Us",
+    "intro": "Professional car export service with years of experience",
+    "values": "Our Values",
+    "region": "Regions Served",
+    "yearsExported": "Years of Export Experience",
+    "compliance": "Compliance & Certifications",
+    "partners": "Our Partners"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "whatsapp": "WhatsApp",
+    "email": "Email",
+    "address": "Address",
+    "openingHours": "Opening Hours",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "send": "Send Message"
+    }
+  },
+  "footer": {
+    "whatsapp": "WhatsApp",
+    "email": "Email",
+    "address": "Address",
+    "hours": "Opening Hours",
+    "legal": {
+      "privacy": "Privacy Policy",
+      "imprint": "Legal Notice",
+      "cookies": "Cookie Policy"
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "close": "Close",
+    "more": "More",
+    "less": "Less"
+  }
+}
