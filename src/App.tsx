@@ -7,9 +7,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
 import Stock from "./pages/Stock";
-import FAQ from "./pages/FAQ";
 import CarPage from "./pages/CarPage";
-import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
 
 import ScrollPagesTop from "./hooks/ScrollPagesTop";
@@ -37,10 +35,8 @@ function App() {
             <Route path='/' element={<Home />} />
             <Route path='/services' element={<Services />} /> 
             <Route path='/stock' element={<Stock />} /> 
-            <Route path='/faq' element={<FAQ />} /> 
             <Route path='/about' element={<About />} /> 
             <Route path='/carpage/:id' element={<CarPage />} /> 
-            <Route path='/contact' element={<Contact />} /> 
             <Route path='/thanks' element={<Thanks />} /> 
           </Routes>
           <Footer />

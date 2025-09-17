@@ -79,30 +79,20 @@ export default function SiteHeader() {
                         <span className={`siteHeader__li__span hover:text-blue-600 transition-colors ${location.pathname === '/' ? 'text-blue-600 font-semibold' : 'text-gray-700'}`}>{t('nav.home')}</span>
                     </li>
                 </NavLink>
-                <NavLink onClick={() => window.innerWidth < 1024 && hideMenu()} to='/services' > 
-                     <li className='siteHeader__li lg:mx-4 lg:py-2 lg:transition-colors'>
-                         <span className={`siteHeader__li__span  ${location.pathname === '/services' && 'text-gray-300'}`}>{t('nav.services')}</span>
-                     </li>
-                </NavLink>
-                <NavLink onClick={() => window.innerWidth < 1024 && hideMenu()} to='/stock' > 
-                    <li className='siteHeader__li lg:mx-4 lg:py-2 lg:transition-colors'>
-                        <span className={`siteHeader__li__span  ${location.pathname === '/stock' && 'text-gray-300'}`}>{t('nav.stock')}</span>
-                    </li>
-                </NavLink> 
-                <NavLink onClick={() => window.innerWidth < 1024 && hideMenu()} to='/faq' > 
-                    <li className='siteHeader__li lg:mx-4 lg:py-2 lg:transition-colors'>
-                        <span className={`siteHeader__li__span  ${location.pathname === '/faq' && 'text-gray-300'}`}>{t('nav.faq')}</span>
-                    </li>
-                </NavLink>
                 <NavLink onClick={() => window.innerWidth < 1024 && hideMenu()} to='/about' > 
                     <li className='siteHeader__li lg:mx-4 lg:py-2 lg:transition-colors'>
                         <span className={`siteHeader__li__span  ${location.pathname === '/about' && 'text-gray-300'}`}>{t('nav.about')}</span>
                     </li>
                 </NavLink>
-                <NavLink onClick={() => window.innerWidth < 1024 && hideMenu()} to='/contact' > 
+                <NavLink onClick={() => window.innerWidth < 1024 && hideMenu()} to='/stock' > 
                     <li className='siteHeader__li lg:mx-4 lg:py-2 lg:transition-colors'>
-                        <span className={`siteHeader__li__span  ${location.pathname === '/contact' && 'text-gray-300'}`}>{t('nav.contact')}</span>
+                        <span className={`siteHeader__li__span  ${location.pathname === '/stock' && 'text-gray-300'}`}>{t('nav.stock')}</span>
                     </li>
+                </NavLink>
+                <NavLink onClick={() => window.innerWidth < 1024 && hideMenu()} to='/services' > 
+                     <li className='siteHeader__li lg:mx-4 lg:py-2 lg:transition-colors'>
+                         <span className={`siteHeader__li__span  ${location.pathname === '/services' && 'text-gray-300'}`}>{t('nav.services')}</span>
+                     </li>
                 </NavLink>
                 </ul>
             </div>

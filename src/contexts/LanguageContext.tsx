@@ -34,8 +34,10 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
     // Load translations for current language
     const loadTranslations = async () => {
       try {
+        console.log('Loading translations for:', language);
         const langData = await import(`../i18n/${language}.json`);
         setTranslations(langData.default || langData);
+        console.log('Translations loaded successfully for:', language);
       } catch (error) {
         console.error(`Failed to load ${language} translations:`, error);
         // Fallback to English
@@ -48,6 +50,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
   }, [language]);
 
   const setLanguage = (lang: Language) => {
+    console.log('LanguageContext: Setting language to', lang);
     setLanguageState(lang);
     localStorage.setItem('language', lang);
     
@@ -59,6 +62,9 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
       document.documentElement.dir = 'ltr';
       document.documentElement.lang = lang;
     }
+    
+    // Force a re-render by updating the body class
+    document.body.className = document.body.className.replace(/lang-\w+/g, '') + ` lang-${lang}`;
   };
 
   const t = (key: string): any => {

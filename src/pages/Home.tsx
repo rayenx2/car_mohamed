@@ -228,89 +228,113 @@ const Home: React.FC = () => {
       {/* How It Works - DI-Auto Process */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
               How it works
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               4 easy steps to get your desired car net in Germany
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
             {/* Step 1 */}
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-xl font-bold">
-                1
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Choose your car</h3>
-              <div className="text-left space-y-2 text-sm text-gray-600">
-                <p><strong>A.</strong> Check our stock if we have what you want.</p>
-                <p><strong>B.</strong> Choose a car from any supplier in Germany, who offers net price + VAT.</p>
-                <p><strong>C.</strong> Talk to the seller, get your information and price and tell him your German partner company will buy the car.</p>
-                <p><strong>D.</strong> Contact us and send us your details, company registration and ID. Tell us what car you want to buy.</p>
-              </div>
-              <div className="mt-4">
-                <NavLink
-                  to="/stock"
-                  className="inline-block bg-blue-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-blue-700 transition-colors"
-                >
-                  Check our Stock!!
-                </NavLink>
+            <div className="relative">
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0">
+                  <div className="w-8 h-8 bg-gray-100 border-2 border-gray-300 rounded-lg flex items-center justify-center">
+                    <span className="text-lg font-bold text-gray-700">1</span>
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-4 leading-tight">Choose your car</h3>
+                  <div className="space-y-3 text-sm text-gray-600 leading-relaxed">
+                    <p><span className="font-medium text-gray-800">A.</span> Check our stock if we have what you want.</p>
+                    <p><span className="font-medium text-gray-800">B.</span> Choose a car from any supplier in Germany, who offers net price + VAT.</p>
+                    <p><span className="font-medium text-gray-800">C.</span> Talk to the seller, get your information and price and tell him your German partner company will buy the car.</p>
+                    <p><span className="font-medium text-gray-800">D.</span> Contact us and send us your details, company registration and ID. Tell us what car you want to buy.</p>
+                  </div>
+                  <div className="mt-6">
+                    <NavLink
+                      to="/stock"
+                      className="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors"
+                    >
+                      Check our Stock
+                    </NavLink>
+                  </div>
+                </div>
               </div>
             </div>
 
             {/* Step 2 */}
-            <div className="text-center">
-              <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-xl font-bold">
-                2
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">On your request, we check the offer (optional)</h3>
-              <div className="text-left space-y-2 text-sm text-gray-600">
-                <p><strong>A.</strong> If you request, we can pre-check the offer. If we find out, that the car is already sold, not available or for some reason we cannot recommend to buy it (due to unclear ownership, or we suspect the car had an accident) then you don't have to pay anything.</p>
-                <p><strong>B.</strong> If we find nothing suspicious and you want to continue with the purchase of this car, you can book us to check it physically direct at the dealer.</p>
-              </div>
-              <div className="mt-4">
-                <NavLink
-                  to="/services"
-                  className="inline-block bg-green-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-green-700 transition-colors"
-                >
-                  See how we check the car
-                </NavLink>
+            <div className="relative">
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0">
+                  <div className="w-8 h-8 bg-gray-100 border-2 border-gray-300 rounded-lg flex items-center justify-center">
+                    <span className="text-lg font-bold text-gray-700">2</span>
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-4 leading-tight">On your request, we check the offer (optional)</h3>
+                  <div className="space-y-3 text-sm text-gray-600 leading-relaxed">
+                    <p><span className="font-medium text-gray-800">A.</span> If you request, we can pre-check the offer. If we find out, that the car is already sold, not available or for some reason we cannot recommend to buy it (due to unclear ownership, or we suspect the car had an accident) then you don't have to pay anything.</p>
+                    <p><span className="font-medium text-gray-800">B.</span> If we find nothing suspicious and you want to continue with the purchase of this car, you can book us to check it physically direct at the dealer.</p>
+                  </div>
+                  <div className="mt-6">
+                    <NavLink
+                      to="/services"
+                      className="inline-block bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors"
+                    >
+                      See how we check the car
+                    </NavLink>
+                  </div>
+                </div>
               </div>
             </div>
 
             {/* Step 3 */}
-            <div className="text-center">
-              <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-xl font-bold">
-                3
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Contract + Down payment</h3>
-              <div className="text-left space-y-2 text-sm text-gray-600">
-                <p>If you wanted a check and it was passed or you agree to buy this car without check, we will send you a purchase contract.</p>
-                <p>The contract will be between us and you. We buy the car from the seller in full with VAT and you buy from us NET (without VAT).</p>
-                <p>In some cases we might ask you to pay 15% of the net purchase price* as down payment after you signed the contract.</p>
+            <div className="relative">
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0">
+                  <div className="w-8 h-8 bg-gray-100 border-2 border-gray-300 rounded-lg flex items-center justify-center">
+                    <span className="text-lg font-bold text-gray-700">3</span>
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-4 leading-tight">Contract + Down payment</h3>
+                  <div className="space-y-3 text-sm text-gray-600 leading-relaxed">
+                    <p>If you wanted a check and it was passed or you agree to buy this car without check, we will send you a purchase contract.</p>
+                    <p>The contract will be between us and you. We buy the car from the seller in full with VAT and you buy from us NET (without VAT).</p>
+                    <p>In some cases we might ask you to pay 15% of the net purchase price* as down payment after you signed the contract.</p>
+                  </div>
+                </div>
               </div>
             </div>
 
             {/* Step 4 */}
-            <div className="text-center">
-              <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-xl font-bold">
-                4
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Transport & International Shipping</h3>
-              <div className="text-left space-y-2 text-sm text-gray-600">
-                <p>You can use your preferred transport company or ask us to help to find one.</p>
-                <p>If you request: We can organize, for a fee, an insured transport (max 1mil. EUR), to bring your new car to your shipping company.</p>
-                <p>Before the car is loaded for transport, pay the remaining balance of the net purchase price +10% VAT deposit (19% if you are a private buyer or company younger than 3 years) to us.</p>
-              </div>
-              <div className="mt-4">
-                <NavLink
-                  to="/services"
-                  className="inline-block bg-orange-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-orange-700 transition-colors"
-                >
-                  See price list
-                </NavLink>
+            <div className="relative">
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0">
+                  <div className="w-8 h-8 bg-gray-100 border-2 border-gray-300 rounded-lg flex items-center justify-center">
+                    <span className="text-lg font-bold text-gray-700">4</span>
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-4 leading-tight">Transport & International Shipping</h3>
+                  <div className="space-y-3 text-sm text-gray-600 leading-relaxed">
+                    <p>You can use your preferred transport company or ask us to help to find one.</p>
+                    <p>If you request: We can organize, for a fee, an insured transport (max 1mil. EUR), to bring your new car to your shipping company.</p>
+                    <p>Before the car is loaded for transport, pay the remaining balance of the net purchase price +10% VAT deposit (19% if you are a private buyer or company younger than 3 years) to us.</p>
+                  </div>
+                  <div className="mt-6">
+                    <NavLink
+                      to="/services"
+                      className="inline-block bg-orange-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-orange-700 transition-colors"
+                    >
+                      See price list
+                    </NavLink>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

@@ -35,17 +35,22 @@ const LanguageSwitcher: React.FC = () => {
   }, []);
 
   const languages = [
-    { code: 'en', name: 'English', flag: '🇺🇸' },
+    { code: 'en', name: 'ENGLISH', flag: '🇺🇸' },
     { code: 'ar', name: 'العربية', flag: '🇸🇦' },
-    { code: 'fr', name: 'Français', flag: '🇫🇷' },
-    { code: 'es', name: 'Español', flag: '🇪🇸' },
+    { code: 'fr', name: 'FRANÇAIS', flag: '🇫🇷' },
+    { code: 'es', name: 'ESPAÑOL', flag: '🇪🇸' },
   ] as const;
 
   const currentLanguage = languages.find(lang => lang.code === language);
 
   const handleLanguageChange = (langCode: 'en' | 'ar' | 'fr' | 'es') => {
+    console.log('Language change requested:', langCode);
     setLanguage(langCode);
     setIsOpen(false);
+    // Force a small delay to ensure state updates
+    setTimeout(() => {
+      console.log('Language changed to:', langCode);
+    }, 100);
   };
 
   const renderDropdown = () => {
@@ -54,7 +59,7 @@ const LanguageSwitcher: React.FC = () => {
     return createPortal(
       <div
         ref={dropdownRef}
-        className="fixed w-48 bg-white border border-gray-300 rounded-lg shadow-2xl z-[999999] backdrop-blur-sm"
+        className="fixed w-64 bg-white border border-gray-200 rounded-2xl shadow-2xl z-[999999] overflow-hidden"
         style={{
           top: dropdownPosition.top,
           left: dropdownPosition.left,
@@ -64,14 +69,16 @@ const LanguageSwitcher: React.FC = () => {
           <button
             key={lang.code}
             onClick={() => handleLanguageChange(lang.code)}
-            className={`w-full flex items-center space-x-3 px-4 py-3 text-left hover:bg-gray-50 transition-colors first:rounded-t-lg last:rounded-b-lg ${
-              language === lang.code ? 'bg-blue-50 text-blue-600' : 'text-gray-700'
+            className={`w-full flex items-center justify-between px-6 py-4 text-left hover:bg-gray-50 transition-all duration-200 ${
+              language === lang.code ? 'bg-gray-50' : ''
             }`}
           >
-            <span className="text-2xl flex-shrink-0 w-8 text-center">{lang.flag}</span>
-            <span className="text-sm font-medium flex-1">{lang.name}</span>
+            <div className="flex items-center space-x-4">
+              <span className="text-2xl flex-shrink-0 w-8 text-center">{lang.flag}</span>
+              <span className="text-base font-bold text-gray-800 tracking-wide">{lang.name}</span>
+            </div>
             {language === lang.code && (
-              <svg className="w-4 h-4 ml-auto text-blue-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <svg className="w-6 h-6 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
               </svg>
             )}
@@ -87,15 +94,17 @@ const LanguageSwitcher: React.FC = () => {
       <button
         ref={buttonRef}
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center space-x-2 px-3 py-2 rounded-lg border border-gray-300 bg-white hover:bg-gray-50 hover:border-gray-400 transition-all duration-200 shadow-sm hover:shadow-md min-w-[60px] justify-center"
+        className="flex items-center space-x-3 px-4 py-3 rounded-xl border border-gray-300 bg-white hover:bg-gray-50 hover:border-gray-400 transition-all duration-200 shadow-lg hover:shadow-xl min-w-[120px] justify-between"
         aria-label="Select language"
       >
-        <span className="text-2xl flex-shrink-0 w-8 text-center">{currentLanguage?.flag}</span>
-        <span className="hidden sm:block text-sm font-medium text-gray-700">
-          {currentLanguage?.code.toUpperCase()}
-        </span>
+        <div className="flex items-center space-x-3">
+          <span className="text-xl flex-shrink-0 w-6 text-center">{currentLanguage?.flag}</span>
+          <span className="text-sm font-bold text-gray-800 tracking-wide">
+            {currentLanguage?.code.toUpperCase()}
+          </span>
+        </div>
         <svg
-          className={`w-4 h-4 transition-transform flex-shrink-0 ${isOpen ? 'rotate-180' : ''}`}
+          className={`w-4 h-4 transition-transform flex-shrink-0 text-gray-500 ${isOpen ? 'rotate-180' : ''}`}
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
