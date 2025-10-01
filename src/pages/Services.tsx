@@ -3,7 +3,20 @@ import { useLanguage } from '../contexts/LanguageContext';
 import { FaShip, FaPlane, FaTruck, FaShieldAlt, FaCheckCircle, FaFileAlt, FaGlobe, FaCar, FaSearch, FaFileContract, FaShippingFast } from 'react-icons/fa';
 
 const Services: React.FC = () => {
-  const { t } = useLanguage();
+  const { t, getArray, isLoading } = useLanguage();
+
+  if (isLoading) {
+    return (
+      <div className="pt-20 pb-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
+            <p className="mt-4 text-gray-600">Loading translations...</p>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="pt-20 pb-16">
@@ -38,8 +51,9 @@ const Services: React.FC = () => {
                 <ul className="space-y-2 text-blue-800 text-center">
                   <li>• {t('services.scenarios.vat')}: 0% (export)</li>
                   <li>• {t('services.scenarios.coc')}: Included</li>
-                  <li>• Full manufacturer warranty</li>
-                  <li>• Latest specifications</li>
+                  {getArray('services.scenarios.newBenefits').map((benefit, index) => (
+                    <li key={index}>• {benefit}</li>
+                  ))}
                 </ul>
               </div>
               
@@ -50,8 +64,9 @@ const Services: React.FC = () => {
                 <ul className="space-y-2 text-green-800 text-center">
                   <li>• {t('services.scenarios.vat')}: 0% (export)</li>
                   <li>• {t('services.scenarios.coc')}: Available</li>
-                  <li>• Condition report included</li>
-                  <li>• Competitive pricing</li>
+                  {getArray('services.scenarios.usedBenefits').map((benefit, index) => (
+                    <li key={index}>• {benefit}</li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -67,10 +82,9 @@ const Services: React.FC = () => {
                   {t('services.scenarios.private')}
                 </h4>
                 <ul className="space-y-2 text-purple-800 text-center">
-                  <li>• Personal ID copy</li>
-                  <li>• Proof of address</li>
-                  <li>• Bank statement</li>
-                  <li>• Simple process</li>
+                  {getArray('services.scenarios.privateRequirements').map((requirement, index) => (
+                    <li key={index}>• {requirement}</li>
+                  ))}
                 </ul>
               </div>
               
@@ -79,10 +93,9 @@ const Services: React.FC = () => {
                   {t('services.scenarios.commercial')}
                 </h4>
                 <ul className="space-y-2 text-orange-800 text-center">
-                  <li>• Business letterhead with VAT ID</li>
-                  <li>• Company registration</li>
-                  <li>• Power of attorney</li>
-                  <li>• Trade license</li>
+                  {getArray('services.scenarios.commercialRequirements').map((requirement, index) => (
+                    <li key={index}>• {requirement}</li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -104,7 +117,7 @@ const Services: React.FC = () => {
                 {t('services.logistics.sea')}
               </h3>
               <p className="text-blue-800 mb-4">
-                Most cost-effective for large shipments
+                {t('services.logistics.seaDescription')}
               </p>
               <div className="text-sm text-blue-700">
                 {t('services.logistics.transitTime')}: 3-6 weeks
@@ -119,7 +132,7 @@ const Services: React.FC = () => {
                 {t('services.logistics.air')}
               </h3>
               <p className="text-green-800 mb-4">
-                Fastest delivery option available
+                {t('services.logistics.airDescription')}
               </p>
               <div className="text-sm text-green-700">
                 {t('services.logistics.transitTime')}: 3-7 days
@@ -134,7 +147,7 @@ const Services: React.FC = () => {
                 {t('services.logistics.transporter')}
               </h3>
               <p className="text-orange-800 mb-4">
-                Door-to-door road transport
+                {t('services.logistics.transporterDescription')}
               </p>
               <div className="text-sm text-orange-700">
                 {t('services.logistics.transitTime')}: 1-3 weeks
@@ -146,72 +159,39 @@ const Services: React.FC = () => {
         {/* Additional Services */}
         <div className="bg-gradient-to-br from-gray-50 to-white rounded-lg p-8 border border-gray-100">
           <h2 className="text-2xl font-bold text-center mb-8 text-gray-900">
-            Additional Services
+            {t('services.additionalServices.title')}
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="flex items-start space-x-4 p-4 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
-                <FaShieldAlt className="text-xl text-blue-600" />
-              </div>
-              <div>
-                <h3 className="font-semibold text-gray-800 mb-1">
-                  {t('services.logistics.insurance')}
-                </h3>
-                <p className="text-gray-600">
-                  Comprehensive coverage during transit
-                </p>
-              </div>
-            </div>
-            
-            <div className="flex items-start space-x-4 p-4 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-                <FaCheckCircle className="text-xl text-green-600" />
-              </div>
-              <div>
-                <h3 className="font-semibold text-gray-800 mb-1">
-                  {t('services.logistics.preDelivery')}
-                </h3>
-                <p className="text-gray-600">
-                  Thorough inspection before shipping
-                </p>
-              </div>
-            </div>
-            
-            <div className="flex items-start space-x-4 p-4 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
-                <FaFileAlt className="text-xl text-orange-600" />
-              </div>
-              <div>
-                <h3 className="font-semibold text-gray-800 mb-1">
-                  Customs Documentation
-                </h3>
-                <p className="text-gray-600">
-                  Complete paperwork handling
-                </p>
-              </div>
-            </div>
-            
-            <div className="flex items-start space-x-4 p-4 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
-                <FaGlobe className="text-xl text-purple-600" />
-              </div>
-              <div>
-                <h3 className="font-semibold text-gray-800 mb-1">
-                  Worldwide Shipping
-                </h3>
-                <p className="text-gray-600">
-                  Export to any destination
-                </p>
-              </div>
-            </div>
+            {getArray('services.additionalServices.services').map((service, index) => {
+              const icons = [FaShieldAlt, FaCheckCircle, FaFileAlt, FaGlobe];
+              const colors = ['blue', 'green', 'orange', 'purple'];
+              const IconComponent = icons[index];
+              const color = colors[index];
+              
+              return (
+                <div key={service.key} className="flex items-start space-x-4 p-4 rounded-lg hover:bg-white/50 transition-all duration-300">
+                  <div className={`w-12 h-12 bg-${color}-100 rounded-full flex items-center justify-center flex-shrink-0`}>
+                    <IconComponent className={`text-xl text-${color}-600`} />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-800 mb-1">
+                      {service.title}
+                    </h3>
+                    <p className="text-gray-600">
+                      {service.description}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
 
         {/* DI-Auto Detailed Process */}
         <div className="mt-16">
           <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">
-            Our Complete Process - Based on 20 Years of Experience
+            {t('services.process.title')}
           </h2>
           
           <div className="space-y-8">
@@ -221,24 +201,24 @@ const Services: React.FC = () => {
                 <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 text-2xl font-bold mr-6 border border-blue-200">
                   <FaCar className="text-2xl" />
                 </div>
-                <h3 className="text-2xl font-semibold text-blue-900">Choose your car</h3>
+                <h3 className="text-2xl font-semibold text-blue-900">{t('services.process.steps.chooseCar.title')}</h3>
               </div>
               
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-3">
-                  <h4 className="font-semibold text-gray-800">Option A: Check our stock</h4>
-                  <p className="text-gray-600">Browse our available vehicles that are ready for immediate export.</p>
+                  <h4 className="font-semibold text-gray-800">{t('services.process.steps.chooseCar.optionA')}</h4>
+                  <p className="text-gray-600">{t('services.process.steps.chooseCar.optionADesc')}</p>
                   
-                  <h4 className="font-semibold text-gray-800">Option B: Choose from any German supplier</h4>
-                  <p className="text-gray-600">Select a car from any supplier in Germany who offers net price + VAT.</p>
+                  <h4 className="font-semibold text-gray-800">{t('services.process.steps.chooseCar.optionB')}</h4>
+                  <p className="text-gray-600">{t('services.process.steps.chooseCar.optionBDesc')}</p>
                 </div>
                 
                 <div className="space-y-3">
-                  <h4 className="font-semibold text-gray-800">Option C: Talk to the seller</h4>
-                  <p className="text-gray-600">Get information and price, then inform them your German partner company will buy the car.</p>
+                  <h4 className="font-semibold text-gray-800">{t('services.process.steps.chooseCar.optionC')}</h4>
+                  <p className="text-gray-600">{t('services.process.steps.chooseCar.optionCDesc')}</p>
                   
-                  <h4 className="font-semibold text-gray-800">Option D: Contact us</h4>
-                  <p className="text-gray-600">Send us your details, company registration and ID. Tell us what car you want to buy.</p>
+                  <h4 className="font-semibold text-gray-800">{t('services.process.steps.chooseCar.optionD')}</h4>
+                  <p className="text-gray-600">{t('services.process.steps.chooseCar.optionDDesc')}</p>
                 </div>
               </div>
             </div>
@@ -249,24 +229,24 @@ const Services: React.FC = () => {
                 <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center text-green-600 text-2xl font-bold mr-6 border border-green-200">
                   <FaSearch className="text-2xl" />
                 </div>
-                <h3 className="text-2xl font-semibold text-green-900">On your request, we check the offer (optional)</h3>
+                <h3 className="text-2xl font-semibold text-green-900">{t('services.process.steps.checkOffer.title')}</h3>
               </div>
               
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-3">
-                  <h4 className="font-semibold text-gray-800">Pre-check service</h4>
-                  <p className="text-gray-600">We can pre-check the offer to verify availability and identify any potential issues. If the car is already sold, not available, or we cannot recommend it (due to unclear ownership or suspected accident damage), you don't have to pay anything.</p>
+                  <h4 className="font-semibold text-gray-800">{t('services.process.steps.checkOffer.preCheck')}</h4>
+                  <p className="text-gray-600">{t('services.process.steps.checkOffer.preCheckDesc')}</p>
                 </div>
                 
                 <div className="space-y-3">
-                  <h4 className="font-semibold text-gray-800">Physical inspection</h4>
-                  <p className="text-gray-600">If nothing suspicious is found and you want to continue, we can physically inspect the car at the dealer. Our inspection takes a minimum of 2 hours and includes real-time photos.</p>
+                  <h4 className="font-semibold text-gray-800">{t('services.process.steps.checkOffer.physicalInspection')}</h4>
+                  <p className="text-gray-600">{t('services.process.steps.checkOffer.physicalInspectionDesc')}</p>
                 </div>
               </div>
               
               <div className="mt-6 p-4 bg-green-50 rounded-lg">
-                <h4 className="font-semibold text-green-900 mb-2">Our Expertise</h4>
-                <p className="text-green-800">We have 20 years of experience in buying, selling and exporting rare, exclusive sports and luxury cars, which we thoroughly check before we buy them.</p>
+                <h4 className="font-semibold text-green-900 mb-2">{t('services.process.steps.checkOffer.expertise')}</h4>
+                <p className="text-green-800">{t('services.process.steps.checkOffer.expertiseDesc')}</p>
               </div>
             </div>
 
@@ -276,18 +256,18 @@ const Services: React.FC = () => {
                 <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center text-purple-600 text-2xl font-bold mr-6 border border-purple-200">
                   <FaFileContract className="text-2xl" />
                 </div>
-                <h3 className="text-2xl font-semibold text-purple-900">Contract + Down payment</h3>
+                <h3 className="text-2xl font-semibold text-purple-900">{t('services.process.steps.contract.title')}</h3>
               </div>
               
               <div className="space-y-4">
-                <p className="text-gray-700">If you wanted a check and it was passed or you agree to buy this car without check, we will send you a purchase contract.</p>
+                <p className="text-gray-700">{t('services.process.steps.contract.description')}</p>
                 
                 <div className="bg-purple-50 p-4 rounded-lg">
-                  <h4 className="font-semibold text-purple-900 mb-2">Contract Structure</h4>
-                  <p className="text-purple-800">The contract will be between us and you. We buy the car from the seller in full with VAT and you buy from us NET (without VAT).</p>
+                  <h4 className="font-semibold text-purple-900 mb-2">{t('services.process.steps.contract.structure')}</h4>
+                  <p className="text-purple-800">{t('services.process.steps.contract.structureDesc')}</p>
                 </div>
                 
-                <p className="text-gray-700">In some cases we might ask you to pay 15% of the net purchase price* as down payment after you signed the contract.</p>
+                <p className="text-gray-700">{t('services.process.steps.contract.downPayment')}</p>
               </div>
             </div>
 
@@ -297,26 +277,26 @@ const Services: React.FC = () => {
                 <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center text-orange-600 text-2xl font-bold mr-6 border border-orange-200">
                   <FaShippingFast className="text-2xl" />
                 </div>
-                <h3 className="text-2xl font-semibold text-orange-900">Transport & International Shipping</h3>
+                <h3 className="text-2xl font-semibold text-orange-900">{t('services.process.steps.transport.title')}</h3>
               </div>
               
               <div className="space-y-4">
-                <p className="text-gray-700">You can use your preferred transport company or ask us to help to find one.</p>
+                <p className="text-gray-700">{t('services.process.steps.transport.description')}</p>
                 
                 <div className="bg-orange-50 p-4 rounded-lg">
-                  <h4 className="font-semibold text-orange-900 mb-2">Our Transport Service</h4>
-                  <p className="text-orange-800">If you request: We can organize, for a fee, an insured transport (max 1mil. EUR), to bring your new car to your shipping company.</p>
+                  <h4 className="font-semibold text-orange-900 mb-2">{t('services.process.steps.transport.ourService')}</h4>
+                  <p className="text-orange-800">{t('services.process.steps.transport.ourServiceDesc')}</p>
                 </div>
                 
-                <p className="text-gray-700">Before the car is loaded for transport, pay the remaining balance of the net purchase price +10% VAT deposit (19% if you are a private buyer or company younger than 3 years) to us.</p>
+                <p className="text-gray-700">{t('services.process.steps.transport.payment')}</p>
               </div>
             </div>
 
             {/* Important Note */}
             <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-8 text-center border border-blue-200">
-              <h3 className="text-2xl font-bold text-blue-900 mb-4">Important Note</h3>
+              <h3 className="text-2xl font-bold text-blue-900 mb-4">{t('services.process.steps.importantNote.title')}</h3>
               <p className="text-blue-800 text-lg">
-                As soon as you can certify, your car has arrived in your country and we get a copy of the car's registration, we immediately send you the VAT deposit back.
+                {t('services.process.steps.importantNote.description')}
               </p>
             </div>
           </div>

@@ -9,12 +9,55 @@
   },
   "home": {
     "hero": {
-      "headline": "Service d'Exportation de Voitures Premium",
-      "subheadline": "Exportez des voitures dans le monde entier avec notre service sécurisé et professionnel",
+      "headline": "IV Export Service a la solution pour vous",
+      "subheadline": "20 ans d'expérience pour fournir les meilleurs services",
+      "benefits": [
+        "Achetez net sans TVA en Allemagne",
+        "Évaluation et inspection professionnelle des voitures",
+        "Protection contre les arnaques et transactions sécurisées",
+        "Expédition internationale et logistique"
+      ],
       "cta": {
-        "checkStock": "Vérifiez notre stock",
-        "whatsapp": "WhatsApp nous"
+        "checkStock": "Vérifiez Notre Stock",
+        "whatsapp": "WhatsApp Nous"
+      },
+      "stats": {
+        "yearsExperience": "Années d'Expérience",
+        "carsExported": "Voitures Exportées",
+        "partnerCarriers": "Transporteurs Partenaires"
       }
+    },
+    "processExplanation": {
+      "title": "Avec nos 20 ans d'expérience, nous savons à quel point il peut être difficile et chronophage d'acheter une voiture en ligne",
+      "subtitle": "Acheter une voiture net en Allemagne peut être encore plus difficile. Nous vous offrons notre expertise, évaluons, vérifions, inspectons la voiture et l'achetons pour vous.",
+      "guarantees": {
+        "condition": {
+          "title": "Nous garantissons que vous recevez la voiture dans l'état qui vous a été promis.",
+          "description": "Notre processus d'inspection approfondi garantit que vous obtenez exactement ce que vous attendez, avec des rapports d'état détaillés et des photos en temps réel."
+        },
+        "security": {
+          "title": "Nous ferons tout pour protéger vos transactions financières et vous mettre en garde contre les arnaques.",
+          "description": "Votre sécurité est notre priorité. Nous gérons toutes les transactions de manière sécurisée et vous protégeons contre les vendeurs frauduleux."
+        },
+        "private": {
+          "title": "Si vous êtes une personne privée à la recherche de votre voiture de rêve en ligne, nous nous assurerons que vous obtenez ce que vous voulez.",
+          "description": "Peu importe si c'est une voiture de commande, une voiture neuve ou d'occasion. Veuillez noter que, même en tant que particulier, vous devrez payer la TVA dans votre pays, pas en Allemagne."
+        }
+      },
+      "benefits": {
+        "netPrice": {
+          "title": "Nous vous vendrons la voiture au prix net.",
+          "description": "Sinon, vous paierez la TVA en Allemagne et dans votre pays."
+        },
+        "contact": {
+          "title": "Contactez-nous.",
+          "description": "Prêt à commencer votre voyage d'exportation de voiture ? Contactez nos experts."
+        }
+      }
+    },
+    "heroCard": {
+      "title": "Voitures Allemandes Premium",
+      "subtitle": "Prêtes pour l'exportation mondiale"
     },
     "whyChooseUs": {
       "title": "Pourquoi Nous Choisir",
@@ -53,6 +96,7 @@
     },
     "howItWorks": {
       "title": "Comment Ça Marche",
+      "subtitle": "4 étapes faciles pour obtenir votre voiture nette désirée en Allemagne",
       "steps": [
         "Trouvez un lien de voiture",
         "Envoyez le lien",
@@ -61,7 +105,38 @@
         "Payez l'acompte",
         "Récupération au showroom",
         "Livraison optionnelle (mer/air/transporteur)"
-      ]
+      ],
+      "step1": {
+        "title": "Choisissez votre voiture",
+        "optionA": "Vérifiez notre stock si nous avons ce que vous voulez.",
+        "optionB": "Choisissez une voiture chez n'importe quel fournisseur en Allemagne, qui propose un prix net + TVA.",
+        "optionC": "Parlez au vendeur, obtenez vos informations et prix et dites-lui que votre société partenaire allemande achètera la voiture.",
+        "optionD": "Contactez-nous et envoyez-nous vos détails, enregistrement de société et pièce d'identité. Dites-nous quelle voiture vous voulez acheter.",
+        "button": "Consultez notre Stock"
+      },
+      "step2": {
+        "title": "Sur votre demande, nous vérifions l'offre (facultatif)",
+        "optionA": "Si vous le demandez, nous pouvons pré-vérifier l'offre. Si nous découvrons que la voiture est déjà vendue, non disponible ou pour une raison quelconque nous ne pouvons pas recommander de l'acheter (en raison d'une propriété peu claire, ou nous soupçonnons que la voiture a eu un accident) alors vous n'avez rien à payer.",
+        "optionB": "Si nous ne trouvons rien de suspect et que vous voulez continuer avec l'achat de cette voiture, vous pouvez nous réserver pour la vérifier physiquement directement chez le concessionnaire.",
+        "button": "Voir comment nous vérifions la voiture"
+      },
+      "step3": {
+        "title": "Contrat + Acompte",
+        "description1": "Si vous vouliez une vérification et qu'elle a été réussie ou si vous acceptez d'acheter cette voiture sans vérification, nous vous enverrons un contrat d'achat.",
+        "description2": "Le contrat sera entre nous et vous. Nous achetons la voiture au vendeur en totalité avec TVA et vous l'achetez chez nous NET (sans TVA).",
+        "description3": "Dans certains cas, nous pourrions vous demander de payer 15% du prix d'achat net* comme acompte après avoir signé le contrat."
+      },
+        "step4": {
+          "title": "Transport et Expédition Internationale",
+          "description1": "Vous pouvez utiliser votre société de transport préférée ou nous demander de vous aider à en trouver une.",
+          "description2": "Si vous le demandez: Nous pouvons organiser, moyennant des frais, un transport assuré (max 1mil. EUR), pour amener votre nouvelle voiture à votre société d'expédition.",
+          "description3": "Avant que la voiture soit chargée pour le transport, payez le solde restant du prix d'achat net + 10% d'acompte TVA (19% si vous êtes un acheteur privé ou une société de moins de 3 ans) à nous.",
+          "button": "Voir la liste de prix",
+          "importantNote": {
+            "title": "Note Importante",
+            "description": "Dès que vous pouvez certifier, votre voiture est arrivée dans votre pays et nous obtenons une copie de l'immatriculation de la voiture, nous vous renvoyons immédiatement le dépôt de TVA."
+          }
+        }
     },
     "whoWeServe": {
       "title": "Qui Nous Servons",
@@ -95,7 +170,11 @@
     },
     "featuredStock": {
       "title": "Stock Vedette",
-      "seeAll": "Voir tout le stock"
+      "seeAll": "Voir tout le stock",
+      "car": "Voiture Vedette",
+      "vehicle": "Véhicule Premium",
+      "available": "Disponible à l'exportation",
+      "viewDetails": "Voir les Détails"
     },
     "trustStrip": {
       "yearsInBusiness": "Années d'Activité",
@@ -106,6 +185,11 @@
       "title": "Contactez-Nous",
       "whatsapp": "WhatsApp",
       "email": "Email"
+    },
+    "messages": {
+      "whatsappMessage": "Bonjour, je suis intéressé par votre service d'exportation de voitures",
+      "emailSubject": "Demande de Service d'Exportation de Voitures",
+      "emailBody": "Bonjour, je suis intéressé par votre service d'exportation de voitures. Veuillez fournir plus d'informations."
     }
   },
   "services": {
@@ -121,7 +205,52 @@
       "coc": "COC",
       "documents": "Documents Requis",
       "deposit": "Conditions d'Acompte",
-      "steps": "Étapes Post-Achat"
+      "steps": "Étapes Post-Achat",
+      "newBenefits": [
+        "Garantie constructeur complète",
+        "Spécifications les plus récentes"
+      ],
+      "usedBenefits": [
+        "Rapport d'état inclus",
+        "Prix compétitifs"
+      ],
+      "privateRequirements": [
+        "Copie de pièce d'identité personnelle",
+        "Justificatif de domicile",
+        "Relevé bancaire",
+        "Processus simple"
+      ],
+      "commercialRequirements": [
+        "En-tête commercial avec numéro de TVA",
+        "Enregistrement de société",
+        "Procuration",
+        "Licence commerciale"
+      ]
+    },
+    "additionalServices": {
+      "title": "Services Supplémentaires",
+      "services": [
+        {
+          "key": "insurance",
+          "title": "Assurance",
+          "description": "Couverture complète pendant le transit"
+        },
+        {
+          "key": "preDelivery",
+          "title": "Vérification Pré-Livraison",
+          "description": "Inspection approfondie avant l'expédition"
+        },
+        {
+          "key": "customs",
+          "title": "Documentation Douanière",
+          "description": "Gestion complète des documents"
+        },
+        {
+          "key": "worldwide",
+          "title": "Expédition Mondiale",
+          "description": "Export vers toute destination"
+        }
+      ]
     },
     "logistics": {
       "title": "Options Logistiques",
@@ -130,11 +259,128 @@
       "transporter": "Transporteur",
       "transitTime": "Temps de Transit",
       "insurance": "Assurance",
-      "preDelivery": "Vérification Pré-Livraison"
+      "preDelivery": "Vérification Pré-Livraison",
+      "seaDescription": "Le plus rentable pour les gros envois",
+      "airDescription": "Option de livraison la plus rapide",
+      "transporterDescription": "Service de porte à porte",
+      "timeUnits": {
+        "days": "jours",
+        "weeks": "semaines"
+      }
+    },
+    "process": {
+      "title": "Notre Processus Complet - Basé sur 20 Ans d'Expérience",
+      "steps": {
+        "chooseCar": {
+          "title": "Choisissez votre voiture",
+          "optionA": "Option A: Vérifiez notre stock",
+          "optionADesc": "Parcourez nos véhicules disponibles prêts pour l'exportation immédiate.",
+          "optionB": "Option B: Choisissez chez n'importe quel fournisseur allemand",
+          "optionBDesc": "Sélectionnez une voiture chez n'importe quel fournisseur en Allemagne qui propose un prix net + TVA.",
+          "optionC": "Option C: Parlez au vendeur",
+          "optionCDesc": "Obtenez des informations et le prix, puis informez-les que votre société partenaire allemande achètera la voiture.",
+          "optionD": "Option D: Contactez-nous",
+          "optionDDesc": "Envoyez-nous vos détails, enregistrement de société et pièce d'identité. Dites-nous quelle voiture vous voulez acheter."
+        },
+        "checkOffer": {
+          "title": "Sur votre demande, nous vérifions l'offre (optionnel)",
+          "preCheck": "Service de pré-vérification",
+          "preCheckDesc": "Nous pouvons pré-vérifier l'offre pour vérifier la disponibilité et identifier tout problème potentiel. Si la voiture est déjà vendue, non disponible, ou si nous ne pouvons pas la recommander (en raison d'une propriété peu claire ou de dommages d'accident suspectés), vous n'avez rien à payer.",
+          "physicalInspection": "Inspection physique",
+          "physicalInspectionDesc": "Si rien de suspect n'est trouvé et que vous voulez continuer, nous pouvons inspecter physiquement la voiture chez le concessionnaire. Notre inspection prend un minimum de 2 heures et comprend des photos en temps réel.",
+          "expertise": "Notre Expertise",
+          "expertiseDesc": "Nous avons 20 ans d'expérience dans l'achat, la vente et l'exportation de voitures de sport et de luxe rares et exclusives, que nous vérifions minutieusement avant de les acheter."
+        },
+        "contract": {
+          "title": "Contrat + Acompte",
+          "description": "Si vous vouliez une vérification et qu'elle a été réussie ou si vous acceptez d'acheter cette voiture sans vérification, nous vous enverrons un contrat d'achat.",
+          "structure": "Structure du Contrat",
+          "structureDesc": "Le contrat sera entre nous et vous. Nous achetons la voiture au vendeur en totalité avec TVA et vous l'achetez chez nous NET (sans TVA).",
+          "downPayment": "Dans certains cas, nous pourrions vous demander de payer 15% du prix d'achat net* comme acompte après avoir signé le contrat."
+        },
+        "transport": {
+          "title": "Transport et Expédition Internationale",
+          "description": "Vous pouvez utiliser votre société de transport préférée ou nous demander de vous aider à en trouver une.",
+          "ourService": "Notre Service de Transport",
+          "ourServiceDesc": "Si vous le demandez: Nous pouvons organiser, moyennant des frais, un transport assuré (max 1mil. EUR), pour amener votre nouvelle voiture à votre société d'expédition.",
+          "payment": "Avant que la voiture soit chargée pour le transport, payez le solde restant du prix d'achat net + 10% d'acompte TVA (19% si vous êtes un acheteur privé ou une société de moins de 3 ans) à nous."
+        },
+        "importantNote": {
+          "title": "Note Importante",
+          "description": "Dès que vous pouvez certifier, votre voiture est arrivée dans votre pays et nous obtenons une copie de l'immatriculation de la voiture, nous vous renvoyons immédiatement le dépôt de TVA."
+        }
+      }
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "À propos d'IV Export Service",
+      "subtitle": "Votre partenaire de confiance pour l'exportation de véhicules premium avec plus de 20 ans d'expertise, offrant l'excellence dans chaque transaction à travers le monde."
+    },
+    "story": {
+      "title": "Notre Histoire",
+      "description1": "IV EXPORT SERVICE (anciennement DI-Auto) est né d'une passion pour l'automobile, où l'expérience et les connaissances sur les voitures se transmettent de génération en génération.",
+      "description2": "Nous avons bâti notre réputation sur la confiance, l'expertise et la livraison exacte de ce que nous promettons. Notre engagement envers la qualité et la satisfaction client a fait de nous un nom de premier plan dans l'industrie de l'exportation automobile."
+    },
+    "stats": {
+      "clients": "1000+",
+      "clientsLabel": "Clients Satisfaits",
+      "vehicles": "5000+",
+      "vehiclesLabel": "Véhicules Exportés",
+      "countries": "50+",
+      "countriesLabel": "Pays Desservis",
+      "secure": "100%",
+      "secureLabel": "Transactions Sécurisées"
+    },
+    "values": {
+      "title": "Nos Valeurs Fondamentales",
+      "trust": {
+        "title": "Confiance et Transparence",
+        "description": "Nous croyons en une transparence totale dans toutes nos transactions, vous garantissant de savoir exactement ce que vous obtenez."
+      },
+      "expertise": {
+        "title": "Connaissance Expert",
+        "description": "Avec des décennies d'expérience, nous comprenons tous les aspects du processus d'exportation automobile."
+      },
+      "quality": {
+        "title": "Assurance Qualité",
+        "description": "Chaque véhicule subit une inspection rigoureuse pour répondre à nos normes élevées avant l'exportation."
+      },
+      "service": {
+        "title": "Service Exceptionnel",
+        "description": "Nous allons au-delà pour assurer votre satisfaction complète tout au long du processus."
+      }
+    },
+    "foundation": {
+      "title": "Notre Fondation Commerciale",
+      "description": "Notre succès est construit sur trois piliers fondamentaux qui guident tout ce que nous faisons :",
+      "pillars": [
+        "Inspection complète des véhicules et assurance qualité",
+        "Transactions financières sécurisées et transparentes",
+        "Expertise en logistique et livraison mondiale"
+      ]
+    },
+    "services": {
+      "title": "Ce Que Nous Offrons",
+      "description": "De la sélection de véhicules à la livraison finale, nous fournissons des solutions de bout en bout pour vos besoins d'exportation automobile.",
+      "features": [
+        "Sourcing et inspection de véhicules premium",
+        "Traitement sécurisé des paiements et documentation",
+        "Coordination de l'expédition et logistique internationale",
+        "Support client et assistance 24/7"
+      ]
+    },
+    "cta": {
+      "title": "Prêt à Commencer Votre Voyage d'Exportation ?",
+      "description": "Contactez nos experts aujourd'hui et laissez-nous vous aider à trouver le véhicule parfait pour l'exportation.",
+      "contact": "Entrer en Contact",
+      "phone": "Nous Appeler",
+      "email": "Nous Écrire"
     }
   },
   "stock": {
     "title": "Stock Disponible",
+    "subtitle": "Parcourez notre sélection de véhicules premium disponibles à l'exportation",
     "filters": {
       "brand": "Marque",
       "year": "Année",
@@ -151,7 +397,24 @@
     "card": {
       "onRequest": "Sur Demande",
       "whatsapp": "WhatsApp nous sur cette voiture",
-      "email": "Email nous sur cette voiture"
+      "email": "Email nous sur cette voiture",
+      "carPhoto": "Photo de Voiture",
+      "noCarsFound": "Aucune voiture trouvée correspondant à vos critères",
+      "specifications": "Spécifications",
+      "description": "Description",
+      "brand": "Marque:",
+      "model": "Modèle:",
+      "year": "Année:",
+      "mileage": "Kilométrage:",
+      "fuel": "Carburant:",
+      "transmission": "Transmission:",
+      "price": "Prix:",
+      "photo": "Photo"
+    },
+    "messages": {
+      "whatsappMessage": "Bonjour, je suis intéressé par la",
+      "emailSubject": "Demande d'information sur",
+      "emailBody": "Bonjour, je suis intéressé par la"
     }
   },
   "faq": {
@@ -191,15 +454,6 @@
       }
     ]
   },
-  "about": {
-    "title": "À Propos de Nous",
-    "intro": "Service d'exportation automobile professionnel avec des années d'expérience",
-    "values": "Nos Valeurs",
-    "region": "Régions Servies",
-    "yearsExported": "Années d'Expérience d'Exportation",
-    "compliance": "Conformité et Certifications",
-    "partners": "Nos Partenaires"
-  },
   "contact": {
     "title": "Contactez-Nous",
     "whatsapp": "WhatsApp",
@@ -223,6 +477,23 @@
       "imprint": "Mentions Légales",
       "cookies": "Politique des Cookies"
     }
+  },
+  "carSpecs": {
+    "year": "Année de production:",
+    "mileage": "Kilométrage:",
+    "fuel": "Carburant:",
+    "power": "Puissance du moteur:",
+    "engineSize": "Cylindrée:",
+    "doors": "Nombre de portes:",
+    "seats": "Nombre de places:",
+    "gearbox": "Boîte de vitesses:",
+    "drive": "Transmission:",
+    "body": "Carrosserie:",
+    "color": "Couleur:",
+    "country": "Pays d'origine:",
+    "firstRegistration": "Date de première immatriculation:",
+    "saleForm": "Forme de vente:",
+    "description": "Description du véhicule"
   },
   "common": {
     "loading": "Chargement...",

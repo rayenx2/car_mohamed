@@ -9,12 +9,55 @@
   },
   "home": {
     "hero": {
-      "headline": "Premium Car Export Service",
-      "subheadline": "Export cars worldwide with our secure, professional service",
+      "headline": "IV Export Service has the solution for you",
+      "subheadline": "20 years of experience to provide the best services",
+      "benefits": [
+        "Buy net without VAT in Germany",
+        "Professional car evaluation & inspection",
+        "Scam protection & secure transactions",
+        "International shipping & logistics"
+      ],
       "cta": {
-        "checkStock": "Check our stock",
-        "whatsapp": "WhatsApp us"
+        "checkStock": "Check Our Stock",
+        "whatsapp": "WhatsApp Us"
+      },
+      "stats": {
+        "yearsExperience": "Years Experience",
+        "carsExported": "Cars Exported",
+        "partnerCarriers": "Partner Carriers"
       }
+    },
+    "processExplanation": {
+      "title": "With our 20 years of experience, we know how difficult and time consuming it can be to buy a car online",
+      "subtitle": "To buy a car net in Germany can be even more difficult. We offer our expertise to you, evaluate, check, inspect the car and buy it for you.",
+      "guarantees": {
+        "condition": {
+          "title": "We guarantee that you receive the car in the condition you were promised.",
+          "description": "Our thorough inspection process ensures you get exactly what you expect, with detailed condition reports and real-time photos."
+        },
+        "security": {
+          "title": "We will do everything to protect your financial transactions and beware you of scam deals.",
+          "description": "Your security is our priority. We handle all transactions securely and protect you from fraudulent sellers."
+        },
+        "private": {
+          "title": "If you are a private person looking for your dream car online, we will make sure you get what you want.",
+          "description": "No matter if an order car, new car or pre-used vehicle. Please mind, even as a private, you will need to pay VAT in your country, not in Germany."
+        }
+      },
+      "benefits": {
+        "netPrice": {
+          "title": "We will sell the car for the net price to you.",
+          "description": "Otherwise, you will pay VAT in Germany and your country."
+        },
+        "contact": {
+          "title": "Contact us.",
+          "description": "Ready to start your car export journey? Get in touch with our experts."
+        }
+      }
+    },
+    "heroCard": {
+      "title": "Premium German Cars",
+      "subtitle": "Ready for worldwide export"
     },
     "whyChooseUs": {
       "title": "Why Choose Us",
@@ -53,6 +96,7 @@
     },
     "howItWorks": {
       "title": "How It Works",
+      "subtitle": "4 easy steps to get your desired car net in Germany",
       "steps": [
         "Find a car link",
         "Send link to us",
@@ -61,7 +105,38 @@
         "Pay deposit",
         "Pickup at showroom",
         "Optional delivery (sea/air/transporter)"
-      ]
+      ],
+      "step1": {
+        "title": "Choose your car",
+        "optionA": "Check our stock if we have what you want.",
+        "optionB": "Choose a car from any supplier in Germany, who offers net price + VAT.",
+        "optionC": "Talk to the seller, get your information and price and tell him your German partner company will buy the car.",
+        "optionD": "Contact us and send us your details, company registration and ID. Tell us what car you want to buy.",
+        "button": "Check our Stock"
+      },
+      "step2": {
+        "title": "On your request, we check the offer (optional)",
+        "optionA": "If you request, we can pre-check the offer. If we find out, that the car is already sold, not available or for some reason we cannot recommend to buy it (due to unclear ownership, or we suspect the car had an accident) then you don't have to pay anything.",
+        "optionB": "If we find nothing suspicious and you want to continue with the purchase of this car, you can book us to check it physically direct at the dealer.",
+        "button": "See how we check the car"
+      },
+      "step3": {
+        "title": "Contract + Down payment",
+        "description1": "If you wanted a check and it was passed or you agree to buy this car without check, we will send you a purchase contract.",
+        "description2": "The contract will be between us and you. We buy the car from the seller in full with VAT and you buy from us NET (without VAT).",
+        "description3": "In some cases we might ask you to pay 15% of the net purchase price* as down payment after you signed the contract."
+      },
+        "step4": {
+          "title": "Transport & International Shipping",
+          "description1": "You can use your preferred transport company or ask us to help to find one.",
+          "description2": "If you request: We can organize, for a fee, an insured transport (max 1mil. EUR), to bring your new car to your shipping company.",
+          "description3": "Before the car is loaded for transport, pay the remaining balance of the net purchase price +10% VAT deposit (19% if you are a private buyer or company younger than 3 years) to us.",
+          "button": "See price list",
+          "importantNote": {
+            "title": "Important Note",
+            "description": "As soon as you can certify, your car has arrived in your country and we get a copy of the car's registration, we immediately send you the VAT deposit back."
+          }
+        }
     },
     "whoWeServe": {
       "title": "Who We Serve",
@@ -95,7 +170,11 @@
     },
     "featuredStock": {
       "title": "Featured Stock",
-      "seeAll": "See all stock"
+      "seeAll": "See all stock",
+      "car": "Featured Car",
+      "vehicle": "Premium Vehicle",
+      "available": "Available for export",
+      "viewDetails": "View Details"
     },
     "trustStrip": {
       "yearsInBusiness": "Years in Business",
@@ -106,6 +185,11 @@
       "title": "Get in Touch",
       "whatsapp": "WhatsApp",
       "email": "Email"
+    },
+    "messages": {
+      "whatsappMessage": "Hi, I'm interested in your car export service",
+      "emailSubject": "Car Export Service Inquiry",
+      "emailBody": "Hi, I'm interested in your car export service. Please provide more information."
     }
   },
   "services": {
@@ -121,7 +205,52 @@
       "coc": "COC",
       "documents": "Required Documents",
       "deposit": "Deposit Conditions",
-      "steps": "Post-Purchase Steps"
+      "steps": "Post-Purchase Steps",
+      "newBenefits": [
+        "Full manufacturer warranty",
+        "Latest specifications"
+      ],
+      "usedBenefits": [
+        "Condition report included",
+        "Competitive pricing"
+      ],
+      "privateRequirements": [
+        "Personal ID copy",
+        "Proof of address",
+        "Bank statement",
+        "Simple process"
+      ],
+      "commercialRequirements": [
+        "Business letterhead with VAT ID",
+        "Company registration",
+        "Power of attorney",
+        "Trade license"
+      ]
+    },
+    "additionalServices": {
+      "title": "Additional Services",
+      "services": [
+        {
+          "key": "insurance",
+          "title": "Insurance",
+          "description": "Comprehensive coverage during transit"
+        },
+        {
+          "key": "preDelivery",
+          "title": "Pre-Delivery Verification",
+          "description": "Thorough inspection before shipping"
+        },
+        {
+          "key": "customs",
+          "title": "Customs Documentation",
+          "description": "Complete paperwork handling"
+        },
+        {
+          "key": "worldwide",
+          "title": "Worldwide Shipping",
+          "description": "Export to any destination"
+        }
+      ]
     },
     "logistics": {
       "title": "Logistics Options",
@@ -130,11 +259,128 @@
       "transporter": "Transporter",
       "transitTime": "Transit Time",
       "insurance": "Insurance",
-      "preDelivery": "Pre-Delivery Check"
+      "preDelivery": "Pre-Delivery Check",
+      "seaDescription": "Most cost-effective for large shipments",
+      "airDescription": "Fastest delivery option",
+      "transporterDescription": "Door-to-door service",
+      "timeUnits": {
+        "days": "days",
+        "weeks": "weeks"
+      }
+    },
+    "process": {
+      "title": "Our Complete Process - Based on 20 Years of Experience",
+      "steps": {
+        "chooseCar": {
+          "title": "Choose your car",
+          "optionA": "Option A: Check our stock",
+          "optionADesc": "Browse our available vehicles that are ready for immediate export.",
+          "optionB": "Option B: Choose from any German supplier",
+          "optionBDesc": "Select a car from any supplier in Germany who offers net price + VAT.",
+          "optionC": "Option C: Talk to the seller",
+          "optionCDesc": "Get information and price, then inform them your German partner company will buy the car.",
+          "optionD": "Option D: Contact us",
+          "optionDDesc": "Send us your details, company registration and ID. Tell us what car you want to buy."
+        },
+        "checkOffer": {
+          "title": "On your request, we check the offer (optional)",
+          "preCheck": "Pre-check service",
+          "preCheckDesc": "We can pre-check the offer to verify availability and identify any potential issues. If the car is already sold, not available, or if we cannot recommend it (due to unclear ownership or suspected accident damage), you pay nothing.",
+          "physicalInspection": "Physical inspection",
+          "physicalInspectionDesc": "If nothing suspicious is found and you want to continue, we can physically inspect the car at the dealer. Our inspection takes a minimum of 2 hours and includes real-time photos.",
+          "expertise": "Our Expertise",
+          "expertiseDesc": "We have 20 years of experience in buying, selling and exporting rare and exclusive sports and luxury cars, which we thoroughly verify before purchasing."
+        },
+        "contract": {
+          "title": "Contract + Down payment",
+          "description": "If you wanted a check and it was passed or you agree to buy this car without check, we will send you a purchase contract.",
+          "structure": "Contract Structure",
+          "structureDesc": "The contract will be between us and you. We buy the car from the seller in full with VAT and you buy it from us NET (without VAT).",
+          "downPayment": "In some cases, we might ask you to pay 15% of the net purchase price* as down payment after signing the contract."
+        },
+        "transport": {
+          "title": "Transport & International Shipping",
+          "description": "You can use your preferred transport company or ask us to help to find one.",
+          "ourService": "Our Transport Service",
+          "ourServiceDesc": "If you request: We can organize, for a fee, insured transport (max 1mil. EUR), to bring your new car to your shipping company.",
+          "payment": "Before the car is loaded for transport, pay the remaining balance of the net purchase price + 10% VAT deposit (19% if you are a private buyer or a company less than 3 years old) to us."
+        },
+        "importantNote": {
+          "title": "Important Note",
+          "description": "As soon as you can certify, your car has arrived in your country and we get a copy of the car's registration, we immediately send you the VAT deposit back."
+        }
+      }
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "About IV Export Service",
+      "subtitle": "Your trusted partner in premium vehicle exports with over 20 years of expertise, delivering excellence in every transaction across the globe."
+    },
+    "story": {
+      "title": "Our Story",
+      "description1": "IV EXPORT SERVICE (formerly DI-Auto) was born from a passion for motoring, where experience and knowledge about cars has been passed down from generation to generation.",
+      "description2": "We have built our reputation on trust, expertise, and delivering exactly what we promise. Our commitment to quality and customer satisfaction has made us a leading name in the automotive export industry."
+    },
+    "stats": {
+      "clients": "1000+",
+      "clientsLabel": "Happy Clients",
+      "vehicles": "5000+",
+      "vehiclesLabel": "Vehicles Exported",
+      "countries": "50+",
+      "countriesLabel": "Countries Served",
+      "secure": "100%",
+      "secureLabel": "Secure Transactions"
+    },
+    "values": {
+      "title": "Our Core Values",
+      "trust": {
+        "title": "Trust & Transparency",
+        "description": "We believe in complete transparency in all our dealings, ensuring you know exactly what you're getting."
+      },
+      "expertise": {
+        "title": "Expert Knowledge",
+        "description": "With decades of experience, we understand every aspect of the automotive export process."
+      },
+      "quality": {
+        "title": "Quality Assurance",
+        "description": "Every vehicle undergoes rigorous inspection to meet our high standards before export."
+      },
+      "service": {
+        "title": "Exceptional Service",
+        "description": "We go above and beyond to ensure your complete satisfaction throughout the entire process."
+      }
+    },
+    "foundation": {
+      "title": "Our Business Foundation",
+      "description": "Our success is built on three fundamental pillars that guide everything we do:",
+      "pillars": [
+        "Comprehensive vehicle inspection and quality assurance",
+        "Secure and transparent financial transactions",
+        "Worldwide logistics and delivery expertise"
+      ]
+    },
+    "services": {
+      "title": "What We Offer",
+      "description": "From vehicle selection to final delivery, we provide end-to-end solutions for your automotive export needs.",
+      "features": [
+        "Premium vehicle sourcing and inspection",
+        "Secure payment processing and documentation",
+        "International shipping and logistics coordination",
+        "24/7 customer support and assistance"
+      ]
+    },
+    "cta": {
+      "title": "Ready to Start Your Export Journey?",
+      "description": "Contact our experts today and let us help you find the perfect vehicle for export.",
+      "contact": "Get in Touch",
+      "phone": "Call Us",
+      "email": "Email Us"
     }
   },
   "stock": {
     "title": "Available Stock",
+    "subtitle": "Browse our selection of premium vehicles available for export",
     "filters": {
       "brand": "Brand",
       "year": "Year",
@@ -151,7 +397,24 @@
     "card": {
       "onRequest": "On Request",
       "whatsapp": "WhatsApp us about this car",
-      "email": "Email us about this car"
+      "email": "Email us about this car",
+      "carPhoto": "Car Photo",
+      "noCarsFound": "No cars found matching your criteria",
+      "specifications": "Specifications",
+      "description": "Description",
+      "brand": "Brand:",
+      "model": "Model:",
+      "year": "Year:",
+      "mileage": "Mileage:",
+      "fuel": "Fuel:",
+      "transmission": "Transmission:",
+      "price": "Price:",
+      "photo": "Photo"
+    },
+    "messages": {
+      "whatsappMessage": "Hi, I'm interested in the",
+      "emailSubject": "Inquiry about",
+      "emailBody": "Hi, I'm interested in the"
     }
   },
   "faq": {
@@ -191,15 +454,6 @@
       }
     ]
   },
-  "about": {
-    "title": "About Us",
-    "intro": "Professional car export service with years of experience",
-    "values": "Our Values",
-    "region": "Regions Served",
-    "yearsExported": "Years of Export Experience",
-    "compliance": "Compliance & Certifications",
-    "partners": "Our Partners"
-  },
   "contact": {
     "title": "Contact Us",
     "whatsapp": "WhatsApp",
@@ -223,6 +477,23 @@
       "imprint": "Legal Notice",
       "cookies": "Cookie Policy"
     }
+  },
+  "carSpecs": {
+    "year": "Year of production:",
+    "mileage": "Mileage:",
+    "fuel": "Fuel:",
+    "power": "Engine power:",
+    "engineSize": "Engine capacity:",
+    "doors": "Number of doors:",
+    "seats": "Number of seats:",
+    "gearbox": "Gearbox:",
+    "drive": "Drive:",
+    "body": "Body:",
+    "color": "Color:",
+    "country": "Country of origin:",
+    "firstRegistration": "First registration date:",
+    "saleForm": "Sale form:",
+    "description": "Vehicle description"
   },
   "common": {
     "loading": "Loading...",

@@ -8,6 +8,7 @@ interface LanguageContextType {
   t: (key: string) => any;
   getArray: (key: string) => any[];
   isRTL: boolean;
+  isLoading: boolean;
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
@@ -19,6 +20,7 @@ interface LanguageProviderProps {
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) => {
   const [language, setLanguageState] = useState<Language>('en');
   const [translations, setTranslations] = useState<any>({});
+  const [isLoading, setIsLoading] = useState(true);
 
   const isRTL = language === 'ar';
 
@@ -34,6 +36,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
     // Load translations for current language
     const loadTranslations = async () => {
       try {
+        setIsLoading(true);
         console.log('Loading translations for:', language);
         const langData = await import(`../i18n/${language}.json`);
         setTranslations(langData.default || langData);
@@ -43,6 +46,8 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
         // Fallback to English
         const enData = await import(`../i18n/en.json`);
         setTranslations(enData.default || enData);
+      } finally {
+        setIsLoading(false);
       }
     };
 
@@ -105,6 +110,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
     t,
     getArray,
     isRTL,
+    isLoading,
   };
 
   return (

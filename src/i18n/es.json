@@ -9,12 +9,55 @@
   },
   "home": {
     "hero": {
-      "headline": "Servicio de Exportación de Autos Premium",
-      "subheadline": "Exporta autos a todo el mundo con nuestro servicio seguro y profesional",
+      "headline": "IV Export Service tiene la solución para usted",
+      "subheadline": "20 años de experiencia para proporcionar los mejores servicios",
+      "benefits": [
+        "Compre neto sin IVA en Alemania",
+        "Evaluación e inspección profesional de autos",
+        "Protección contra estafas y transacciones seguras",
+        "Envío internacional y logística"
+      ],
       "cta": {
         "checkStock": "Revisa nuestro stock",
         "whatsapp": "WhatsApp nosotros"
+      },
+      "stats": {
+        "yearsExperience": "Años de Experiencia",
+        "carsExported": "Autos Exportados",
+        "partnerCarriers": "Transportistas Socios"
       }
+    },
+    "processExplanation": {
+      "title": "Con nuestros 20 años de experiencia, sabemos lo difícil y consumidor de tiempo que puede ser comprar un auto en línea",
+      "subtitle": "Comprar un auto neto en Alemania puede ser aún más difícil. Le ofrecemos nuestra experiencia, evaluamos, verificamos, inspeccionamos el auto y lo compramos por usted.",
+      "guarantees": {
+        "condition": {
+          "title": "Garantizamos que reciba el auto en la condición que le fue prometida.",
+          "description": "Nuestro proceso de inspección exhaustivo asegura que obtenga exactamente lo que espera, con reportes de condición detallados y fotos en tiempo real."
+        },
+        "security": {
+          "title": "Haremos todo para proteger sus transacciones financieras y advertirle sobre ofertas fraudulentas.",
+          "description": "Su seguridad es nuestra prioridad. Manejamos todas las transacciones de forma segura y lo protegemos de vendedores fraudulentos."
+        },
+        "private": {
+          "title": "Si es una persona privada buscando su auto de ensueño en línea, nos aseguraremos de que obtenga lo que quiere.",
+          "description": "No importa si es un auto por encargo, auto nuevo o vehículo usado. Por favor tenga en cuenta, incluso como privado, necesitará pagar IVA en su país, no en Alemania."
+        }
+      },
+      "benefits": {
+        "netPrice": {
+          "title": "Le venderemos el auto al precio neto.",
+          "description": "De lo contrario, pagará IVA en Alemania y su país."
+        },
+        "contact": {
+          "title": "Contáctenos.",
+          "description": "¿Listo para comenzar su viaje de exportación de autos? Póngase en contacto con nuestros expertos."
+        }
+      }
+    },
+    "heroCard": {
+      "title": "Autos Alemanes Premium",
+      "subtitle": "Listos para exportación mundial"
     },
     "whyChooseUs": {
       "title": "Por Qué Elegirnos",
@@ -53,6 +96,7 @@
     },
     "howItWorks": {
       "title": "Cómo Funciona",
+      "subtitle": "4 sencillos pasos para obtener el auto que desea en Alemania",
       "steps": [
         "Encuentra un enlace de auto",
         "Envía el enlace",
@@ -61,7 +105,38 @@
         "Paga el depósito",
         "Recogida en el showroom",
         "Entrega opcional (mar/aire/transportador)"
-      ]
+      ],
+      "step1": {
+        "title": "Elige tu auto",
+        "optionA": "Revisa nuestro stock si tenemos lo que quieres.",
+        "optionB": "Elige un auto de cualquier proveedor en Alemania, que ofrezca precio neto + IVA.",
+        "optionC": "Habla con el vendedor, obtén tu información y precio y dile que tu empresa socia alemana comprará el auto.",
+        "optionD": "Contáctanos y envíanos tus detalles, registro de empresa e ID. Dinos qué auto quieres comprar.",
+        "button": "Revisa nuestro Stock"
+      },
+      "step2": {
+        "title": "A tu solicitud, verificamos la oferta (opcional)",
+        "optionA": "Si lo solicitas, podemos pre-verificar la oferta. Si descubrimos que el auto ya está vendido, no disponible o por alguna razón no podemos recomendarlo para comprar (debido a propiedad poco clara, o sospechamos que el auto tuvo un accidente) entonces no tienes que pagar nada.",
+        "optionB": "Si no encontramos nada sospechoso y quieres continuar con la compra de este auto, puedes reservarnos para verificarlo físicamente directamente en el concesionario.",
+        "button": "Ver cómo verificamos el auto"
+      },
+      "step3": {
+        "title": "Contrato + Pago inicial",
+        "description1": "Si querías una verificación y fue aprobada o aceptas comprar este auto sin verificación, te enviaremos un contrato de compra.",
+        "description2": "El contrato será entre nosotros y tú. Compramos el auto del vendedor en total con IVA y tú lo compras de nosotros NET (sin IVA).",
+        "description3": "En algunos casos podríamos pedirte que pagues 15% del precio de compra neto* como pago inicial después de firmar el contrato."
+      },
+        "step4": {
+          "title": "Transporte y Envío Internacional",
+          "description1": "Puedes usar tu empresa de transporte preferida o pedirnos que te ayudemos a encontrar una.",
+          "description2": "Si lo solicitas: Podemos organizar, por una tarifa, transporte asegurado (máx. 1mil. EUR), para llevar tu nuevo auto a tu empresa de envío.",
+          "description3": "Antes de que el auto sea cargado para transporte, paga el saldo restante del precio de compra neto + 10% depósito de IVA (19% si eres un comprador privado o una empresa de menos de 3 años) a nosotros.",
+          "button": "Ver lista de precios",
+          "importantNote": {
+            "title": "Nota Importante",
+            "description": "Tan pronto como puedas certificar, tu auto ha llegado a tu país y obtenemos una copia del registro del auto, inmediatamente te enviamos de vuelta el depósito de IVA."
+          }
+        }
     },
     "whoWeServe": {
       "title": "A Quién Servimos",
@@ -95,7 +170,11 @@
     },
     "featuredStock": {
       "title": "Stock Destacado",
-      "seeAll": "Ver todo el stock"
+      "seeAll": "Ver todo el stock",
+      "car": "Auto Destacado",
+      "vehicle": "Vehículo Premium",
+      "available": "Disponible para exportación",
+      "viewDetails": "Ver Detalles"
     },
     "trustStrip": {
       "yearsInBusiness": "Años en el Negocio",
@@ -106,6 +185,11 @@
       "title": "Contáctanos",
       "whatsapp": "WhatsApp",
       "email": "Email"
+    },
+    "messages": {
+      "whatsappMessage": "Hola, estoy interesado en su servicio de exportación de autos",
+      "emailSubject": "Consulta sobre Servicio de Exportación de Autos",
+      "emailBody": "Hola, estoy interesado en su servicio de exportación de autos. Por favor proporcione más información."
     }
   },
   "services": {
@@ -121,7 +205,52 @@
       "coc": "COC",
       "documents": "Documentos Requeridos",
       "deposit": "Condiciones de Depósito",
-      "steps": "Pasos Post-Compra"
+      "steps": "Pasos Post-Compra",
+      "newBenefits": [
+        "Garantía completa del fabricante",
+        "Especificaciones más recientes"
+      ],
+      "usedBenefits": [
+        "Reporte de condición incluido",
+        "Precios competitivos"
+      ],
+      "privateRequirements": [
+        "Copia de ID personal",
+        "Comprobante de domicilio",
+        "Estado de cuenta bancario",
+        "Proceso simple"
+      ],
+      "commercialRequirements": [
+        "Papelería comercial con ID de IVA",
+        "Registro de empresa",
+        "Poder notarial",
+        "Licencia comercial"
+      ]
+    },
+    "additionalServices": {
+      "title": "Servicios Adicionales",
+      "services": [
+        {
+          "key": "insurance",
+          "title": "Seguro",
+          "description": "Cobertura integral durante el tránsito"
+        },
+        {
+          "key": "preDelivery",
+          "title": "Verificación Pre-Entrega",
+          "description": "Inspección exhaustiva antes del envío"
+        },
+        {
+          "key": "customs",
+          "title": "Documentación Aduanera",
+          "description": "Manejo completo de documentos"
+        },
+        {
+          "key": "worldwide",
+          "title": "Envío Mundial",
+          "description": "Exportación a cualquier destino"
+        }
+      ]
     },
     "logistics": {
       "title": "Opciones Logísticas",
@@ -129,12 +258,63 @@
       "air": "Flete Aéreo",
       "transporter": "Transportador",
       "transitTime": "Tiempo de Tránsito",
+      "seaDescription": "La opción más rentable para envíos grandes",
+      "airDescription": "La opción de entrega más rápida disponible",
+      "transporterDescription": "Transporte por carretera puerta a puerta",
       "insurance": "Seguro",
-      "preDelivery": "Verificación Pre-Entrega"
+      "preDelivery": "Verificación Pre-Entrega",
+      "timeUnits": {
+        "days": "días",
+        "weeks": "semanas"
+      }
+    },
+    "process": {
+      "title": "Nuestro Proceso Completo - Basado en 20 Años de Experiencia",
+      "steps": {
+        "chooseCar": {
+          "title": "Elige tu auto",
+          "optionA": "Opción A: Revisa nuestro stock",
+          "optionADesc": "Explora nuestros vehículos disponibles que están listos para exportación inmediata.",
+          "optionB": "Opción B: Elige de cualquier proveedor alemán",
+          "optionBDesc": "Selecciona un auto de cualquier proveedor en Alemania que ofrezca precio neto + IVA.",
+          "optionC": "Opción C: Habla con el vendedor",
+          "optionCDesc": "Obtén información y precio, luego infórmales que tu empresa socia alemana comprará el auto.",
+          "optionD": "Opción D: Contáctanos",
+          "optionDDesc": "Envíanos tus detalles, registro de empresa e ID. Dinos qué auto quieres comprar."
+        },
+        "checkOffer": {
+          "title": "A tu solicitud, verificamos la oferta (opcional)",
+          "preCheck": "Servicio de pre-verificación",
+          "preCheckDesc": "Podemos pre-verificar la oferta para verificar disponibilidad e identificar cualquier problema potencial. Si el auto ya está vendido, no disponible, o si no podemos recomendarlo (debido a propiedad poco clara o daños de accidente sospechados), no pagas nada.",
+          "physicalInspection": "Inspección física",
+          "physicalInspectionDesc": "Si no se encuentra nada sospechoso y quieres continuar, podemos inspeccionar físicamente el auto en el concesionario. Nuestra inspección toma un mínimo de 2 horas e incluye fotos en tiempo real.",
+          "expertise": "Nuestra Experiencia",
+          "expertiseDesc": "Tenemos 20 años de experiencia comprando, vendiendo y exportando autos deportivos y de lujo raros y exclusivos, que verificamos minuciosamente antes de comprar."
+        },
+        "contract": {
+          "title": "Contrato + Pago inicial",
+          "description": "Si querías una verificación y fue aprobada o aceptas comprar este auto sin verificación, te enviaremos un contrato de compra.",
+          "structure": "Estructura del Contrato",
+          "structureDesc": "El contrato será entre nosotros y tú. Compramos el auto del vendedor en total con IVA y tú lo compras de nosotros NET (sin IVA).",
+          "downPayment": "En algunos casos, podríamos pedirte que pagues 15% del precio de compra neto* como pago inicial después de firmar el contrato."
+        },
+        "transport": {
+          "title": "Transporte y Envío Internacional",
+          "description": "Puedes usar tu empresa de transporte preferida o pedirnos que te ayudemos a encontrar una.",
+          "ourService": "Nuestro Servicio de Transporte",
+          "ourServiceDesc": "Si lo solicitas: Podemos organizar, por una tarifa, transporte asegurado (máx. 1mil. EUR), para llevar tu nuevo auto a tu empresa de envío.",
+          "payment": "Antes de que el auto sea cargado para transporte, paga el saldo restante del precio de compra neto + 10% depósito de IVA (19% si eres un comprador privado o una empresa de menos de 3 años) a nosotros."
+        },
+        "importantNote": {
+          "title": "Nota Importante",
+          "description": "Tan pronto como puedas certificar, tu auto ha llegado a tu país y obtenemos una copia del registro del auto, inmediatamente te enviamos de vuelta el depósito de IVA."
+        }
+      }
     }
   },
   "stock": {
     "title": "Stock Disponible",
+    "subtitle": "Explora nuestra selección de vehículos premium disponibles para exportación",
     "filters": {
       "brand": "Marca",
       "year": "Año",
@@ -151,7 +331,24 @@
     "card": {
       "onRequest": "A Solicitud",
       "whatsapp": "WhatsApp nosotros sobre este auto",
-      "email": "Email nosotros sobre este auto"
+      "email": "Email nosotros sobre este auto",
+      "carPhoto": "Foto del Auto",
+      "noCarsFound": "No se encontraron autos que coincidan con sus criterios",
+      "specifications": "Especificaciones",
+      "description": "Descripción",
+      "brand": "Marca:",
+      "model": "Modelo:",
+      "year": "Año:",
+      "mileage": "Kilometraje:",
+      "fuel": "Combustible:",
+      "transmission": "Transmisión:",
+      "price": "Precio:",
+      "photo": "Foto"
+    },
+    "messages": {
+      "whatsappMessage": "Hola, estoy interesado en el",
+      "emailSubject": "Consulta sobre",
+      "emailBody": "Hola, estoy interesado en el"
     }
   },
   "faq": {
@@ -192,13 +389,70 @@
     ]
   },
   "about": {
-    "title": "Acerca de Nosotros",
-    "intro": "Servicio profesional de exportación de autos con años de experiencia",
-    "values": "Nuestros Valores",
-    "region": "Regiones Servidas",
-    "yearsExported": "Años de Experiencia en Exportación",
-    "compliance": "Cumplimiento y Certificaciones",
-    "partners": "Nuestros Socios"
+    "hero": {
+      "title": "Acerca de IV Export Service",
+      "subtitle": "Su socio de confianza en exportaciones de vehículos premium con más de 20 años de experiencia, entregando excelencia en cada transacción en todo el mundo."
+    },
+    "story": {
+      "title": "Nuestra Historia",
+      "description1": "IV EXPORT SERVICE (anteriormente DI-Auto) nació de una pasión por los automóviles, donde la experiencia y el conocimiento sobre autos se ha transmitido de generación en generación.",
+      "description2": "Hemos construido nuestra reputación en la confianza, experiencia y entrega exacta de lo que prometemos. Nuestro compromiso con la calidad y satisfacción del cliente nos ha convertido en un nombre líder en la industria de exportación automotriz."
+    },
+    "stats": {
+      "clients": "1000+",
+      "clientsLabel": "Clientes Felices",
+      "vehicles": "5000+",
+      "vehiclesLabel": "Vehículos Exportados",
+      "countries": "50+",
+      "countriesLabel": "Países Servidos",
+      "secure": "100%",
+      "secureLabel": "Transacciones Seguras"
+    },
+    "values": {
+      "title": "Nuestros Valores Fundamentales",
+      "trust": {
+        "title": "Confianza y Transparencia",
+        "description": "Creemos en la transparencia total en todos nuestros tratos, asegurando que sepa exactamente lo que está obteniendo."
+      },
+      "expertise": {
+        "title": "Conocimiento Experto",
+        "description": "Con décadas de experiencia, entendemos cada aspecto del proceso de exportación automotriz."
+      },
+      "quality": {
+        "title": "Garantía de Calidad",
+        "description": "Cada vehículo pasa por una inspección rigurosa para cumplir con nuestros altos estándares antes de la exportación."
+      },
+      "service": {
+        "title": "Servicio Excepcional",
+        "description": "Vamos más allá para asegurar su satisfacción completa durante todo el proceso."
+      }
+    },
+    "foundation": {
+      "title": "Nuestra Base Comercial",
+      "description": "Nuestro éxito se construye sobre tres pilares fundamentales que guían todo lo que hacemos:",
+      "pillars": [
+        "Inspección completa de vehículos y garantía de calidad",
+        "Transacciones financieras seguras y transparentes",
+        "Experiencia en logística y entrega mundial"
+      ]
+    },
+    "services": {
+      "title": "Lo Que Ofrecemos",
+      "description": "Desde la selección de vehículos hasta la entrega final, proporcionamos soluciones de extremo a extremo para sus necesidades de exportación automotriz.",
+      "features": [
+        "Sourcing e inspección de vehículos premium",
+        "Procesamiento seguro de pagos y documentación",
+        "Coordinación de envío y logística internacional",
+        "Soporte al cliente y asistencia 24/7"
+      ]
+    },
+    "cta": {
+      "title": "¿Listo para Comenzar Su Viaje de Exportación?",
+      "description": "Contacte a nuestros expertos hoy y permítanos ayudarle a encontrar el vehículo perfecto para exportar.",
+      "contact": "Ponerse en Contacto",
+      "phone": "Llamarnos",
+      "email": "Escribirnos"
+    }
   },
   "contact": {
     "title": "Contáctanos",
@@ -223,6 +477,23 @@
       "imprint": "Aviso Legal",
       "cookies": "Política de Cookies"
     }
+  },
+  "carSpecs": {
+    "year": "Año de producción:",
+    "mileage": "Kilometraje:",
+    "fuel": "Combustible:",
+    "power": "Potencia del motor:",
+    "engineSize": "Cilindrada:",
+    "doors": "Número de puertas:",
+    "seats": "Número de asientos:",
+    "gearbox": "Caja de cambios:",
+    "drive": "Transmisión:",
+    "body": "Carrocería:",
+    "color": "Color:",
+    "country": "País de origen:",
+    "firstRegistration": "Fecha de primera matriculación:",
+    "saleForm": "Forma de venta:",
+    "description": "Descripción del vehículo"
   },
   "common": {
     "loading": "Cargando...",

@@ -144,14 +144,14 @@ const Stock: React.FC = () => {
   };
 
   const handleWhatsApp = (car: Car) => {
-    const message = `Hi, I'm interested in the ${car.brand} ${car.model} ${car.year}`;
+    const message = `${t('stock.messages.whatsappMessage')} ${car.brand} ${car.model} ${car.year}`;
     const whatsappUrl = `https://wa.me/4917669495526?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
 
   const handleEmail = (car: Car) => {
-    const subject = `Inquiry about ${car.brand} ${car.model} ${car.year}`;
-    const body = `Hi, I'm interested in the ${car.brand} ${car.model} ${car.year}. Please provide more information.`;
+    const subject = `${t('stock.messages.emailSubject')} ${car.brand} ${car.model} ${car.year}`;
+    const body = `${t('stock.messages.emailBody')} ${car.brand} ${car.model} ${car.year}. Please provide more information.`;
     const mailtoUrl = `mailto:Iv.exportservice@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.open(mailtoUrl);
   };
@@ -165,7 +165,7 @@ const Stock: React.FC = () => {
             {t('stock.title')}
           </h1>
           <p className="text-xl text-gray-600">
-            Browse our selection of premium vehicles available for export
+            {t('stock.subtitle')}
           </p>
         </div>
 
@@ -221,17 +221,17 @@ const Stock: React.FC = () => {
               onClick={() => openCarModal(car)}
             >
               <div className="h-48 bg-gray-200 flex items-center justify-center">
-                <span className="text-gray-500">🚗 Car Photo</span>
+                <span className="text-gray-500">🚗 {t('stock.card.carPhoto')}</span>
               </div>
               <div className="p-4">
                 <h3 className="text-lg font-semibold text-gray-800 mb-2">
                   {car.brand} {car.model}
                 </h3>
                 <div className="grid grid-cols-2 gap-2 text-sm text-gray-600 mb-3">
-                  <div>Year: {car.year}</div>
-                  <div>Mileage: {car.mileage.toLocaleString()} km</div>
-                  <div>Fuel: {car.fuel}</div>
-                  <div>Transmission: {car.transmission}</div>
+                  <div>{t('stock.card.year')} {car.year}</div>
+                  <div>{t('stock.card.mileage')} {car.mileage.toLocaleString()} km</div>
+                  <div>{t('stock.card.fuel')} {car.fuel}</div>
+                  <div>{t('stock.card.transmission')} {car.transmission}</div>
                 </div>
                 <div className="text-lg font-bold text-blue-600">
                   {typeof car.price === 'number' 
@@ -246,7 +246,7 @@ const Stock: React.FC = () => {
 
         {filteredCars.length === 0 && (
           <div className="text-center py-12">
-            <p className="text-gray-500 text-lg">No cars found matching your criteria</p>
+            <p className="text-gray-500 text-lg">{t('stock.card.noCarsFound')}</p>
           </div>
         )}
       </div>
@@ -271,7 +271,7 @@ const Stock: React.FC = () => {
               {/* Photo Gallery */}
               <div className="relative mb-6">
                 <div className="h-64 bg-gray-200 flex items-center justify-center rounded-lg">
-                  <span className="text-gray-500">🚗 Photo {currentPhotoIndex + 1}</span>
+                  <span className="text-gray-500">🚗 {t('stock.card.photo')} {currentPhotoIndex + 1}</span>
                 </div>
                 {selectedCar.photos.length > 1 && (
                   <>
@@ -294,22 +294,22 @@ const Stock: React.FC = () => {
               {/* Car Details */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div>
-                  <h3 className="font-semibold text-gray-800 mb-2">Specifications</h3>
+                  <h3 className="font-semibold text-gray-800 mb-2">{t('stock.card.specifications')}</h3>
                   <div className="space-y-2 text-gray-600">
-                    <div>Brand: {selectedCar.brand}</div>
-                    <div>Model: {selectedCar.model}</div>
-                    <div>Year: {selectedCar.year}</div>
-                    <div>Mileage: {selectedCar.mileage.toLocaleString()} km</div>
-                    <div>Fuel: {selectedCar.fuel}</div>
-                    <div>Transmission: {selectedCar.transmission}</div>
-                    <div>Price: {typeof selectedCar.price === 'number' 
+                    <div>{t('stock.card.brand')} {selectedCar.brand}</div>
+                    <div>{t('stock.card.model')} {selectedCar.model}</div>
+                    <div>{t('stock.card.year')} {selectedCar.year}</div>
+                    <div>{t('stock.card.mileage')} {selectedCar.mileage.toLocaleString()} km</div>
+                    <div>{t('stock.card.fuel')} {selectedCar.fuel}</div>
+                    <div>{t('stock.card.transmission')} {selectedCar.transmission}</div>
+                    <div>{t('stock.card.price')} {typeof selectedCar.price === 'number' 
                       ? `€${selectedCar.price.toLocaleString()}` 
                       : t('stock.card.onRequest')
                     }</div>
                   </div>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-800 mb-2">Description</h3>
+                  <h3 className="font-semibold text-gray-800 mb-2">{t('stock.card.description')}</h3>
                   <p className="text-gray-600">{selectedCar.description}</p>
                 </div>
               </div>

@@ -44,9 +44,10 @@ export default function SiteHeader() {
         xl:w-[1200px] mx-auto text-17 font-semibold overflow-visible bg-white/95 backdrop-blur-md shadow-sm'>
 
             {/* Logo and Company Name */}
-            <div className='block w-full max-w-xs my-1 mx-auto py-1 px-0
-                sm:max-w-none sm:inline-block sm:w-[450px] sm:inline-block sm:ml-8
-                lg:p-0 lg:my-0 lg:mb-4'
+            <div className={`block w-full max-w-xs my-1 mx-auto py-1 px-0 pr-20
+                sm:max-w-none sm:inline-block sm:w-[450px] sm:inline-block sm:ml-8 sm:pr-24
+                lg:p-0 lg:my-0 lg:mb-4 lg:pr-28
+                ${isRTL ? 'sm:ml-0 sm:mr-8 lg:pr-0 lg:pl-28' : ''}`}
             >
                 <NavLink to='/' style={{color: 'black'}}>
                     <div className='flex items-center justify-center sm:justify-start gap-3'>

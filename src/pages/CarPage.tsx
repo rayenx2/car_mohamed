@@ -3,6 +3,7 @@ import ImageSlider from '../components/ImageSlider';
 import Loader from '../components/Loader';
 import { useParams } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const strapiURL = 'https://kokpit.alfamotors.pl/';
 const apiURL = 'https://kokpit.alfamotors.pl/api/cars?sort=date&pagination[start]=12&pagination[limit]=100&populate=* ';
@@ -75,6 +76,7 @@ interface Image {
 
 export default function CarPage() {
     const { id } = useParams();
+    const { t } = useLanguage();
     // IDs of cars are not like the order due to deleted records (e.g. first record from db has ID = 12). This why the program uses pagination
     let pagination: number = Number(id) - 20; // TS doesn't accept substracting number from string
     if (pagination < 0) pagination = 0;
@@ -132,66 +134,66 @@ export default function CarPage() {
             '>
                 <tbody className='block width-full'>
                     <tr className="CarPage__table__body__row border-0"> {/* The first row must be without border */}
-                        <td className="CarPage__table__body__row__cell-first">Rok produkcji:</td>
+                        <td className="CarPage__table__body__row__cell-first">{t('carSpecs.year')}</td>
                         <td className="CarPage__table__body__row__cell-second">{foundCar[1].attributes.year}</td>
                     </tr>
                     <tr className="CarPage__table__body__row">
-                        <td className="CarPage__table__body__row__cell-first">Przebieg:</td>
+                        <td className="CarPage__table__body__row__cell-first">{t('carSpecs.mileage')}</td>
                         <td className="CarPage__table__body__row__cell-second">{foundCar[1].attributes.mileage} km</td>
                     </tr>
                     <tr className="CarPage__table__body__row">
-                        <td className="CarPage__table__body__row__cell-first">Paliwo:</td>
+                        <td className="CarPage__table__body__row__cell-first">{t('carSpecs.fuel')}</td>
                         <td className="CarPage__table__body__row__cell-second">{foundCar[1].attributes.fuel}</td>
                     </tr>
                     <tr className="CarPage__table__body__row">
-                        <td className="CarPage__table__body__row__cell-first">Moc silnika:</td>
+                        <td className="CarPage__table__body__row__cell-first">{t('carSpecs.power')}</td>
                         <td className="CarPage__table__body__row__cell-second">{foundCar[1].attributes.power} KM</td>
                     </tr>
                     <tr className="CarPage__table__body__row">
-                        <td className="CarPage__table__body__row__cell-first">Poj. silnika:</td>
+                        <td className="CarPage__table__body__row__cell-first">{t('carSpecs.engineSize')}</td>
                         <td className="CarPage__table__body__row__cell-second">{foundCar[1].attributes.engine_size}</td>
                     </tr>
                     <tr className="CarPage__table__body__row">
-                        <td className="CarPage__table__body__row__cell-first">Liczba drzwi:</td>
+                        <td className="CarPage__table__body__row__cell-first">{t('carSpecs.doors')}</td>
                         <td className="CarPage__table__body__row__cell-second">{foundCar[1].attributes.doors}</td>
                     </tr>
                     <tr className="CarPage__table__body__row">
-                        <td className="CarPage__table__body__row__cell-first">Liczba miejsc:</td>
+                        <td className="CarPage__table__body__row__cell-first">{t('carSpecs.seats')}</td>
                         <td className="CarPage__table__body__row__cell-second">{foundCar[1].attributes.seats}</td>
                     </tr>
                     <tr className="CarPage__table__body__row">
-                        <td className="CarPage__table__body__row__cell-first">Skrzynia biegów:</td>
+                        <td className="CarPage__table__body__row__cell-first">{t('carSpecs.gearbox')}</td>
                         <td className="CarPage__table__body__row__cell-second">{foundCar[1].attributes.gearbox}</td>
                     </tr>
                     <tr className="CarPage__table__body__row">
-                        <td className="CarPage__table__body__row__cell-first">Napęd:</td>
+                        <td className="CarPage__table__body__row__cell-first">{t('carSpecs.drive')}</td>
                         <td className="CarPage__table__body__row__cell-second">{foundCar[1].attributes.drive}</td>
                     </tr>
                     <tr className="CarPage__table__body__row">
-                        <td className="CarPage__table__body__row__cell-first">Nadwozie:</td>
+                        <td className="CarPage__table__body__row__cell-first">{t('carSpecs.body')}</td>
                         <td className="CarPage__table__body__row__cell-second">{foundCar[1].attributes.body}</td>
                     </tr>
                     <tr className="CarPage__table__body__row">
-                        <td className="CarPage__table__body__row__cell-first">Kolor:</td>
+                        <td className="CarPage__table__body__row__cell-first">{t('carSpecs.color')}</td>
                         <td className="CarPage__table__body__row__cell-second">{foundCar[1].attributes.color}</td>
                     </tr>
                     <tr className="CarPage__table__body__row">
-                        <td className="CarPage__table__body__row__cell-first">Country of origin:</td>
+                        <td className="CarPage__table__body__row__cell-first">{t('carSpecs.country')}</td>
                         <td className="CarPage__table__body__row__cell-second">{foundCar[1].attributes.country}</td>
                     </tr>
                     <tr className="CarPage__table__body__row">
-                        <td className="CarPage__table__body__row__cell-first">First registration date:</td>
+                        <td className="CarPage__table__body__row__cell-first">{t('carSpecs.firstRegistration')}</td>
                         <td className="CarPage__table__body__row__cell-second">{foundCar[1].attributes.first_registration}</td>
                     </tr>
                     <tr className="CarPage__table__body__row">
-                        <td className="CarPage__table__body__row__cell-first">Sale form:</td>
+                        <td className="CarPage__table__body__row__cell-first">{t('carSpecs.saleForm')}</td>
                         <td className="CarPage__table__body__row__cell-second">{foundCar[1].attributes.vin}</td>
                     </tr>
                 </tbody>
             </table>
 
             <div className='CarPage__description relative top-32 w-90vw max-w-[1080px] mx-auto bg-gray-100 shadow-car-page-shadow'>
-                <div className="pt-3 pb-7 font-medium text-3xl text-center underline underline-offset-[12px]">Vehicle description</div>
+                <div className="pt-3 pb-7 font-medium text-3xl text-center underline underline-offset-[12px]">{t('carSpecs.description')}</div>
                 <ReactMarkdown className='px-2'>
                     {foundCar[1].attributes.description}
                 </ReactMarkdown>

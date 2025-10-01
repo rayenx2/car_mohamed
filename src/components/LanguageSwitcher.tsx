@@ -1,119 +1,56 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { createPortal } from 'react-dom';
+import React from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
+import ukFlag from '../image/Flag_of_the_United_Kingdom..png';
+import saudiFlag from '../image/Flag_of_Saudi_Arabia.svg.png';
+import franceFlag from '../image/Flag_of_France.svg.png';
+import spainFlag from '../image/Flag_of_Spain.svg.png';
 
 const LanguageSwitcher: React.FC = () => {
-  const { language, setLanguage, isRTL } = useLanguage();
-  const [isOpen, setIsOpen] = useState(false);
-  const [dropdownPosition, setDropdownPosition] = useState({ top: 0, left: 0, width: 0 });
-  const buttonRef = useRef<HTMLButtonElement>(null);
-  const dropdownRef = useRef<HTMLDivElement>(null);
-
-  // Calculate dropdown position when opening
-  useEffect(() => {
-    if (isOpen && buttonRef.current) {
-      const rect = buttonRef.current.getBoundingClientRect();
-      setDropdownPosition({
-        top: rect.bottom + window.scrollY + 8,
-        left: rect.right - 192, // 192px = w-48 (48 * 4px)
-        width: rect.width
-      });
-    }
-  }, [isOpen]);
-
-  // Close dropdown when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (buttonRef.current && !buttonRef.current.contains(event.target as Node) &&
-          dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        setIsOpen(false);
-      }
-    };
-
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
+  const { language, setLanguage } = useLanguage();
 
   const languages = [
-    { code: 'en', name: 'ENGLISH', flag: '🇺🇸' },
-    { code: 'ar', name: 'العربية', flag: '🇸🇦' },
-    { code: 'fr', name: 'FRANÇAIS', flag: '🇫🇷' },
-    { code: 'es', name: 'ESPAÑOL', flag: '🇪🇸' },
+    { code: 'en', name: 'En', flag: ukFlag },
+    { code: 'ar', name: 'Ar', flag: saudiFlag },
+    { code: 'fr', name: 'Fr', flag: franceFlag },
+    { code: 'es', name: 'Es', flag: spainFlag },
   ] as const;
-
-  const currentLanguage = languages.find(lang => lang.code === language);
 
   const handleLanguageChange = (langCode: 'en' | 'ar' | 'fr' | 'es') => {
     console.log('Language change requested:', langCode);
     setLanguage(langCode);
-    setIsOpen(false);
     // Force a small delay to ensure state updates
     setTimeout(() => {
       console.log('Language changed to:', langCode);
     }, 100);
   };
 
-  const renderDropdown = () => {
-    if (!isOpen) return null;
-
-    return createPortal(
-      <div
-        ref={dropdownRef}
-        className="fixed w-64 bg-white border border-gray-200 rounded-2xl shadow-2xl z-[999999] overflow-hidden"
-        style={{
-          top: dropdownPosition.top,
-          left: dropdownPosition.left,
-        }}
-      >
-        {languages.map((lang) => (
-          <button
-            key={lang.code}
-            onClick={() => handleLanguageChange(lang.code)}
-            className={`w-full flex items-center justify-between px-6 py-4 text-left hover:bg-gray-50 transition-all duration-200 ${
-              language === lang.code ? 'bg-gray-50' : ''
-            }`}
-          >
-            <div className="flex items-center space-x-4">
-              <span className="text-2xl flex-shrink-0 w-8 text-center">{lang.flag}</span>
-              <span className="text-base font-bold text-gray-800 tracking-wide">{lang.name}</span>
-            </div>
-            {language === lang.code && (
-              <svg className="w-6 h-6 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-              </svg>
-            )}
-          </button>
-        ))}
-      </div>,
-      document.body
-    );
-  };
-
   return (
-    <div className="relative">
-      <button
-        ref={buttonRef}
-        onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center space-x-3 px-4 py-3 rounded-xl border border-gray-300 bg-white hover:bg-gray-50 hover:border-gray-400 transition-all duration-200 shadow-lg hover:shadow-xl min-w-[120px] justify-between"
-        aria-label="Select language"
-      >
-        <div className="flex items-center space-x-3">
-          <span className="text-xl flex-shrink-0 w-6 text-center">{currentLanguage?.flag}</span>
-          <span className="text-sm font-bold text-gray-800 tracking-wide">
-            {currentLanguage?.code.toUpperCase()}
-          </span>
-        </div>
-        <svg
-          className={`w-4 h-4 transition-transform flex-shrink-0 text-gray-500 ${isOpen ? 'rotate-180' : ''}`}
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-        </svg>
-      </button>
-
-      {renderDropdown()}
+    <div className="px-4 py-2">
+      <div className="flex items-center space-x-1 rtl:space-x-reverse">
+        {languages.map((lang, index) => (
+          <React.Fragment key={lang.code}>
+            <button
+              onClick={() => handleLanguageChange(lang.code)}
+              className={`flex items-center space-x-2 px-2 py-1 rounded transition-colors duration-200 ${
+                language === lang.code 
+                  ? 'text-gray-900 bg-gray-100 border border-gray-300' 
+                  : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
+              }`}
+              aria-label={`Switch to ${lang.name}`}
+            >
+              <img 
+                src={lang.flag} 
+                alt={`${lang.name} flag`}
+                className="w-5 h-4 object-cover rounded-sm"
+              />
+              <span className="text-sm font-medium">{lang.name}</span>
+            </button>
+            {index < languages.length - 1 && (
+              <span className="text-gray-400 text-sm">/</span>
+            )}
+          </React.Fragment>
+        ))}
+      </div>
     </div>
   );
 };

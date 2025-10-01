@@ -254,8 +254,18 @@
     @apply relative;
 }
 
+/* Language switcher container positioning */
 .language-switcher-container {
-    @apply absolute top-2 right-2 sm:top-3 sm:right-3 lg:top-4 lg:right-4 z-[9999];
+    position: absolute !important;
+    top: 1rem !important;
+    right: 1rem !important;
+    z-index: 50 !important;
+}
+
+/* RTL support for language switcher */
+[dir="rtl"] .language-switcher-container {
+    right: auto !important;
+    left: 1rem !important;
 }
 
 /* Ensure dropdown appears above everything */
