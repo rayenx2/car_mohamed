@@ -254,18 +254,47 @@
     @apply relative;
 }
 
-/* Language switcher container positioning */
-.language-switcher-container {
-    position: absolute !important;
-    top: 1rem !important;
-    right: 1rem !important;
-    z-index: 50 !important;
+/* Language switcher is now handled inline in the header */
+
+/* Mobile Navigation Styles */
+.siteHeader__navbar--hidden {
+    @apply hidden;
 }
 
-/* RTL support for language switcher */
-[dir="rtl"] .language-switcher-container {
-    right: auto !important;
-    left: 1rem !important;
+.siteHeader__navbar--shown {
+    @apply block;
+}
+
+.siteHeader__li {
+    @apply block w-full text-center py-3 px-4 border-b border-gray-200 last:border-b-0;
+}
+
+.siteHeader__li__span {
+    @apply text-lg font-medium;
+}
+
+/* Desktop navigation styles */
+@media (min-width: 1024px) {
+    .siteHeader__navbar--hidden {
+        @apply block opacity-100;
+    }
+    
+    .siteHeader__li {
+        @apply inline-block w-auto text-center py-2 px-4 border-b-0 mx-4 transition-colors;
+    }
+    
+    .siteHeader__li__span {
+        @apply text-base;
+    }
+}
+
+/* Mobile-optimized hero buttons */
+.btn-hero-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-lg font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors duration-200 shadow-lg hover:shadow-xl;
+}
+
+.btn-hero-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-lg font-semibold text-blue-600 bg-white border-2 border-blue-600 rounded-lg hover:bg-blue-50 transition-colors duration-200 shadow-lg hover:shadow-xl;
 }
 
 /* Ensure dropdown appears above everything */

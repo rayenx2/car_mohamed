@@ -33,18 +33,18 @@ const Home: React.FC = () => {
   }
 
   return (
-    <div className="pt-20">
+    <div className="pt-16 sm:pt-20">
       {/* Hero Section - Based on Image 2 Design */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-green-50 py-20">
+      <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-green-50 py-12 sm:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[600px]">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[400px] sm:min-h-[500px] lg:min-h-[600px]">
             {/* Left Content Area */}
-            <div className="space-y-8">
-              <div className="space-y-6">
-                                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+            <div className="space-y-6 sm:space-y-8">
+              <div className="space-y-4 sm:space-y-6">
+                                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
                    {t('home.hero.headline')}
                  </h1>
-                 <p className="text-xl text-gray-600 leading-relaxed">
+                 <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
                    {t('home.hero.subheadline')}
                  </p>
                 
@@ -62,12 +62,12 @@ const Home: React.FC = () => {
               </div>
 
               {/* CTAs */}
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <NavLink
                   to="/stock"
-                  className="btn-hero-primary"
+                  className="btn-hero-primary w-full sm:w-auto"
                 >
-                  <svg className="h-5 w-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="h-4 w-4 sm:h-5 sm:w-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                   </svg>
                   {t('home.hero.cta.checkStock')}
@@ -75,7 +75,7 @@ const Home: React.FC = () => {
                 
                 <button
                   onClick={handleWhatsApp}
-                  className="btn-hero-secondary"
+                  className="btn-hero-secondary w-full sm:w-auto"
                 >
                   <svg className="h-5 w-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M20.52 3.48A11.94 11.94 0 0 0 12.02 0C5.39 0 .02 5.37.02 12c0 2.12.55 4.14 1.6 5.94L0 24l6.22-1.62c1.73.95 3.7 1.45 5.78 1.45 6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.35ZM12 22c-1.9 0-3.69-.5-5.27-1.45l-.38-.22-3.12.81.83-3.04-.25-.4A9.92 9.92 0 0 1 2 12C2 6.49 6.49 2 12 2s10 4.49 10 10-4.49 10-10 10Zm5.35-7.42c-.29-.15-1.7-.84-1.97-.94-.27-.1-.47-.15-.68.15-.2.29-.78.94-.95 1.14-.17.2-.35.22-.64.07-.29-.15-1.2-.44-2.28-1.41-.84-.75-1.41-1.67-1.58-1.95-.17-.29-.02-.45.13-.6.13-.13.29-.35.44-.52.15-.17.2-.29.29-.49.1-.2.05-.37-.02-.52-.07-.15-.68-1.64-.94-2.25-.24-.58-.48-.5-.68-.51h-.58c-.2 0-.52.07-.79.37-.27.29-1.04 1.02-1.04 2.49s1.07 2.88 1.22 3.09c.15.2 2.11 3.22 5.11 4.51.71.31 1.26.49 1.69.63.71.23 1.36.2 1.88.12.57-.08 1.7-.7 1.94-1.38.24-.69.24-1.28.17-1.41-.07-.13-.26-.2-.55-.35Z" />
@@ -127,60 +127,60 @@ const Home: React.FC = () => {
        </section>
 
        {/* DI-Auto Process Explanation */}
-       <section className="py-20 bg-white">
+       <section className="py-12 sm:py-16 lg:py-20 bg-white">
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-           <div className="text-center mb-16">
-             <h2 className="text-3xl font-bold text-gray-900 mb-4">
+           <div className="text-center mb-12 sm:mb-16">
+             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
                {t('home.processExplanation.title')}
              </h2>
-             <p className="text-lg text-gray-600 max-w-4xl mx-auto">
+             <p className="text-base sm:text-lg text-gray-600 max-w-4xl mx-auto">
                {t('home.processExplanation.subtitle')}
              </p>
            </div>
 
-           <div className="grid md:grid-cols-2 gap-12 items-center">
-             <div className="space-y-6">
-               <div className="bg-blue-50/40 p-6 rounded-lg">
-                 <h3 className="text-xl font-semibold text-blue-900 mb-3">{t('home.processExplanation.guarantees.condition.title')}</h3>
-                 <p className="text-blue-800">
+           <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
+             <div className="space-y-4 sm:space-y-6">
+               <div className="bg-blue-50/40 p-4 sm:p-6 rounded-lg">
+                 <h3 className="text-lg sm:text-xl font-semibold text-blue-900 mb-3">{t('home.processExplanation.guarantees.condition.title')}</h3>
+                 <p className="text-sm sm:text-base text-blue-800">
                    {t('home.processExplanation.guarantees.condition.description')}
                  </p>
                </div>
                
-               <div className="bg-green-50/40 p-6 rounded-lg">
-                 <h3 className="text-xl font-semibold text-green-900 mb-3">{t('home.processExplanation.guarantees.security.title')}</h3>
-                 <p className="text-green-800">
+               <div className="bg-green-50/40 p-4 sm:p-6 rounded-lg">
+                 <h3 className="text-lg sm:text-xl font-semibold text-green-900 mb-3">{t('home.processExplanation.guarantees.security.title')}</h3>
+                 <p className="text-sm sm:text-base text-green-800">
                    {t('home.processExplanation.guarantees.security.description')}
                  </p>
                </div>
 
-               <div className="bg-purple-50/40 p-6 rounded-lg">
-                 <h3 className="text-xl font-semibold text-purple-900 mb-3">{t('home.processExplanation.guarantees.private.title')}</h3>
-                 <p className="text-purple-800">
+               <div className="bg-purple-50/40 p-4 sm:p-6 rounded-lg">
+                 <h3 className="text-lg sm:text-xl font-semibold text-purple-900 mb-3">{t('home.processExplanation.guarantees.private.title')}</h3>
+                 <p className="text-sm sm:text-base text-purple-800">
                    {t('home.processExplanation.guarantees.private.description')}
                  </p>
                </div>
              </div>
 
-             <div className="space-y-6">
+             <div className="space-y-6 sm:space-y-8">
                <div className="text-center">
-                 <div className="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                   <svg className="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                 <div className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                   <svg className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                    </svg>
                  </div>
-                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{t('home.processExplanation.benefits.netPrice.title')}</h3>
-                 <p className="text-gray-600">{t('home.processExplanation.benefits.netPrice.description')}</p>
+                 <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">{t('home.processExplanation.benefits.netPrice.title')}</h3>
+                 <p className="text-sm sm:text-base text-gray-600">{t('home.processExplanation.benefits.netPrice.description')}</p>
                </div>
 
                <div className="text-center">
-                 <div className="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                   <svg className="w-12 h-12 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                 <div className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                   <svg className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                    </svg>
                  </div>
-                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{t('home.processExplanation.benefits.contact.title')}</h3>
-                 <p className="text-gray-600">{t('home.processExplanation.benefits.contact.description')}</p>
+                 <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">{t('home.processExplanation.benefits.contact.title')}</h3>
+                 <p className="text-sm sm:text-base text-gray-600">{t('home.processExplanation.benefits.contact.description')}</p>
                </div>
              </div>
            </div>
