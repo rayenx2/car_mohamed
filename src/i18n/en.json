@@ -1,4 +1,14 @@
 {
+  "section": {
+    "cta": {
+      "question": "Still have questions? We are here to help."
+    }
+  },
+  "cta": {
+    "whatsapp": {
+      "action": "Chat with us"
+    }
+  },
   "nav": {
     "home": "Home",
     "services": "Services",
@@ -126,17 +136,17 @@
         "description2": "The contract will be between us and you. We buy the car from the seller in full with VAT and you buy from us NET (without VAT).",
         "description3": "In some cases we might ask you to pay 15% of the net purchase price* as down payment after you signed the contract."
       },
-        "step4": {
-          "title": "Transport & International Shipping",
-          "description1": "You can use your preferred transport company or ask us to help to find one.",
-          "description2": "If you request: We can organize, for a fee, an insured transport (max 1mil. EUR), to bring your new car to your shipping company.",
-          "description3": "Before the car is loaded for transport, pay the remaining balance of the net purchase price +10% VAT deposit (19% if you are a private buyer or company younger than 3 years) to us.",
-          "button": "See price list",
-          "importantNote": {
-            "title": "Important Note",
-            "description": "As soon as you can certify, your car has arrived in your country and we get a copy of the car's registration, we immediately send you the VAT deposit back."
-          }
+      "step4": {
+        "title": "Transport & International Shipping",
+        "description1": "You can use your preferred transport company or ask us to help to find one.",
+        "description2": "If you request: We can organize, for a fee, an insured transport (max 1mil. EUR), to bring your new car to your shipping company.",
+        "description3": "Before the car is loaded for transport, pay the remaining balance of the net purchase price +10% VAT deposit (19% if you are a private buyer or company younger than 3 years) to us.",
+        "button": "See price list",
+        "importantNote": {
+          "title": "Important Note",
+          "description": "As soon as you can certify, your car has arrived in your country and we get a copy of the car's registration, we immediately send you the VAT deposit back."
         }
+      }
     },
     "whoWeServe": {
       "title": "Who We Serve",
@@ -381,6 +391,18 @@
   "stock": {
     "title": "Available Stock",
     "subtitle": "Browse our selection of premium vehicles available for export",
+    "availability": {
+      "message": "Our inventory is constantly moving. Contact us for the latest list."
+    },
+    "contact": {
+      "title": "Interested in our stock?",
+      "description": "For the most up-to-date availability and exclusive offers, please contact us directly.",
+      "whatsapp": "Chat on WhatsApp",
+      "email": "Email Us"
+    },
+    "response": {
+      "time": "We typically reply within a few minutes."
+    },
     "filters": {
       "brand": "Brand",
       "year": "Year",

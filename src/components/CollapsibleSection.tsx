@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { gsap } from 'gsap';
-import { ChevronDown } from 'lucide-react';
+import { FaChevronDown } from 'react-icons/fa';
 
 interface CollapsibleSectionProps {
   title: string;
@@ -70,11 +70,11 @@ const CollapsibleSection: React.FC<CollapsibleSectionProps> = ({
           <h3 className="text-lg font-semibold text-gray-800 text-left">{title}</h3>
         </div>
         <div ref={chevronRef} className="flex-shrink-0">
-          <ChevronDown className="w-5 h-5 text-gray-600" />
+          <FaChevronDown className="w-5 h-5 text-gray-600" />
         </div>
       </button>
-      
-      <div 
+
+      <div
         ref={contentRef}
         className="overflow-hidden"
         style={{ height: defaultExpanded ? 'auto' : (isExpanded ? 'auto' : 0) }}

@@ -2,7 +2,7 @@ import { useEffect, useState, useRef, useCallback } from 'react';
 import { useLocation, NavLink } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 import LanguageSwitcher from './LanguageSwitcher';
-import menuBtn from '../assets/siteHeader/menuBtn.png';    
+import menuBtn from '../assets/siteHeader/menuBtn.png';
 
 export default function SiteHeader() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -12,11 +12,19 @@ export default function SiteHeader() {
     const buttonRef = useRef<HTMLButtonElement>(null);
 
     function toggleMenu() {
-        setMenuOpen(!menuOpen);
+        const isOpen = !menuOpen;
+        setMenuOpen(isOpen);
+        // Prevent scrolling when menu is open
+        if (isOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
     }
 
     const hideMenu = useCallback(() => {
         setMenuOpen(false);
+        document.body.style.overflow = 'unset';
     }, []);
 
     // useEffect below closes menu whenever sth not being NavBar is clicked
@@ -30,9 +38,9 @@ export default function SiteHeader() {
                 }
             }
         }
-        
+
         document.addEventListener('mousedown', handler);
-        
+
         return () => {
             document.removeEventListener('mousedown', handler);
         };
@@ -45,18 +53,18 @@ export default function SiteHeader() {
                 <div className='flex items-center justify-between py-4'>
                     {/* Logo and Company Name */}
                     <div className='flex items-center gap-3 flex-shrink-0'>
-                        <NavLink to='/' style={{color: 'black'}}>
+                        <NavLink to='/' style={{ color: 'black' }}>
                             <div className='flex items-center gap-3'>
-                                <img src={encodeURI('/WhatsApp Image 2025-08-19 à 16.31.08_eeee4154.jpg')} alt='IV Export Service logo' className='h-8 sm:h-10 w-auto'
-                                     onError={(e) => {
-                                         const img = e.currentTarget as HTMLImageElement;
-                                         if (!img.dataset.fallbackTried) {
-                                             img.dataset.fallbackTried = '1';
-                                             img.src = '/iv-export-logo.png';
-                                         } else {
-                                             img.src = '/logo-black.svg';
-                                         }
-                                     }} />
+                                <img src={encodeURI('/WhatsApp Image 2025-08-19 à 16.31.08_eeee4154.jpg')} alt='IV Export Service logo' className='h-20 sm:h-24 lg:h-32 w-auto'
+                                    onError={(e) => {
+                                        const img = e.currentTarget as HTMLImageElement;
+                                        if (!img.dataset.fallbackTried) {
+                                            img.dataset.fallbackTried = '1';
+                                            img.src = '/iv-export-logo.png';
+                                        } else {
+                                            img.src = '/logo-black.svg';
+                                        }
+                                    }} />
                                 <div className='hidden sm:block'>
                                     <h2 className='font-bebasFont text-xl sm:text-2xl lg:text-3xl font-thin text-gray-900'>IV EXPORT SERVICE</h2>
                                     <p className='font-bebasFont font-thin text-sm lg:text-base text-gray-600'>International Vehicle Export</p>
@@ -66,7 +74,7 @@ export default function SiteHeader() {
                     </div>
 
                     {/* Mobile Menu Button */}
-                    <button 
+                    <button
                         className='lg:hidden p-2 rounded-md hover:bg-gray-100 transition-colors'
                         onClick={toggleMenu}
                         ref={buttonRef}
@@ -111,20 +119,20 @@ export default function SiteHeader() {
                                 <span className={`siteHeader__li__span hover:text-blue-600 transition-colors ${location.pathname === '/' ? 'text-blue-600 font-semibold' : 'text-gray-700'}`}>{t('nav.home')}</span>
                             </li>
                         </NavLink>
-                        <NavLink onClick={() => window.innerWidth < 1024 && hideMenu()} to='/about' > 
+                        <NavLink onClick={() => window.innerWidth < 1024 && hideMenu()} to='/about' >
                             <li className='siteHeader__li lg:mx-4 lg:py-2 lg:transition-colors'>
                                 <span className={`siteHeader__li__span  ${location.pathname === '/about' && 'text-gray-300'}`}>{t('nav.about')}</span>
                             </li>
                         </NavLink>
-                        <NavLink onClick={() => window.innerWidth < 1024 && hideMenu()} to='/stock' > 
+                        <NavLink onClick={() => window.innerWidth < 1024 && hideMenu()} to='/stock' >
                             <li className='siteHeader__li lg:mx-4 lg:py-2 lg:transition-colors'>
                                 <span className={`siteHeader__li__span  ${location.pathname === '/stock' && 'text-gray-300'}`}>{t('nav.stock')}</span>
                             </li>
                         </NavLink>
-                        <NavLink onClick={() => window.innerWidth < 1024 && hideMenu()} to='/services' > 
-                             <li className='siteHeader__li lg:mx-4 lg:py-2 lg:transition-colors'>
-                                 <span className={`siteHeader__li__span  ${location.pathname === '/services' && 'text-gray-300'}`}>{t('nav.services')}</span>
-                             </li>
+                        <NavLink onClick={() => window.innerWidth < 1024 && hideMenu()} to='/services' >
+                            <li className='siteHeader__li lg:mx-4 lg:py-2 lg:transition-colors'>
+                                <span className={`siteHeader__li__span  ${location.pathname === '/services' && 'text-gray-300'}`}>{t('nav.services')}</span>
+                            </li>
                         </NavLink>
                     </ul>
                 </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { FaShip, FaPlane, FaTruck, FaShieldAlt, FaCheckCircle, FaFileAlt, FaGlobe, FaCar, FaSearch, FaFileContract, FaShippingFast } from 'react-icons/fa';
+import IconContainer from '../components/design-system/IconContainer';
 
 const Services: React.FC = () => {
   const { t, getArray, isLoading } = useLanguage();
@@ -36,14 +37,14 @@ const Services: React.FC = () => {
           <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">
             {t('services.scenarios.title')}
           </h2>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* New vs Used */}
             <div className="space-y-6">
               <h3 className="text-2xl font-semibold text-center text-gray-800 mb-8">
                 {t('services.scenarios.new')} vs {t('services.scenarios.used')}
               </h3>
-              
+
               <div className="bg-blue-50/40 p-6 rounded-lg">
                 <h4 className="text-lg font-medium text-center text-blue-900 mb-4">
                   {t('services.scenarios.new')}
@@ -56,7 +57,7 @@ const Services: React.FC = () => {
                   ))}
                 </ul>
               </div>
-              
+
               <div className="bg-green-50/40 p-6 rounded-lg">
                 <h4 className="text-lg font-medium text-center text-green-900 mb-4">
                   {t('services.scenarios.used')}
@@ -76,7 +77,7 @@ const Services: React.FC = () => {
               <h3 className="text-2xl font-semibold text-center text-gray-800 mb-8">
                 {t('services.scenarios.private')} vs {t('services.scenarios.commercial')}
               </h3>
-              
+
               <div className="bg-purple-50/40 p-6 rounded-lg">
                 <h4 className="text-lg font-medium text-center text-purple-900 mb-4">
                   {t('services.scenarios.private')}
@@ -87,7 +88,7 @@ const Services: React.FC = () => {
                   ))}
                 </ul>
               </div>
-              
+
               <div className="bg-orange-50/40 p-6 rounded-lg">
                 <h4 className="text-lg font-medium text-center text-orange-900 mb-4">
                   {t('services.scenarios.commercial')}
@@ -107,11 +108,11 @@ const Services: React.FC = () => {
           <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">
             {t('services.logistics.title')}
           </h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-blue-50/40 rounded-lg p-8 text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <FaShip className="text-2xl text-blue-600" />
+              <div className="flex justify-center mb-6">
+                <IconContainer icon={<FaShip />} variant="primary" size="lg" />
               </div>
               <h3 className="text-xl font-semibold mb-3 text-blue-900">
                 {t('services.logistics.sea')}
@@ -123,10 +124,10 @@ const Services: React.FC = () => {
                 {t('services.logistics.transitTime')}: 3-6 weeks
               </div>
             </div>
-            
+
             <div className="bg-green-50/40 rounded-lg p-8 text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <FaPlane className="text-2xl text-green-600" />
+              <div className="flex justify-center mb-6">
+                <IconContainer icon={<FaPlane />} variant="whatsapp" size="lg" />
               </div>
               <h3 className="text-xl font-semibold mb-3 text-green-900">
                 {t('services.logistics.air')}
@@ -138,10 +139,10 @@ const Services: React.FC = () => {
                 {t('services.logistics.transitTime')}: 3-7 days
               </div>
             </div>
-            
+
             <div className="bg-orange-50/40 rounded-lg p-8 text-center">
-              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <FaTruck className="text-2xl text-orange-600" />
+              <div className="flex justify-center mb-6">
+                <IconContainer icon={<FaTruck />} variant="secondary" size="lg" />
               </div>
               <h3 className="text-xl font-semibold mb-3 text-orange-900">
                 {t('services.logistics.transporter')}
@@ -161,14 +162,14 @@ const Services: React.FC = () => {
           <h2 className="text-2xl font-bold text-center mb-8 text-gray-900">
             {t('services.additionalServices.title')}
           </h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {getArray('services.additionalServices.services').map((service, index) => {
               const icons = [FaShieldAlt, FaCheckCircle, FaFileAlt, FaGlobe];
               const colors = ['blue', 'green', 'orange', 'purple'];
               const IconComponent = icons[index];
               const color = colors[index];
-              
+
               return (
                 <div key={service.key} className="flex items-start space-x-4 p-4 rounded-lg hover:bg-white/50 transition-all duration-300">
                   <div className={`w-12 h-12 bg-${color}-100 rounded-full flex items-center justify-center flex-shrink-0`}>
@@ -193,7 +194,7 @@ const Services: React.FC = () => {
           <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">
             {t('services.process.title')}
           </h2>
-          
+
           <div className="space-y-8">
             {/* Step 1: Choose your car */}
             <div className="bg-blue-50/40 rounded-lg p-8">
@@ -203,20 +204,20 @@ const Services: React.FC = () => {
                 </div>
                 <h3 className="text-2xl font-semibold text-blue-900">{t('services.process.steps.chooseCar.title')}</h3>
               </div>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-3">
                   <h4 className="font-semibold text-gray-800">{t('services.process.steps.chooseCar.optionA')}</h4>
                   <p className="text-gray-600">{t('services.process.steps.chooseCar.optionADesc')}</p>
-                  
+
                   <h4 className="font-semibold text-gray-800">{t('services.process.steps.chooseCar.optionB')}</h4>
                   <p className="text-gray-600">{t('services.process.steps.chooseCar.optionBDesc')}</p>
                 </div>
-                
+
                 <div className="space-y-3">
                   <h4 className="font-semibold text-gray-800">{t('services.process.steps.chooseCar.optionC')}</h4>
                   <p className="text-gray-600">{t('services.process.steps.chooseCar.optionCDesc')}</p>
-                  
+
                   <h4 className="font-semibold text-gray-800">{t('services.process.steps.chooseCar.optionD')}</h4>
                   <p className="text-gray-600">{t('services.process.steps.chooseCar.optionDDesc')}</p>
                 </div>
@@ -231,19 +232,19 @@ const Services: React.FC = () => {
                 </div>
                 <h3 className="text-2xl font-semibold text-green-900">{t('services.process.steps.checkOffer.title')}</h3>
               </div>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-3">
                   <h4 className="font-semibold text-gray-800">{t('services.process.steps.checkOffer.preCheck')}</h4>
                   <p className="text-gray-600">{t('services.process.steps.checkOffer.preCheckDesc')}</p>
                 </div>
-                
+
                 <div className="space-y-3">
                   <h4 className="font-semibold text-gray-800">{t('services.process.steps.checkOffer.physicalInspection')}</h4>
                   <p className="text-gray-600">{t('services.process.steps.checkOffer.physicalInspectionDesc')}</p>
                 </div>
               </div>
-              
+
               <div className="mt-6 p-4 bg-green-50 rounded-lg">
                 <h4 className="font-semibold text-green-900 mb-2">{t('services.process.steps.checkOffer.expertise')}</h4>
                 <p className="text-green-800">{t('services.process.steps.checkOffer.expertiseDesc')}</p>
@@ -258,15 +259,15 @@ const Services: React.FC = () => {
                 </div>
                 <h3 className="text-2xl font-semibold text-purple-900">{t('services.process.steps.contract.title')}</h3>
               </div>
-              
+
               <div className="space-y-4">
                 <p className="text-gray-700">{t('services.process.steps.contract.description')}</p>
-                
+
                 <div className="bg-purple-50 p-4 rounded-lg">
                   <h4 className="font-semibold text-purple-900 mb-2">{t('services.process.steps.contract.structure')}</h4>
                   <p className="text-purple-800">{t('services.process.steps.contract.structureDesc')}</p>
                 </div>
-                
+
                 <p className="text-gray-700">{t('services.process.steps.contract.downPayment')}</p>
               </div>
             </div>
@@ -279,15 +280,15 @@ const Services: React.FC = () => {
                 </div>
                 <h3 className="text-2xl font-semibold text-orange-900">{t('services.process.steps.transport.title')}</h3>
               </div>
-              
+
               <div className="space-y-4">
                 <p className="text-gray-700">{t('services.process.steps.transport.description')}</p>
-                
+
                 <div className="bg-orange-50 p-4 rounded-lg">
                   <h4 className="font-semibold text-orange-900 mb-2">{t('services.process.steps.transport.ourService')}</h4>
                   <p className="text-orange-800">{t('services.process.steps.transport.ourServiceDesc')}</p>
                 </div>
-                
+
                 <p className="text-gray-700">{t('services.process.steps.transport.payment')}</p>
               </div>
             </div>

@@ -1,10 +1,11 @@
 import React from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { FaAward, FaShieldAlt, FaGlobe, FaUsers, FaCar, FaHandshake, FaCheckCircle, FaTruck, FaFileContract, FaPhone, FaEnvelope } from 'react-icons/fa';
+import IconContainer from '../components/design-system/IconContainer';
 
 export default function About() {
     const { t, getArray, isLoading } = useLanguage();
-    
+
     if (isLoading) {
         return (
             <div className="pt-20 pb-16">
@@ -17,7 +18,7 @@ export default function About() {
             </div>
         );
     }
-    
+
     return (
         <div className="pt-20 pb-16">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -44,8 +45,8 @@ export default function About() {
                             </p>
                         </div>
                         <div className="text-center">
-                            <div className="w-32 h-32 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <FaAward className="text-4xl text-blue-600" />
+                            <div className="flex justify-center mb-4">
+                                <IconContainer icon={<FaAward />} variant="primary" size="lg" className="w-32 h-32 text-4xl" />
                             </div>
                         </div>
                     </div>
@@ -76,29 +77,29 @@ export default function About() {
                     <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">{t('about.values.title')}</h2>
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                         <div className="text-center">
-                            <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <FaShieldAlt className="text-2xl text-blue-600" />
+                            <div className="flex justify-center mb-4">
+                                <IconContainer icon={<FaShieldAlt />} variant="primary" size="lg" />
                             </div>
                             <h3 className="text-xl font-semibold text-gray-900 mb-3">{t('about.values.trust.title')}</h3>
                             <p className="text-gray-600">{t('about.values.trust.description')}</p>
                         </div>
                         <div className="text-center">
-                            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <FaGlobe className="text-2xl text-green-600" />
+                            <div className="flex justify-center mb-4">
+                                <IconContainer icon={<FaGlobe />} variant="whatsapp" size="lg" />
                             </div>
                             <h3 className="text-xl font-semibold text-gray-900 mb-3">{t('about.values.expertise.title')}</h3>
                             <p className="text-gray-600">{t('about.values.expertise.description')}</p>
                         </div>
                         <div className="text-center">
-                            <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <FaCheckCircle className="text-2xl text-purple-600" />
+                            <div className="flex justify-center mb-4">
+                                <IconContainer icon={<FaCheckCircle />} variant="secondary" size="lg" />
                             </div>
                             <h3 className="text-xl font-semibold text-gray-900 mb-3">{t('about.values.quality.title')}</h3>
                             <p className="text-gray-600">{t('about.values.quality.description')}</p>
                         </div>
                         <div className="text-center">
-                            <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <FaUsers className="text-2xl text-orange-600" />
+                            <div className="flex justify-center mb-4">
+                                <IconContainer icon={<FaUsers />} variant="secondary" size="lg" />
                             </div>
                             <h3 className="text-xl font-semibold text-gray-900 mb-3">{t('about.values.service.title')}</h3>
                             <p className="text-gray-600">{t('about.values.service.description')}</p>

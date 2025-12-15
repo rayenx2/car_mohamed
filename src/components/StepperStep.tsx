@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { gsap } from 'gsap';
-import { ChevronDown, ChevronUp } from 'lucide-react';
+import { FaChevronDown } from 'react-icons/fa';
 
 interface StepperStepProps {
   stepNumber: number;
@@ -82,12 +82,12 @@ const StepperStep: React.FC<StepperStepProps> = ({
               {icon}
             </div>
           </div>
-          
+
           {/* Content */}
           <div className="flex-1">
             <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
             <p className="text-gray-600 text-sm mb-4">{shortDescription}</p>
-            
+
             {/* Show More/Less Button */}
             <button
               onClick={toggleExpanded}
@@ -95,21 +95,21 @@ const StepperStep: React.FC<StepperStepProps> = ({
             >
               <span>{isExpanded ? 'Show Less' : 'Show More'}</span>
               <div ref={chevronRef} className="transform transition-transform duration-300">
-                <ChevronDown className="w-4 h-4" />
+                <FaChevronDown className="w-4 h-4" />
               </div>
             </button>
           </div>
         </div>
 
         {/* Expandable Content */}
-        <div 
+        <div
           ref={contentRef}
           className="overflow-hidden"
           style={{ height: 0 }}
         >
           <div className="pt-4 border-t border-gray-100 mt-4">
             {fullContent}
-            
+
             {/* Action Button */}
             {button && (
               <div className="mt-6">

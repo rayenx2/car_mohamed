@@ -2,6 +2,7 @@ import React from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { NavLink } from 'react-router-dom';
 import { FaCar, FaGlobe, FaUsers, FaBuilding, FaUser, FaFlag, FaLightbulb } from 'react-icons/fa';
+import IconContainer from '../components/design-system/IconContainer';
 
 const Home: React.FC = () => {
   const { t, getArray, isLoading } = useLanguage();
@@ -41,24 +42,24 @@ const Home: React.FC = () => {
             {/* Left Content Area */}
             <div className="space-y-6 sm:space-y-8">
               <div className="space-y-4 sm:space-y-6">
-                                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                   {t('home.hero.headline')}
-                 </h1>
-                 <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
-                   {t('home.hero.subheadline')}
-                 </p>
-                
-                                 {/* Benefits List */}
-                 <div className="space-y-3">
-                   {getArray('home.hero.benefits').map((benefit, index) => (
-                     <div key={index} className="flex items-center gap-3">
-                       <svg className="h-5 w-5 text-green-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                       </svg>
-                       <span className="text-gray-700">{benefit}</span>
-                     </div>
-                   ))}
-                 </div>
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                  {t('home.hero.headline')}
+                </h1>
+                <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
+                  {t('home.hero.subheadline')}
+                </p>
+
+                {/* Benefits List */}
+                <div className="space-y-3">
+                  {getArray('home.hero.benefits').map((benefit, index) => (
+                    <div key={index} className="flex items-center gap-3">
+                      <svg className="h-5 w-5 text-green-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                      <span className="text-gray-700">{benefit}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
 
               {/* CTAs */}
@@ -72,7 +73,7 @@ const Home: React.FC = () => {
                   </svg>
                   {t('home.hero.cta.checkStock')}
                 </NavLink>
-                
+
                 <button
                   onClick={handleWhatsApp}
                   className="btn-hero-secondary w-full sm:w-auto"
@@ -84,21 +85,21 @@ const Home: React.FC = () => {
                 </button>
               </div>
 
-                             {/* Trust Indicators */}
-               <div className="grid grid-cols-3 gap-4 pt-8 border-t border-gray-200">
-                 <div className="text-center">
-                   <div className="hero-stat">20+</div>
-                   <div className="hero-stat-label">{t('home.hero.stats.yearsExperience')}</div>
-                 </div>
-                 <div className="text-center">
-                   <div className="hero-stat">1000+</div>
-                   <div className="hero-stat-label">{t('home.hero.stats.carsExported')}</div>
-                 </div>
-                 <div className="text-center">
-                   <div className="hero-stat">50+</div>
-                   <div className="hero-stat-label">{t('home.hero.stats.partnerCarriers')}</div>
-                 </div>
-               </div>
+              {/* Trust Indicators */}
+              <div className="grid grid-cols-3 gap-4 pt-8 border-t border-gray-200">
+                <div className="text-center">
+                  <div className="hero-stat">20+</div>
+                  <div className="hero-stat-label">{t('home.hero.stats.yearsExperience')}</div>
+                </div>
+                <div className="text-center">
+                  <div className="hero-stat">1000+</div>
+                  <div className="hero-stat-label">{t('home.hero.stats.carsExported')}</div>
+                </div>
+                <div className="text-center">
+                  <div className="hero-stat">50+</div>
+                  <div className="hero-stat-label">{t('home.hero.stats.partnerCarriers')}</div>
+                </div>
+              </div>
             </div>
 
             {/* Right Visual Card */}
@@ -118,107 +119,105 @@ const Home: React.FC = () => {
                   </div>
                 </div>
               </div>
-              
+
               {/* Background decoration */}
               <div className="absolute inset-0 bg-gradient-to-br from-blue-100 to-green-100 rounded-2xl transform rotate-3 scale-105"></div>
             </div>
           </div>
-                 </div>
-       </section>
+        </div>
+      </section>
 
-       {/* DI-Auto Process Explanation */}
-       <section className="py-12 sm:py-16 lg:py-20 bg-white">
-         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-           <div className="text-center mb-12 sm:mb-16">
-             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
-               {t('home.processExplanation.title')}
-             </h2>
-             <p className="text-base sm:text-lg text-gray-600 max-w-4xl mx-auto">
-               {t('home.processExplanation.subtitle')}
-             </p>
-           </div>
+      {/* DI-Auto Process Explanation */}
+      <section className="py-12 sm:py-16 lg:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+              {t('home.processExplanation.title')}
+            </h2>
+            <p className="text-base sm:text-lg text-gray-600 max-w-4xl mx-auto">
+              {t('home.processExplanation.subtitle')}
+            </p>
+          </div>
 
-           <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
-             <div className="space-y-4 sm:space-y-6">
-               <div className="bg-blue-50/40 p-4 sm:p-6 rounded-lg">
-                 <h3 className="text-lg sm:text-xl font-semibold text-blue-900 mb-3">{t('home.processExplanation.guarantees.condition.title')}</h3>
-                 <p className="text-sm sm:text-base text-blue-800">
-                   {t('home.processExplanation.guarantees.condition.description')}
-                 </p>
-               </div>
-               
-               <div className="bg-green-50/40 p-4 sm:p-6 rounded-lg">
-                 <h3 className="text-lg sm:text-xl font-semibold text-green-900 mb-3">{t('home.processExplanation.guarantees.security.title')}</h3>
-                 <p className="text-sm sm:text-base text-green-800">
-                   {t('home.processExplanation.guarantees.security.description')}
-                 </p>
-               </div>
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div className="space-y-4 sm:space-y-6">
+              <div className="bg-blue-50/40 p-4 sm:p-6 rounded-lg">
+                <h3 className="text-lg sm:text-xl font-semibold text-blue-900 mb-3">{t('home.processExplanation.guarantees.condition.title')}</h3>
+                <p className="text-sm sm:text-base text-blue-800">
+                  {t('home.processExplanation.guarantees.condition.description')}
+                </p>
+              </div>
 
-               <div className="bg-purple-50/40 p-4 sm:p-6 rounded-lg">
-                 <h3 className="text-lg sm:text-xl font-semibold text-purple-900 mb-3">{t('home.processExplanation.guarantees.private.title')}</h3>
-                 <p className="text-sm sm:text-base text-purple-800">
-                   {t('home.processExplanation.guarantees.private.description')}
-                 </p>
-               </div>
-             </div>
+              <div className="bg-green-50/40 p-4 sm:p-6 rounded-lg">
+                <h3 className="text-lg sm:text-xl font-semibold text-green-900 mb-3">{t('home.processExplanation.guarantees.security.title')}</h3>
+                <p className="text-sm sm:text-base text-green-800">
+                  {t('home.processExplanation.guarantees.security.description')}
+                </p>
+              </div>
 
-             <div className="space-y-6 sm:space-y-8">
-               <div className="text-center">
-                 <div className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                   <svg className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                   </svg>
-                 </div>
-                 <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">{t('home.processExplanation.benefits.netPrice.title')}</h3>
-                 <p className="text-sm sm:text-base text-gray-600">{t('home.processExplanation.benefits.netPrice.description')}</p>
-               </div>
+              <div className="bg-purple-50/40 p-4 sm:p-6 rounded-lg">
+                <h3 className="text-lg sm:text-xl font-semibold text-purple-900 mb-3">{t('home.processExplanation.guarantees.private.title')}</h3>
+                <p className="text-sm sm:text-base text-purple-800">
+                  {t('home.processExplanation.guarantees.private.description')}
+                </p>
+              </div>
+            </div>
 
-               <div className="text-center">
-                 <div className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                   <svg className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                   </svg>
-                 </div>
-                 <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">{t('home.processExplanation.benefits.contact.title')}</h3>
-                 <p className="text-sm sm:text-base text-gray-600">{t('home.processExplanation.benefits.contact.description')}</p>
-               </div>
-             </div>
-           </div>
-         </div>
-       </section>
+            <div className="space-y-6 sm:space-y-8">
+              <div className="text-center">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">{t('home.processExplanation.benefits.netPrice.title')}</h3>
+                <p className="text-sm sm:text-base text-gray-600">{t('home.processExplanation.benefits.netPrice.description')}</p>
+              </div>
 
-       {/* Why Choose Us */}
-     <section className="py-20 bg-gray-25">
+              <div className="text-center">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">{t('home.processExplanation.benefits.contact.title')}</h3>
+                <p className="text-sm sm:text-base text-gray-600">{t('home.processExplanation.benefits.contact.description')}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us */}
+      <section className="py-20 bg-gray-25">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center mb-16">
             {t('home.whyChooseUs.title')}
           </h2>
-                                                                                       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-               {getArray('home.whyChooseUs.cards').map((card: any, index: number) => (
-                 <div key={card.key} className="bg-white/90 backdrop-blur-sm rounded-xl shadow-sm border border-gray-100 p-8 text-center hover:shadow-md transition-all duration-300">
-                   <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-full flex items-center justify-center">
-                     {card.key === 'car' ? (
-                       <FaCar className="text-2xl text-blue-600" />
-                     ) : card.key === 'export' ? (
-                       <FaGlobe className="text-2xl text-green-600" />
-                     ) : (
-                       <FaUsers className="text-2xl text-purple-600" />
-                     )}
-                   </div>
-                   <h3 className="text-xl font-semibold mb-4 text-gray-800">{card.title}</h3>
-                   <ul className="text-left space-y-3">
-                     {Array.isArray(card.benefits) && card.benefits.map((benefit: string, benefitIndex: number) => (
-                       <li key={benefitIndex} className="flex items-start">
-                         <svg className="w-4 h-4 text-green-500 mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                         </svg>
-                         <span className="text-gray-600 text-sm leading-relaxed">{benefit}</span>
-                       </li>
-                     ))}
-                   </ul>
-                 </div>
-               ))}
-             </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {getArray('home.whyChooseUs.cards').map((card: any, index: number) => (
+              <div key={card.key} className="bg-white/90 backdrop-blur-sm rounded-xl shadow-sm border border-gray-100 p-8 text-center hover:shadow-md transition-all duration-300">
+                <div className="flex justify-center mb-6">
+                  <IconContainer
+                    icon={card.key === 'car' ? <FaCar /> : card.key === 'export' ? <FaGlobe /> : <FaUsers />}
+                    variant={card.key === 'car' ? 'primary' : card.key === 'export' ? 'success' : 'secondary'}
+                    size="lg"
+                  />
+                </div>
+                <h3 className="text-xl font-semibold mb-4 text-gray-800">{card.title}</h3>
+                <ul className="text-left space-y-3">
+                  {Array.isArray(card.benefits) && card.benefits.map((benefit: string, benefitIndex: number) => (
+                    <li key={benefitIndex} className="flex items-start">
+                      <svg className="w-4 h-4 text-green-500 mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                      <span className="text-gray-600 text-sm leading-relaxed">{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -353,23 +352,23 @@ const Home: React.FC = () => {
           <h2 className="text-3xl font-bold text-center mb-16">
             {t('home.whoWeServe.title')}
           </h2>
-                                                                                       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-               {getArray('home.whoWeServe.cards').map((card: any, index: number) => (
-                 <div key={card.key} className="bg-white/90 backdrop-blur-sm rounded-xl shadow-sm border border-gray-100 p-8 text-center hover:shadow-md transition-all duration-300 cursor-pointer">
-                   <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-full flex items-center justify-center">
-                     {card.key === 'internationalDealers' ? (
-                       <FaBuilding className="text-2xl text-indigo-600" />
-                     ) : card.key === 'privateBuyers' ? (
-                       <FaUser className="text-2xl text-blue-600" />
-                     ) : (
-                       <FaFlag className="text-2xl text-red-600" />
-                     )}
-                   </div>
-                   <h3 className="text-xl font-semibold mb-3 text-gray-800">{card.title}</h3>
-                   <p className="text-gray-600 leading-relaxed">{card.description}</p>
-                 </div>
-               ))}
-             </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {getArray('home.whoWeServe.cards').map((card: any, index: number) => (
+              <div key={card.key} className="bg-white/90 backdrop-blur-sm rounded-xl shadow-sm border border-gray-100 p-8 text-center hover:shadow-md transition-all duration-300 cursor-pointer">
+                <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-full flex items-center justify-center">
+                  {card.key === 'internationalDealers' ? (
+                    <FaBuilding className="text-2xl text-indigo-600" />
+                  ) : card.key === 'privateBuyers' ? (
+                    <FaUser className="text-2xl text-blue-600" />
+                  ) : (
+                    <FaFlag className="text-2xl text-red-600" />
+                  )}
+                </div>
+                <h3 className="text-xl font-semibold mb-3 text-gray-800">{card.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{card.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -379,16 +378,16 @@ const Home: React.FC = () => {
           <h2 className="text-3xl font-bold text-center mb-16">
             {t('home.problemsWeSolve.title')}
           </h2>
-                                           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {getArray('home.problemsWeSolve.list').map((problem: string, index: number) => (
-                <div key={index} className="bg-white/80 backdrop-blur-sm rounded-xl shadow-sm border border-gray-100 p-6 text-center hover:shadow-md transition-all duration-300">
-                  <div className="w-12 h-12 mx-auto mb-4 bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-full flex items-center justify-center">
-                    <FaLightbulb className="text-xl text-yellow-600" />
-                  </div>
-                  <p className="text-gray-700 font-medium leading-relaxed">{problem}</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {getArray('home.problemsWeSolve.list').map((problem: string, index: number) => (
+              <div key={index} className="bg-white/80 backdrop-blur-sm rounded-xl shadow-sm border border-gray-100 p-6 text-center hover:shadow-md transition-all duration-300">
+                <div className="w-12 h-12 mx-auto mb-4 bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-full flex items-center justify-center">
+                  <FaLightbulb className="text-xl text-yellow-600" />
                 </div>
-              ))}
-            </div>
+                <p className="text-gray-700 font-medium leading-relaxed">{problem}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -406,7 +405,7 @@ const Home: React.FC = () => {
               {t('home.featuredStock.seeAll')}
             </NavLink>
           </div>
-          
+
           {/* Sample Featured Cars */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[1, 2, 3].map((index) => (

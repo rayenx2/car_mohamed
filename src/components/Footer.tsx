@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
+import { FaWhatsapp, FaEnvelope, FaMapMarkerAlt, FaPhone, FaClock, FaGlobe } from 'react-icons/fa';
 
 export default function Footer() {
 	const { t } = useLanguage();
@@ -28,9 +29,7 @@ export default function Footer() {
 							className="inline-flex items-center justify-center bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl"
 						>
 							<span className="mr-3">
-								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6">
-									<path d="M20.52 3.48A11.94 11.94 0 0 0 12.02 0C5.39 0 .02 5.37.02 12c0 2.12.55 4.14 1.6 5.94L0 24l6.22-1.62c1.73.95 3.7 1.45 5.78 1.45 6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.35ZM12 22c-1.9 0-3.69-.5-5.27-1.45l-.38-.22-3.12.81.83-3.04-.25-.4A9.92 9.92 0 0 1 2 12C2 6.49 6.49 2 12 2s10 4.49 10 10-4.49 10-10 10Zm5.35-7.42c-.29-.15-1.7-.84-1.97-.94-.27-.1-.47-.15-.68.15-.2.29-.78.94-.95 1.14-.17.2-.35.22-.64.07-.29-.15-1.2-.44-2.28-1.41-.84-.75-1.41-1.67-1.58-1.95-.17-.29-.02-.45.13-.6.13-.13.29-.35.44-.52.15-.17.2-.29.29-.49.1-.2.05-.37-.02-.52-.07-.15-.68-1.64-.94-2.25-.24-.58-.48-.5-.68-.51h-.58c-.2 0-.52.07-.79.37-.27.29-1.04 1.02-1.04 2.49s1.07 2.88 1.22 3.09c.15.2 2.11 3.22 5.11 4.51.71.31 1.26.49 1.69.63.71.23 1.36.2 1.88.12.57-.08 1.7-.7 1.94-1.38.24-.69.24-1.28.17-1.41-.07-.13-.26-.2-.55-.35Z" />
-								</svg>
+								<FaWhatsapp className="h-6 w-6" />
 							</span>
 							<span>{t('home.hero.cta.whatsapp') || 'WhatsApp Us'}</span>
 						</a>
@@ -39,9 +38,7 @@ export default function Footer() {
 							className="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl"
 						>
 							<span className="mr-3">
-								<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="h-6 w-6">
-									<path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 2v.01L12 13 4 6.01V6h16ZM4 18V8.236l7.386 6.148a1 1 0 0 0 1.228 0L20 8.236V18H4Z" />
-								</svg>
+								<FaEnvelope className="h-6 w-6" />
 							</span>
 							<span>{t('home.contactStrip.email') || 'Email Us'}</span>
 						</a>
@@ -74,22 +71,15 @@ export default function Footer() {
 						</p>
 						<div className="space-y-3 text-sm text-gray-600">
 							<div className="flex items-center gap-3">
-								<svg className="h-5 w-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-								</svg>
+								<FaGlobe className="h-5 w-5 text-blue-600" />
 								<span>Germany - Worldwide Export</span>
 							</div>
 							<div className="flex items-center gap-3">
-								<svg className="h-5 w-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-								</svg>
+								<FaClock className="h-5 w-5 text-blue-600" />
 								<span>Mon - Fri: 9:00 - 18:00 CET</span>
 							</div>
 							<div className="flex items-center gap-3">
-								<svg className="h-5 w-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-								</svg>
+								<FaPhone className="h-5 w-5 text-blue-600" />
 								<span>+49 176 69495526</span>
 							</div>
 						</div>
@@ -138,14 +128,10 @@ export default function Footer() {
 					</p>
 					<div className="flex gap-4 mt-4 md:mt-0">
 						<a href={whatsappHref} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-green-600 transition-colors">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
-								<path d="M20.52 3.48A11.94 11.94 0 0 0 12.02 0C5.39 0 .02 5.37.02 12c0 2.12.55 4.14 1.6 5.94L0 24l6.22-1.62c1.73.95 3.7 1.45 5.78 1.45 6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.35ZM12 22c-1.9 0-3.69-.5-5.27-1.45l-.38-.22-3.12.81.83-3.04-.25-.4A9.92 9.92 0 0 1 2 12C2 6.49 6.49 2 12 2s10 4.49 10 10-4.49 10-10 10Zm5.35-7.42c-.29-.15-1.7-.84-1.97-.94-.27-.1-.47-.15-.68.15-.2.29-.78.94-.95 1.14-.17.2-.35.22-.64.07-.29-.15-1.2-.44-2.28-1.41-.84-.75-1.41-1.67-1.58-1.95-.17-.29-.02-.45.13-.6.13-.13.29-.35.44-.52.15-.17.2-.29.29-.49.1-.2.05-.37-.02-.52-.07-.15-.68-1.64-.94-2.25-.24-.58-.48-.5-.68-.51h-.58c-.2 0-.52.07-.79.37-.27.29-1.04 1.02-1.04 2.49s1.07 2.88 1.22 3.09c.15.2 2.11 3.22 5.11 4.51.71.31 1.26.49 1.69.63.71.23 1.36.2 1.88.12.57-.08 1.7-.7 1.94-1.38.24-.69.24-1.28.17-1.41-.07-.13-.26-.2-.55-.35Z" />
-							</svg>
+							<FaWhatsapp className="h-5 w-5" />
 						</a>
 						<a href={emailHref} className="text-gray-400 hover:text-blue-600 transition-colors">
-							<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="h-5 w-5">
-								<path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 2v.01L12 13 4 6.01V6h16ZM4 18V8.236l7.386 6.148a1 1 0 0 0 1.228 0L20 8.236V18H4Z" />
-							</svg>
+							<FaEnvelope className="h-5 w-5" />
 						</a>
 					</div>
 				</div>

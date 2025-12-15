@@ -1,4 +1,14 @@
 {
+  "section": {
+    "cta": {
+      "question": "¿Todavía tiene preguntas? Estamos aquí para ayudarle."
+    }
+  },
+  "cta": {
+    "whatsapp": {
+      "action": "Chatea con nosotros"
+    }
+  },
   "nav": {
     "home": "Inicio",
     "services": "Servicios",
@@ -126,17 +136,17 @@
         "description2": "El contrato será entre nosotros y tú. Compramos el auto del vendedor en total con IVA y tú lo compras de nosotros NET (sin IVA).",
         "description3": "En algunos casos podríamos pedirte que pagues 15% del precio de compra neto* como pago inicial después de firmar el contrato."
       },
-        "step4": {
-          "title": "Transporte y Envío Internacional",
-          "description1": "Puedes usar tu empresa de transporte preferida o pedirnos que te ayudemos a encontrar una.",
-          "description2": "Si lo solicitas: Podemos organizar, por una tarifa, transporte asegurado (máx. 1mil. EUR), para llevar tu nuevo auto a tu empresa de envío.",
-          "description3": "Antes de que el auto sea cargado para transporte, paga el saldo restante del precio de compra neto + 10% depósito de IVA (19% si eres un comprador privado o una empresa de menos de 3 años) a nosotros.",
-          "button": "Ver lista de precios",
-          "importantNote": {
-            "title": "Nota Importante",
-            "description": "Tan pronto como puedas certificar, tu auto ha llegado a tu país y obtenemos una copia del registro del auto, inmediatamente te enviamos de vuelta el depósito de IVA."
-          }
+      "step4": {
+        "title": "Transporte y Envío Internacional",
+        "description1": "Puedes usar tu empresa de transporte preferida o pedirnos que te ayudemos a encontrar una.",
+        "description2": "Si lo solicitas: Podemos organizar, por una tarifa, transporte asegurado (máx. 1mil. EUR), para llevar tu nuevo auto a tu empresa de envío.",
+        "description3": "Antes de que el auto sea cargado para transporte, paga el saldo restante del precio de compra neto + 10% depósito de IVA (19% si eres un comprador privado o una empresa de menos de 3 años) a nosotros.",
+        "button": "Ver lista de precios",
+        "importantNote": {
+          "title": "Nota Importante",
+          "description": "Tan pronto como puedas certificar, tu auto ha llegado a tu país y obtenemos una copia del registro del auto, inmediatamente te enviamos de vuelta el depósito de IVA."
         }
+      }
     },
     "whoWeServe": {
       "title": "A Quién Servimos",

@@ -1,4 +1,14 @@
 {
+  "section": {
+    "cta": {
+      "question": "Vous avez encore des questions ? Nous sommes là pour vous aider."
+    }
+  },
+  "cta": {
+    "whatsapp": {
+      "action": "Discuter avec nous"
+    }
+  },
   "nav": {
     "home": "Accueil",
     "services": "Services",
@@ -126,17 +136,17 @@
         "description2": "Le contrat sera entre nous et vous. Nous achetons la voiture au vendeur en totalité avec TVA et vous l'achetez chez nous NET (sans TVA).",
         "description3": "Dans certains cas, nous pourrions vous demander de payer 15% du prix d'achat net* comme acompte après avoir signé le contrat."
       },
-        "step4": {
-          "title": "Transport et Expédition Internationale",
-          "description1": "Vous pouvez utiliser votre société de transport préférée ou nous demander de vous aider à en trouver une.",
-          "description2": "Si vous le demandez: Nous pouvons organiser, moyennant des frais, un transport assuré (max 1mil. EUR), pour amener votre nouvelle voiture à votre société d'expédition.",
-          "description3": "Avant que la voiture soit chargée pour le transport, payez le solde restant du prix d'achat net + 10% d'acompte TVA (19% si vous êtes un acheteur privé ou une société de moins de 3 ans) à nous.",
-          "button": "Voir la liste de prix",
-          "importantNote": {
-            "title": "Note Importante",
-            "description": "Dès que vous pouvez certifier, votre voiture est arrivée dans votre pays et nous obtenons une copie de l'immatriculation de la voiture, nous vous renvoyons immédiatement le dépôt de TVA."
-          }
+      "step4": {
+        "title": "Transport et Expédition Internationale",
+        "description1": "Vous pouvez utiliser votre société de transport préférée ou nous demander de vous aider à en trouver une.",
+        "description2": "Si vous le demandez: Nous pouvons organiser, moyennant des frais, un transport assuré (max 1mil. EUR), pour amener votre nouvelle voiture à votre société d'expédition.",
+        "description3": "Avant que la voiture soit chargée pour le transport, payez le solde restant du prix d'achat net + 10% d'acompte TVA (19% si vous êtes un acheteur privé ou une société de moins de 3 ans) à nous.",
+        "button": "Voir la liste de prix",
+        "importantNote": {
+          "title": "Note Importante",
+          "description": "Dès que vous pouvez certifier, votre voiture est arrivée dans votre pays et nous obtenons une copie de l'immatriculation de la voiture, nous vous renvoyons immédiatement le dépôt de TVA."
         }
+      }
     },
     "whoWeServe": {
       "title": "Qui Nous Servons",
