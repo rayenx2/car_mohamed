@@ -6,9 +6,10 @@ import menuBtn from '../assets/siteHeader/menuBtn.png';
 
 export default function SiteHeader() {
     const [menuOpen, setMenuOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
     const location = useLocation();
     const { t, isRTL } = useLanguage();
-    const menuRef = useRef<HTMLUListElement>(null);
+    const menuRef = useRef<HTMLDivElement>(null);
     const buttonRef = useRef<HTMLButtonElement>(null);
 
     function toggleMenu() {
@@ -25,6 +26,15 @@ export default function SiteHeader() {
     const hideMenu = useCallback(() => {
         setMenuOpen(false);
         document.body.style.overflow = 'unset';
+    }, []);
+
+    // Handle Scroll for shrinking header
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 20);
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
     // useEffect below closes menu whenever sth not being NavBar is clicked
@@ -47,15 +57,25 @@ export default function SiteHeader() {
     }, [hideMenu, menuOpen]);
 
     return (
-        <div className='w-full bg-white/95 backdrop-blur-md shadow-sm sticky top-0 z-50'>
-            <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <header className={`
+            fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md 
+            transition-all duration-300
+            ${isScrolled ? 'h-16 shadow-lg' : 'h-20 sm:h-24 shadow-sm'}
+        `}>
+            <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center'>
                 {/* Top Row - Logo, Title, Language Selector */}
-                <div className='flex items-center justify-between py-4'>
+                <div className='flex items-center justify-between'>
                     {/* Logo and Company Name */}
                     <div className='flex items-center gap-3 flex-shrink-0'>
-                        <NavLink to='/' style={{ color: 'black' }}>
+                        <NavLink to='/' style={{ color: 'black' }} onClick={hideMenu}>
                             <div className='flex items-center gap-3'>
-                                <img src={encodeURI('/WhatsApp Image 2025-08-19 à 16.31.08_eeee4154.jpg')} alt='IV Export Service logo' className='h-20 sm:h-24 lg:h-32 w-auto'
+                                <img
+                                    src={encodeURI('/WhatsApp Image 2025-08-19 à 16.31.08_eeee4154.jpg')}
+                                    alt='IV Export Service logo'
+                                    className={`
+                                        w-auto transition-all duration-300
+                                        ${isScrolled ? 'h-10 sm:h-12' : 'h-12 sm:h-16 lg:h-20'}
+                                    `}
                                     onError={(e) => {
                                         const img = e.currentTarget as HTMLImageElement;
                                         if (!img.dataset.fallbackTried) {
@@ -64,13 +84,47 @@ export default function SiteHeader() {
                                         } else {
                                             img.src = '/logo-black.svg';
                                         }
-                                    }} />
-                                <div className='hidden sm:block'>
-                                    <h2 className='font-bebasFont text-xl sm:text-2xl lg:text-3xl font-thin text-gray-900'>IV EXPORT SERVICE</h2>
-                                    <p className='font-bebasFont font-thin text-sm lg:text-base text-gray-600'>International Vehicle Export</p>
+                                    }}
+                                />
+                                <div className='block'>
+                                    <h2 className={`
+                                        font-bebasFont font-thin text-gray-900 transition-all duration-300
+                                        ${isScrolled ? 'text-lg sm:text-xl' : 'text-xl sm:text-2xl lg:text-3xl'}
+                                    `}>
+                                        IV EXPORT SERVICE
+                                    </h2>
+                                    <p className={`
+                                        font-bebasFont font-thin text-gray-600 hidden sm:block
+                                        ${isScrolled ? 'text-xs' : 'text-sm lg:text-base'}
+                                    `}>
+                                        International Vehicle Export
+                                    </p>
                                 </div>
                             </div>
                         </NavLink>
+                    </div>
+
+                    {/* Desktop Navigation & Language */}
+                    <div className="hidden lg:flex items-center gap-8">
+                        <nav>
+                            <ul className="flex gap-6">
+                                <NavLink to='/' >
+                                    <li className={`text-base font-medium hover:text-blue-600 transition-colors ${location.pathname === '/' ? 'text-blue-600' : 'text-gray-700'}`}>{t('nav.home')}</li>
+                                </NavLink>
+                                <NavLink to='/about' >
+                                    <li className={`text-base font-medium hover:text-blue-600 transition-colors ${location.pathname === '/about' ? 'text-blue-600' : 'text-gray-700'}`}>{t('nav.about')}</li>
+                                </NavLink>
+                                <NavLink to='/stock' >
+                                    <li className={`text-base font-medium hover:text-blue-600 transition-colors ${location.pathname === '/stock' ? 'text-blue-600' : 'text-gray-700'}`}>{t('nav.stock')}</li>
+                                </NavLink>
+                                <NavLink to='/services' >
+                                    <li className={`text-base font-medium hover:text-blue-600 transition-colors ${location.pathname === '/services' ? 'text-blue-600' : 'text-gray-700'}`}>{t('nav.services')}</li>
+                                </NavLink>
+                            </ul>
+                        </nav>
+                        <div className='border-l pl-6 border-gray-200'>
+                            <LanguageSwitcher />
+                        </div>
                     </div>
 
                     {/* Mobile Menu Button */}
@@ -80,7 +134,7 @@ export default function SiteHeader() {
                         ref={buttonRef}
                         aria-label='Toggle navigation menu'
                     >
-                        <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg className="h-8 w-8 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             {menuOpen ? (
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                             ) : (
@@ -88,55 +142,48 @@ export default function SiteHeader() {
                             )}
                         </svg>
                     </button>
-
-                    {/* Language Selector */}
-                    <div className='hidden sm:block'>
-                        <LanguageSwitcher />
-                    </div>
-                </div>
-
-                {/* Mobile Company Name */}
-                <div className='sm:hidden text-center pb-4'>
-                    <h2 className='font-bebasFont text-lg font-thin text-gray-900'>IV EXPORT SERVICE</h2>
-                    <p className='font-bebasFont font-thin text-sm text-gray-600'>International Vehicle Export</p>
-                </div>
-
-                {/* Mobile Language Selector */}
-                <div className='sm:hidden flex justify-center pb-4'>
-                    <LanguageSwitcher />
-                </div>
-
-                {/* Navigation Bar */}
-                <div className='w-full border-t border-gray-200'>
-                    <ul className={`w-full
-                        ${menuOpen ? 'siteHeader__navbar--shown' : 'siteHeader__navbar--hidden'}
-                        lg:block lg:opacity-100
-                        lg:flex lg:flex-row lg:justify-center lg:items-center lg:border-t-0`}
-                        ref={menuRef}
-                    >
-                        <NavLink onClick={() => window.innerWidth < 1024 && hideMenu()} to='/' >
-                            <li className='siteHeader__li lg:mx-4 lg:py-2 lg:transition-colors'>
-                                <span className={`siteHeader__li__span hover:text-blue-600 transition-colors ${location.pathname === '/' ? 'text-blue-600 font-semibold' : 'text-gray-700'}`}>{t('nav.home')}</span>
-                            </li>
-                        </NavLink>
-                        <NavLink onClick={() => window.innerWidth < 1024 && hideMenu()} to='/about' >
-                            <li className='siteHeader__li lg:mx-4 lg:py-2 lg:transition-colors'>
-                                <span className={`siteHeader__li__span  ${location.pathname === '/about' && 'text-gray-300'}`}>{t('nav.about')}</span>
-                            </li>
-                        </NavLink>
-                        <NavLink onClick={() => window.innerWidth < 1024 && hideMenu()} to='/stock' >
-                            <li className='siteHeader__li lg:mx-4 lg:py-2 lg:transition-colors'>
-                                <span className={`siteHeader__li__span  ${location.pathname === '/stock' && 'text-gray-300'}`}>{t('nav.stock')}</span>
-                            </li>
-                        </NavLink>
-                        <NavLink onClick={() => window.innerWidth < 1024 && hideMenu()} to='/services' >
-                            <li className='siteHeader__li lg:mx-4 lg:py-2 lg:transition-colors'>
-                                <span className={`siteHeader__li__span  ${location.pathname === '/services' && 'text-gray-300'}`}>{t('nav.services')}</span>
-                            </li>
-                        </NavLink>
-                    </ul>
                 </div>
             </div>
-        </div>
+
+            {/* Mobile Menu Overlay */}
+            <div className={`
+                fixed inset-x-0 top-[64px] bg-white shadow-lg border-t border-gray-100 lg:hidden overflow-hidden transition-all duration-300 ease-in-out
+                ${menuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'}
+            `} ref={menuRef}>
+                <div className="p-4 space-y-4 h-[calc(100vh-64px)] overflow-y-auto">
+                    <nav>
+                        <ul className="space-y-4">
+                            <NavLink onClick={hideMenu} to='/' className="block">
+                                <li className={`text-lg font-medium p-3 rounded-lg hover:bg-gray-50 ${location.pathname === '/' ? 'text-blue-600 bg-blue-50' : 'text-gray-700'}`}>
+                                    {t('nav.home')}
+                                </li>
+                            </NavLink>
+                            <NavLink onClick={hideMenu} to='/about' className="block">
+                                <li className={`text-lg font-medium p-3 rounded-lg hover:bg-gray-50 ${location.pathname === '/about' ? 'text-blue-600 bg-blue-50' : 'text-gray-700'}`}>
+                                    {t('nav.about')}
+                                </li>
+                            </NavLink>
+                            <NavLink onClick={hideMenu} to='/stock' className="block">
+                                <li className={`text-lg font-medium p-3 rounded-lg hover:bg-gray-50 ${location.pathname === '/stock' ? 'text-blue-600 bg-blue-50' : 'text-gray-700'}`}>
+                                    {t('nav.stock')}
+                                </li>
+                            </NavLink>
+                            <NavLink onClick={hideMenu} to='/services' className="block">
+                                <li className={`text-lg font-medium p-3 rounded-lg hover:bg-gray-50 ${location.pathname === '/services' ? 'text-blue-600 bg-blue-50' : 'text-gray-700'}`}>
+                                    {t('nav.services')}
+                                </li>
+                            </NavLink>
+                        </ul>
+                    </nav>
+
+                    <div className="border-t border-gray-100 pt-6">
+                        <p className="text-sm text-gray-500 mb-3 uppercase tracking-wider font-semibold">Language / اللغة</p>
+                        <div className="flex justify-start">
+                            <LanguageSwitcher />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
     )
 }

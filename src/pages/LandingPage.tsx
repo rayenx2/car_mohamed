@@ -5,6 +5,7 @@ import Button from '../components/design-system/Button';
 import SectionCard from '../components/design-system/SectionCard';
 import IconContainer from '../components/design-system/IconContainer';
 import NorthAfricanPattern from '../components/NorthAfricanPattern';
+import TrustStrip from '../components/TrustStrip';
 
 import { FaCar, FaHandshake, FaGlobeAfrica, FaCheckCircle, FaShippingFast, FaFileContract, FaWhatsapp } from 'react-icons/fa';
 import HeroCarousel from '../components/HeroCarousel';
@@ -13,9 +14,13 @@ import { useRef, useState } from 'react';
 import useVideoAutoplay from '../hooks/useVideoAutoplay';
 import { FaPlay, FaPause, FaVolumeMute, FaVolumeUp } from 'react-icons/fa';
 
-import video1 from '../assets/videos/lv_0_20251214222341.mp4';
-import video2 from '../assets/videos/lv_0_20250912213631.mp4';
-import video3 from '../assets/videos/MP4_20251029_232454VLOG.mp4';
+// Cloudinary CDN video URLs - permanent, optimized delivery
+const CLOUDINARY_BASE = 'https://res.cloudinary.com/dzaomtxj8/video/upload';
+
+// Videos with automatic quality and format optimization
+const testimonialVideo = `${CLOUDINARY_BASE}/q_auto,f_auto/lv_0_20251214222341_sywsnm.mp4`;
+const mohamedIntroVideo = `${CLOUDINARY_BASE}/q_auto,f_auto/lv_0_20250912213631_yxhqcc.mp4`;
+const processVideo = `${CLOUDINARY_BASE}/q_auto,f_auto/MP4_20251029_232454VLOG_1_dkoagn.mp4`;
 
 const LandingPage: React.FC = () => {
     const { t, language, isRTL } = useLanguage();
@@ -46,16 +51,20 @@ const LandingPage: React.FC = () => {
         setIsMuted3(!isMuted3);
     };
 
+    const handleVideoError = (e: React.SyntheticEvent<HTMLVideoElement>) => {
+        console.error('Video failed to load:', e.currentTarget.src);
+    };
+
     const heroImage = '/WhatsApp Image 2025-08-19 à 16.31.08_eeee4154.jpg'; // Using the logo as placeholder/hero or maybe background? 
     // Wait, the prompt said logo is at that path. For hero background we might need a car image.
     // I will use a gradient or the wallpaper component's background style if possible, but let's stick to standard Tailwind for now.
 
     return (
         <div className={`min-h-screen bg-gray-50 text-gray-900 font-sans ${isRTL ? 'font-arabic' : ''}`} dir={isRTL ? 'rtl' : 'ltr'}>
-
-
             {/* Hero Section */}
             <HeroCarousel />
+            {/* Trust Strip */}
+            <TrustStrip />
 
             {/* Services Section */}
             <section className="py-20 bg-white relative">
@@ -107,17 +116,18 @@ const LandingPage: React.FC = () => {
             </section>
 
             {/* Why Choose Us / Trust Section */}
-            <section className="py-20 bg-gray-50">
+            <section className="py-20 bg-gray-50 relative overflow-hidden">
+                <NorthAfricanPattern opacity={0.03} />
                 <Container>
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <div className="order-2 lg:order-1">
                             <div className="grid grid-cols-2 gap-4">
                                 <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
-                                    <div className="text-4xl font-bold text-primary-blue mb-2">5+</div>
+                                    <div className="text-4xl font-bold text-primary-blue mb-2">20+</div>
                                     <div className="text-sm text-gray-600">{language === 'ar' ? 'سنوات خبرة' : 'Years Experience'}</div>
                                 </div>
                                 <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
-                                    <div className="text-4xl font-bold text-primary-blue mb-2">500+</div>
+                                    <div className="text-4xl font-bold text-primary-blue mb-2">1000+</div>
                                     <div className="text-sm text-gray-600">{language === 'ar' ? 'سيارة تم تصديرها' : 'Cars Exported'}</div>
                                 </div>
                                 <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 col-span-2">
@@ -168,7 +178,8 @@ const LandingPage: React.FC = () => {
             </section>
 
             {/* INTRODUCE OUR SERVICE (VIDEO 3) */}
-            <section className="bg-white py-16">
+            <section className="bg-white py-16 relative overflow-hidden">
+                <NorthAfricanPattern opacity={0.03} />
                 <Container>
                     <div className="text-center mb-10">
                         <h2 className="text-h2 text-deep-blue mb-4">
@@ -192,8 +203,9 @@ const LandingPage: React.FC = () => {
                             loop
                             preload="metadata"
                             onClick={toggleMute3}
+                            onError={handleVideoError}
                         >
-                            <source src={video3} type="video/mp4" />
+                            <source src={processVideo} type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
                         <div className="absolute bottom-4 right-4 z-10 transition-opacity duration-300 opacity-70 hover:opacity-100">
@@ -223,7 +235,8 @@ const LandingPage: React.FC = () => {
             </section>
 
             {/* CLIENT TESTIMONIAL VIDEO SECTION (VIDEO 1) */}
-            <section className="bg-gray-50 py-20">
+            <section className="bg-gray-50 py-20 relative overflow-hidden">
+                <NorthAfricanPattern opacity={0.03} />
                 <Container>
                     <div className="text-center mb-12">
                         <h2 className="text-h2 text-deep-blue mb-4">
@@ -245,8 +258,9 @@ const LandingPage: React.FC = () => {
                             loop
                             preload="metadata"
                             onClick={toggleMute1}
+                            onError={handleVideoError}
                         >
-                            <source src={video1} type="video/mp4" />
+                            <source src={testimonialVideo} type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
                         <div className="absolute bottom-4 right-4 z-10 transition-opacity duration-300 opacity-70 hover:opacity-100">
@@ -276,7 +290,8 @@ const LandingPage: React.FC = () => {
             </section>
 
             {/* INTRODUCING MOHAMED (VIDEO 2) */}
-            <section className="bg-white py-20">
+            <section className="bg-white py-20 relative overflow-hidden">
+                <NorthAfricanPattern opacity={0.03} />
                 <Container>
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         {/* Video */}
@@ -288,9 +303,11 @@ const LandingPage: React.FC = () => {
                                 muted={isMuted2}
                                 loop
                                 preload="metadata"
+                                crossOrigin="anonymous"
                                 onClick={toggleMute2}
+                                onError={handleVideoError}
                             >
-                                <source src={video2} type="video/mp4" />
+                                <source src={mohamedIntroVideo} type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
                             <div className="absolute bottom-4 right-4 z-10 transition-opacity duration-300 opacity-70 hover:opacity-100">
@@ -355,23 +372,7 @@ const LandingPage: React.FC = () => {
                 </div>
             </section>
 
-            {/* CTA Section */}
-            <section className="py-24 bg-deep-blue text-white relative overflow-hidden">
-                <NorthAfricanPattern opacity={0.1} />
-                <Container className="relative z-10 text-center">
-                    <h2 className="text-display mb-6">
-                        {language === 'ar' ? 'جاهز لاستيراد سيارتك القادمة؟' : 'Ready to Import Your Next Car?'}
-                    </h2>
-                    <p className="text-body-lg text-blue-100 max-w-2xl mx-auto mb-10">
-                        {language === 'ar'
-                            ? 'تواصل معنا اليوم واحصل على استشارة مجانية. فريقنا جاهز لمساعدتك في إيجاد السيارة المثالية.'
-                            : 'Contact us today for a free consultation. Our team is ready to help you find the perfect car.'}
-                    </p>
-                    <Button variant="whatsapp" size="lg" className="text-xl" onClick={() => window.open('https://wa.me/4917669495526', '_blank')}>
-                        {language === 'ar' ? 'ابدأ المحادثة عبر واتساب' : 'Start WhatsApp Chat'}
-                    </Button>
-                </Container>
-            </section>
+
         </div >
     );
 };

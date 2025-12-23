@@ -7,6 +7,9 @@
   "cta": {
     "whatsapp": {
       "action": "Chatea con nosotros"
+    },
+    "email": {
+      "action": "Envíenos un email"
     }
   },
   "nav": {
@@ -482,6 +485,10 @@
     "email": "Email",
     "address": "Dirección",
     "hours": "Horarios de Apertura",
+    "cta": {
+      "title": "¿Listo para importar su próximo coche?",
+      "description": "Contáctenos hoy para una consulta gratuita. Nuestro equipo está listo para ayudarle a encontrar el coche perfecto."
+    },
     "legal": {
       "privacy": "Política de Privacidad",
       "imprint": "Aviso Legal",

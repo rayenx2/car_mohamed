@@ -2,15 +2,17 @@ body {
   margin: 0;
   /* Another Segoe font added for Safari */
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-  sans-serif;
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
 @font-face {
   font-family: 'bebasFont';
   src: url(./fonts/BebasNeue-Regular.ttf);
@@ -22,21 +24,74 @@ code {
   src: url(./fonts/SegoeUI.ttf);
 } */
 
-/* Mobile Touch Optimization */
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Mobile-specific optimizations */
 @media (max-width: 768px) {
-  button, 
-  a, 
-  input, 
-  select, 
-  textarea {
+
+  /* Prevent zoom on input focus (iOS) */
+  input,
+  select,
+  textarea,
+  button {
+    font-size: 16px !important;
+  }
+
+  /* Improve touch targets */
+  a,
+  button,
+  [role="button"] {
     min-height: 44px;
     min-width: 44px;
   }
+
+  /* Optimize Arabic typography for mobile */
+  [lang="ar"] body {
+    font-size: 1.05em;
+    letter-spacing: normal;
+  }
+
+  [lang="ar"] h1,
+  [lang="ar"] h2,
+  [lang="ar"] h3 {
+    font-size: 1.1em;
+  }
+
+  /* Optimize for mobile performance */
+  * {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+  }
 }
 
-/* Prevent zoom on input focus (iOS) */
-@media screen and (max-width: 768px) {
-  input, select, textarea {
-    font-size: 16px !important;
+/* Disable pinch zoom (prevents accidental zoom) */
+@media (max-width: 768px) {
+  * {
+    touch-action: pan-y;
   }
+
+  button,
+  a {
+    touch-action: manipulation;
+  }
+}
+
+/* Safe Area Support for iPhone X+ */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  body {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+/* Hide scrollbar for clean mobile horizontal scroll */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

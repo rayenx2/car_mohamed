@@ -1,17 +1,18 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { FaWhatsapp, FaArrowRight, FaCheckCircle } from 'react-icons/fa';
+import { FaWhatsapp, FaArrowRight } from 'react-icons/fa';
 import { useLanguage } from '../contexts/LanguageContext';
 import Button from './design-system/Button';
 import Container from './design-system/Container';
 
 // Import local images directly
-import wallpaper1 from '../assets/backgrounds/wallpaper1.png';
-import wallpaper2 from '../assets/backgrounds/wallpaper2.png';
-import wallpaper3 from '../assets/backgrounds/wallpaper3.png';
-import wallpaper4 from '../assets/backgrounds/wallpaper4.png';
-import wallpaper5 from '../assets/backgrounds/wallpaper5.png';
+import wallpaper1 from '../assets/backgrounds/hero-bg-1.png';
+import wallpaper2 from '../assets/backgrounds/hero-bg-2.png';
+import wallpaper3 from '../assets/backgrounds/hero-bg-3.png';
+import wallpaper4 from '../assets/backgrounds/hero-bg-4.png';
+// Using wallpaper1 as valid 5th element since user only provided 4
+import wallpaper5 from '../assets/backgrounds/hero-bg-1.png';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -49,17 +50,19 @@ const HeroCarousel: React.FC = () => {
             const title = contentRef.current.querySelector('.hero-title');
             const subtitle = contentRef.current.querySelector('.hero-subtitle');
             const buttons = contentRef.current.querySelectorAll('.hero-btn');
-            const trust = contentRef.current.querySelector('.hero-trust');
 
-            tl.fromTo(logo,
-                { opacity: 0, scale: 0.8 },
-                { opacity: 1, scale: 1, duration: 1, ease: "power2.out" }
+            if (logo) {
+                tl.fromTo(logo,
+                    { opacity: 0, scale: 0.8 },
+                    { opacity: 1, scale: 1, duration: 1, ease: "power2.out" }
+                );
+            }
+
+            tl.fromTo(title,
+                { opacity: 0, y: 30 },
+                { opacity: 1, y: 0, duration: 1.2, ease: "power2.out" },
+                "-=0.7"
             )
-                .fromTo(title,
-                    { opacity: 0, y: 30 },
-                    { opacity: 1, y: 0, duration: 1.2, ease: "power2.out" },
-                    "-=0.7"
-                )
                 .fromTo(subtitle,
                     { opacity: 0, y: 20 },
                     { opacity: 1, y: 0, duration: 1, ease: "power2.out" },
@@ -69,145 +72,128 @@ const HeroCarousel: React.FC = () => {
                     { opacity: 0, scale: 0.9 },
                     { opacity: 1, scale: 1, duration: 0.8, stagger: 0.2, ease: "back.out(1.7)" },
                     "-=0.6"
-                )
-                .fromTo(trust,
-                    { opacity: 0 },
-                    { opacity: 1, duration: 0.6 },
-                    "-=0.4"
                 );
-        }
-
-        // Parallax effect on scroll
-        if (containerRef.current) {
-            gsap.to(containerRef.current, {
-                scrollTrigger: {
-                    trigger: containerRef.current,
-                    start: "top top",
-                    end: "bottom top",
-                    scrub: true
-                },
-                y: "30%", // Move background slower than scroll
-                ease: "none"
-            });
-
-            // Fade out content on scroll
-            if (contentRef.current) {
-                gsap.to(contentRef.current, {
-                    scrollTrigger: {
-                        trigger: containerRef.current,
-                        start: "top top",
-                        end: "50% top",
-                        scrub: true
-                    },
-                    opacity: 0,
-                    y: -50,
-                    ease: "none"
-                });
-            }
         }
     }, []);
 
-    // Reset loop
-    useEffect(() => {
-        // Ken Burns effect logic handled via CSS classes using keyframes
-        // but verify transitions here if needed
-    }, [currentBg]);
-
     return (
-        <div ref={containerRef} className="relative h-[80vh] md:h-[90vh] lg:h-screen w-full overflow-hidden bg-gray-900">
-            {/* Background Layers */}
+        <section
+            ref={containerRef}
+            style={{
+                position: 'relative',
+                width: '100vw',
+                height: '100vh',
+                overflow: 'hidden',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
+            }}
+        >
+            {/* Background Images */}
             {backgrounds.map((bg, index) => (
                 <div
                     key={index}
                     ref={el => bgRefs.current[index] = el}
-                    className={`absolute inset-0 bg-cover bg-center transition-opacity duration-[1500ms] ease-in-out ${index === currentBg ? 'opacity-100 z-10' : 'opacity-0 z-0'
-                        }`}
-                    style={{ backgroundImage: `url(${bg})` }}
+                    style={{
+                        position: 'absolute',
+                        top: 0,
+                        left: 0,
+                        width: '100%',
+                        height: '100%',
+                        opacity: index === currentBg ? 1 : 0,
+                        transition: 'opacity 1.5s ease-in-out',
+                        zIndex: 0
+                    }}
                 >
-                    {/* Ken Burns effect applied when active */}
-                    <div className={`absolute inset-0 bg-black/50 ${index === currentBg ? 'animate-ken-burns' : ''}`}></div>
+                    <img
+                        src={bg}
+                        alt="Hero background"
+                        loading={index === 0 ? "eager" : "lazy"}
+                        style={{
+                            width: '100%',
+                            height: '100%',
+                            objectFit: 'cover',
+                            objectPosition: 'center',
+                            display: 'block'
+                        }}
+                    />
+                    <div style={{
+                        position: 'absolute',
+                        top: 0,
+                        left: 0,
+                        width: '100%',
+                        height: '100%',
+                        background: window.innerWidth < 768
+                            ? 'linear-gradient(180deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.35) 50%, rgba(0,0,0,0.55) 100%)'
+                            : 'linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.7) 100%)',
+                        zIndex: 1
+                    }} />
                 </div>
             ))}
 
-            {/* Content Overlay */}
-            <div ref={contentRef} className="absolute inset-0 z-20 flex items-center justify-center text-center px-4">
-                <Container className="max-w-5xl">
-                    {/* Logo */}
-                    <img
-                        src="/WhatsApp Image 2025-08-19 à 16.31.08_eeee4154.jpg"
-                        alt="IV Export Logo"
-                        className="hero-logo w-24 h-24 md:w-32 md:h-32 mx-auto mb-8 rounded-full shadow-2xl border-4 border-white/20"
-                    />
+            {/* Content */}
+            <div ref={contentRef} style={{
+                position: 'relative',
+                zIndex: 20,
+                width: '100%',
+                maxWidth: '1200px',
+                padding: '0 1rem',
+                textAlign: 'center'
+            }}>
+                <Container className="w-full max-w-4xl mx-auto">
+                    {/* Logo - Hidden on mobile */}
+                    <div className="hidden md:block hero-logo mb-8">
+                        <img
+                            src="/WhatsApp Image 2025-08-19 à 16.31.08_eeee4154.jpg"
+                            alt="IV Export Logo"
+                            className="w-32 h-32 mx-auto rounded-full shadow-2xl border-4 border-white/20"
+                        />
+                    </div>
 
                     {/* Headline */}
-                    <h1 className="hero-title text-3xl md:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
+                    <h1 className="hero-title text-white font-bold text-center mb-4 md:mb-6 text-2xl leading-tight sm:text-3xl md:text-5xl lg:text-7xl drop-shadow-lg">
                         {language === 'ar' ? 'خدمة تصدير السيارات الألمانية المتميزة' : 'IV Export Service - Premium German Car Exports'}
                     </h1>
 
                     {/* Subheadline */}
-                    <p className="hero-subtitle text-lg md:text-xl lg:text-2xl text-white/90 mb-10 max-w-3xl mx-auto drop-shadow-md">
+                    <p className="hero-subtitle text-white/90 text-center mb-8 max-w-2xl mx-auto text-sm leading-relaxed px-4 sm:text-base md:text-xl lg:text-2xl drop-shadow-md">
                         {language === 'ar'
-                            ? 'نضمن لك الجودة والموثوقية في كل خطوة من خطوات استيراد سيارتك.'
+                            ? 'نضمن لك الجودة والموثوقية في كل خطوة من خطوات استيراد سياراتك.'
                             : 'We ensure quality and reliability in every step of importing your car.'}
                     </p>
 
-                    {/* CTA Buttons */}
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-                        <div className="hero-btn">
+                    {/* CTA Buttons - Stacked on mobile */}
+                    <div className="flex flex-col md:flex-row gap-4 justify-center items-center w-full max-w-md mx-auto md:max-w-none">
+                        <div className="hero-btn w-full md:w-auto">
                             <Button
                                 variant="whatsapp"
                                 size="lg"
-                                className="w-full sm:w-auto text-lg px-8 shadow-xl hover:shadow-2xl"
-                                onClick={() => window.open('https://wa.me/4917612345678', '_blank')}
+                                className="w-full md:w-auto text-base md:text-lg px-8 py-4 shadow-xl hover:shadow-2xl min-h-[56px] flex items-center justify-center gap-2"
+                                onClick={() => window.open('https://wa.me/4917669495526', '_blank')}
                             >
+                                <FaWhatsapp className="text-2xl" />
                                 {language === 'ar' ? 'تواصل عبر واتساب' : 'Contact on WhatsApp'}
                             </Button>
                         </div>
-                        <div className="hero-btn">
+                        <div className="hero-btn w-full md:w-auto">
                             <Button
                                 variant="secondary"
                                 size="lg"
-                                className="w-full sm:w-auto text-lg px-8 bg-white/10 text-white border-white/40 hover:bg-white/20 backdrop-blur-sm"
+                                className="w-full md:w-auto text-base md:text-lg px-8 py-4 bg-white/20 text-white border-2 border-white/60 hover:bg-white/30 backdrop-blur-sm min-h-[56px]"
                                 onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
                             >
                                 {language === 'ar' ? 'تصفح الخدمات' : 'View Services'}
                             </Button>
                         </div>
                     </div>
-
-                    {/* Trust Indicators */}
-                    <div className="hero-trust grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8 text-white/90 max-w-2xl mx-auto border-t border-white/20 pt-8">
-                        <div className="flex flex-col">
-                            <span className="text-2xl md:text-3xl font-bold text-white">20+</span>
-                            <span className="text-sm md:text-base">{language === 'ar' ? 'سنوات خبرة' : 'Years Experience'}</span>
-                        </div>
-                        <div className="flex flex-col">
-                            <span className="text-2xl md:text-3xl font-bold text-white">1000+</span>
-                            <span className="text-sm md:text-base">{language === 'ar' ? 'سيارة' : 'Cars Exported'}</span>
-                        </div>
-                        <div className="hidden md:flex flex-col">
-                            <span className="text-2xl md:text-3xl font-bold text-white">50+</span>
-                            <span className="text-sm md:text-base">{language === 'ar' ? 'دولة' : 'Countries'}</span>
-                        </div>
-                    </div>
                 </Container>
             </div>
 
             {/* Scroll Indicator */}
-            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 animate-bounce text-white/50">
+            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 animate-bounce text-white/50 hidden md:block">
                 <FaArrowRight className="transform rotate-90 text-2xl" />
             </div>
-
-            <style>{`
-                @keyframes ken-burns {
-                    0% { transform: scale(1); }
-                    100% { transform: scale(1.05); }
-                }
-                .animate-ken-burns {
-                    animation: ken-burns 6s ease-out forwards;
-                }
-            `}</style>
-        </div>
+        </section>
     );
 };
 

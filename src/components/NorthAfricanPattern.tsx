@@ -12,7 +12,7 @@ const NorthAfricanPattern: React.FC<NorthAfricanPatternProps> = ({
 }) => {
     const { language } = useLanguage();
 
-    if (language !== 'ar') return null;
+
 
     return (
         <div

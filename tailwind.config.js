@@ -46,6 +46,11 @@ module.exports = {
         'body-lg': ['1.125rem', { lineHeight: '1.6', fontWeight: '400' }],
         'body': ['1rem', { lineHeight: '1.6', fontWeight: '400' }],
         'small': ['0.875rem', { lineHeight: '1.5', fontWeight: '400' }],
+        // Mobile-optimized sizes
+        'display-mobile': ['2rem', { lineHeight: '1.2', fontWeight: '700' }],
+        'h1-mobile': ['1.75rem', { lineHeight: '1.3', fontWeight: '700' }],
+        'h2-mobile': ['1.5rem', { lineHeight: '1.4', fontWeight: '600' }],
+        'body-mobile': ['0.9375rem', { lineHeight: '1.6', fontWeight: '400' }],
         // Legacy
         '17': '1.0625rem',
       },
@@ -57,6 +62,12 @@ module.exports = {
         'xl': '3rem',     // 48px
         '2xl': '4rem',    // 64px
         '3xl': '6rem',    // 96px
+
+        // Safe area insets for notched devices
+        'safe-top': 'env(safe-area-inset-top)',
+        'safe-bottom': 'env(safe-area-inset-bottom)',
+        'safe-left': 'env(safe-area-inset-left)',
+        'safe-right': 'env(safe-area-inset-right)',
 
         // Legacy spacing
         '2.5': '10px',

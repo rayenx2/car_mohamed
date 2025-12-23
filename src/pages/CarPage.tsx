@@ -4,11 +4,12 @@ import Loader from '../components/Loader';
 import { useParams } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import { useLanguage } from '../contexts/LanguageContext';
+import NorthAfricanPattern from '../components/NorthAfricanPattern';
 
 const strapiURL = 'https://kokpit.alfamotors.pl/';
 const apiURL = 'https://kokpit.alfamotors.pl/api/cars?sort=date&pagination[start]=12&pagination[limit]=100&populate=* ';
 
-    // Local
+// Local
 // const strapiURL = 'http://localhost:1337';
 // const apiURL = 'http://localhost:1337/api/cars?populate=*';
 
@@ -72,7 +73,9 @@ interface ImageAttributes {
 interface Image {
     attributes: ImageAttributes;
     id: number;
-  }
+}
+
+
 
 export default function CarPage() {
     const { id } = useParams();
@@ -80,8 +83,8 @@ export default function CarPage() {
     // IDs of cars are not like the order due to deleted records (e.g. first record from db has ID = 12). This why the program uses pagination
     let pagination: number = Number(id) - 20; // TS doesn't accept substracting number from string
     if (pagination < 0) pagination = 0;
-    const apiURL = 'https://kokpit.alfamotors.pl/api/cars?sort=date&pagination[start]=' + pagination + '&pagination[limit]=100&populate=* '; 
-    
+    const apiURL = 'https://kokpit.alfamotors.pl/api/cars?sort=date&pagination[start]=' + pagination + '&pagination[limit]=100&populate=* ';
+
     const { loading, error, data } = useFetch(apiURL);
     let imagesURLs: string[] = []; // here will be stored URLs of images
     let idCar: number = Number(id); // turninig string into number
@@ -90,7 +93,7 @@ export default function CarPage() {
     function isThatCar(fetchedCar: Car[]) {
         return fetchedCar[1].id === idCar;
     }
-    
+
     if (loading) return <Loader />
     if (error) return <p>Error!!!</p>
 
@@ -98,29 +101,30 @@ export default function CarPage() {
     let foundCar: any = data.find(isThatCar);
 
     // Collecting an array of car's images
-    if (foundCar && foundCar[1]) {    
+    if (foundCar && foundCar[1]) {
         foundCar[1].attributes.gallery.data.map((image: Image) => (
             imagesURLs.push(strapiURL + image.attributes.formats.large.url)
         ));
     } else {
         // if url has ID which is not in db
-        return <h3 style={{textAlign: 'center', fontSize: '22px', fontWeight: '700', marginTop: 50, paddingInline: '5px'}}>Brak samochodu o takim identyfikatorze.</h3>
+        return <h3 style={{ textAlign: 'center', fontSize: '22px', fontWeight: '700', marginTop: 50, paddingInline: '5px' }}>Brak samochodu o takim identyfikatorze.</h3>
     }
 
     return (
-        <div className='CarPage relative pb-64'> {/* Relative position necessary to lock table with absolute position */}
+        <div className='CarPage relative pb-64 overflow-hidden'> {/* Relative position necessary to lock table with absolute position */}
+            <NorthAfricanPattern opacity={0.03} />
             <h1 className='py-4 px-2 font-bebasFont text-2xl text-center
             sm:py-6 sm:text-3xl'>
                 {foundCar[1].attributes.title + ' '}
                 <div className='CarPage__price__area font-medium text-red-600 sm:inline-block' style={
-                    foundCar[1].attributes.state==='sold' || 
-                    foundCar[1].attributes.state==='soon' ? {display: 'none'} : {}
+                    foundCar[1].attributes.state === 'sold' ||
+                        foundCar[1].attributes.state === 'soon' ? { display: 'none' } : {}
                 }>
-                    <span className='CarPage__price__area__dash px-1'>{foundCar[1].attributes.price ? ` - ` : ' '}</span> 
+                    <span className='CarPage__price__area__dash px-1'>{foundCar[1].attributes.price ? ` - ` : ' '}</span>
                     <span className='CarPage__price__area__number'>
-                        {foundCar[1].attributes.state==='zarezerwowane' ? 
-                        ' - ZAREZERWOWANE' : 
-                        foundCar[1].attributes.price + ' PLN'}
+                        {foundCar[1].attributes.state === 'zarezerwowane' ?
+                            ' - ZAREZERWOWANE' :
+                            foundCar[1].attributes.price + ' PLN'}
                     </span>
                 </div>
             </h1>

@@ -21,5 +21,8 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-src/assets/videos/MP4_20251029_232454VLOG.mp4
-src/assets/videos/lv_0_20250912213631.mp4
+# Large media files
+*.mp4
+*.mov
+*.avi
+src/assets/videos/*.mp4

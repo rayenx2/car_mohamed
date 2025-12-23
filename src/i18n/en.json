@@ -7,6 +7,9 @@
   "cta": {
     "whatsapp": {
       "action": "Chat with us"
+    },
+    "email": {
+      "action": "Email Us"
     }
   },
   "nav": {
@@ -29,7 +32,8 @@
       ],
       "cta": {
         "checkStock": "Check Our Stock",
-        "whatsapp": "WhatsApp Us"
+        "whatsapp": "WhatsApp Us",
+        "services": "Our Services"
       },
       "stats": {
         "yearsExperience": "Years Experience",
@@ -189,12 +193,15 @@
     "trustStrip": {
       "yearsInBusiness": "Years in Business",
       "carsExported": "Cars Exported",
-      "partnerCarriers": "Partner Carriers"
+      "partnerCarriers": "Partner Carriers",
+      "countries": "Countries Served",
+      "satisfaction": "Client Satisfaction"
     },
     "contactStrip": {
       "title": "Get in Touch",
       "whatsapp": "WhatsApp",
-      "email": "Email"
+      "email": "Email",
+      "contact": "Contact on WhatsApp"
     },
     "messages": {
       "whatsappMessage": "Hi, I'm interested in your car export service",
@@ -335,7 +342,7 @@
     "stats": {
       "clients": "1000+",
       "clientsLabel": "Happy Clients",
-      "vehicles": "5000+",
+      "vehicles": "1000+",
       "vehiclesLabel": "Vehicles Exported",
       "countries": "50+",
       "countriesLabel": "Countries Served",
@@ -494,6 +501,10 @@
     "email": "Email",
     "address": "Address",
     "hours": "Opening Hours",
+    "cta": {
+      "title": "Ready to Import Your Next Car?",
+      "description": "Contact us today for a free consultation. Our team is ready to help you find the perfect car."
+    },
     "legal": {
       "privacy": "Privacy Policy",
       "imprint": "Legal Notice",

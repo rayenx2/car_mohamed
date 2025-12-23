@@ -2,8 +2,10 @@ import { NavLink } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 import { FaWhatsapp, FaEnvelope, FaMapMarkerAlt, FaPhone, FaClock, FaGlobe } from 'react-icons/fa';
 
+import NorthAfricanPattern from './NorthAfricanPattern';
+
 export default function Footer() {
-	const { t } = useLanguage();
+	const { t, language } = useLanguage();
 	const currentYear = new Date().getFullYear();
 
 	const WHATSAPP_NUMBER = '4917669495526';
@@ -14,36 +16,40 @@ export default function Footer() {
 
 	return (
 		<footer className="bg-gray-50 border-t border-gray-200" aria-labelledby="site-footer">
-			<div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
-				{/* Contact CTAs - Prominent Section */}
-				<div className="text-center mb-16">
-					<h2 className="text-3xl font-bold text-gray-900 mb-6">{t('contact.title') || 'Get in Touch'}</h2>
-					<p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-						Ready to start your car export journey? Contact us for personalized assistance and expert guidance.
+			{/* Contact CTAs - Prominent Section */}
+			<section className="relative py-24 bg-deep-blue text-white overflow-hidden">
+				<NorthAfricanPattern opacity={0.1} />
+				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+					<h2 className="text-4xl md:text-5xl font-bold mb-6">
+						{t('footer.cta.title') || (language === 'ar' ? 'جاهز لاستيراد سيارتك القادمة؟' : 'Ready to Import Your Next Car?')}
+					</h2>
+					<p className="text-xl text-blue-100 max-w-2xl mx-auto mb-10">
+						{t('footer.cta.description') || (language === 'ar'
+							? 'تواصل معنا اليوم واحصل على استشارة مجانية. فريقنا جاهز لمساعدتك في إيجاد السيارة المثالية.'
+							: 'Contact us today for a free consultation. Our team is ready to help you find the perfect car.')}
 					</p>
-					<div className="flex flex-col sm:flex-row gap-4 justify-center">
+					<div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
 						<a
 							href={whatsappHref}
 							target="_blank"
 							rel="noopener noreferrer"
-							className="inline-flex items-center justify-center bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl"
+							className="inline-flex items-center justify-center bg-whatsapp-green hover:bg-emerald-700 text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg group"
 						>
-							<span className="mr-3">
-								<FaWhatsapp className="h-6 w-6" />
-							</span>
-							<span>{t('home.hero.cta.whatsapp') || 'WhatsApp Us'}</span>
+							<FaWhatsapp className="text-2xl mr-3 group-hover:animate-pulse" />
+							<span>{t('cta.whatsapp.action') || (language === 'ar' ? 'ابدأ المحادثة عبر واتساب' : 'Start WhatsApp Chat')}</span>
 						</a>
 						<a
 							href={emailHref}
-							className="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl"
+							className="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 text-white border-2 border-white/30 px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg backdrop-blur-sm group"
 						>
-							<span className="mr-3">
-								<FaEnvelope className="h-6 w-6" />
-							</span>
-							<span>{t('home.contactStrip.email') || 'Email Us'}</span>
+							<FaEnvelope className="text-2xl mr-3" />
+							<span>{t('cta.email.action') || (language === 'ar' ? 'راسلنا عبر البريد' : 'Email Us')}</span>
 						</a>
 					</div>
 				</div>
+			</section>
+
+			<div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
 
 				{/* Main Footer Content */}
 				<div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -70,6 +76,14 @@ export default function Footer() {
 							Your trusted partner for premium car export from Germany. Professional service, secure logistics, and worldwide shipping expertise.
 						</p>
 						<div className="space-y-3 text-sm text-gray-600">
+							<div className="flex items-start gap-3">
+								<FaMapMarkerAlt className="h-5 w-5 text-blue-600 flex-shrink-0 mt-1" />
+								<div>
+									<p className="font-semibold text-gray-900">Mohamed Zouinkhi</p>
+									<p>Hudekamp 15, 23558 Lübeck</p>
+									<p className="text-gray-500 text-xs mt-1">VAT ID: DE457498033</p>
+								</div>
+							</div>
 							<div className="flex items-center gap-3">
 								<FaGlobe className="h-5 w-5 text-blue-600" />
 								<span>Germany - Worldwide Export</span>
@@ -94,9 +108,6 @@ export default function Footer() {
 							</NavLink>
 							<NavLink to="/stock" className="block text-gray-600 hover:text-blue-600 transition-colors">
 								{t('nav.stock')}
-							</NavLink>
-							<NavLink to="/faq" className="block text-gray-600 hover:text-blue-600 transition-colors">
-								{t('nav.faq')}
 							</NavLink>
 							<NavLink to="/about" className="block text-gray-600 hover:text-blue-600 transition-colors">
 								{t('nav.about')}
@@ -136,6 +147,6 @@ export default function Footer() {
 					</div>
 				</div>
 			</div>
-		</footer>
+		</footer >
 	);
 }
