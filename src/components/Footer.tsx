@@ -81,7 +81,6 @@ export default function Footer() {
 								<div>
 									<p className="font-semibold text-gray-900">Mohamed Zouinkhi</p>
 									<p>Hudekamp 15, 23558 Lübeck</p>
-									<p className="text-gray-500 text-xs mt-1">VAT ID: DE457498033</p>
 								</div>
 							</div>
 							<div className="flex items-center gap-3">
