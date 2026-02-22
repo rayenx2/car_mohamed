@@ -13,13 +13,6 @@ const Home: React.FC = () => {
     window.open(whatsappUrl, '_blank');
   };
 
-  const handleEmail = () => {
-    const subject = t('home.messages.emailSubject');
-    const body = t('home.messages.emailBody');
-    const mailtoUrl = `mailto:Iv.exportservice@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.open(mailtoUrl);
-  };
-
   if (isLoading) {
     return (
       <div className="pt-20 pb-16">

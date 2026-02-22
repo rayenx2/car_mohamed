@@ -20,6 +20,7 @@ const Services = lazy(() => import("./pages/Services"));
 const Stock = lazy(() => import("./pages/Stock"));
 const CarPage = lazy(() => import("./pages/CarPage"));
 const Thanks = lazy(() => import("./pages/Thanks"));
+const Impressum = lazy(() => import("./pages/Impressum"));
 
 
 
@@ -48,6 +49,7 @@ function App() {
                 <Route path='/about' element={<About />} />
                 <Route path='/carpage/:id' element={<CarPage />} />
                 <Route path='/thanks' element={<Thanks />} />
+                <Route path='/impressum' element={<Impressum />} />
               </Routes>
             </Suspense>
           </main>

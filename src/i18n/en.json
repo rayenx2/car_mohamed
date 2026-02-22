@@ -287,6 +287,7 @@
     },
     "process": {
       "title": "Our Complete Process - Based on 20 Years of Experience",
+      "subtitle": "From vehicle selection to final delivery, we provide comprehensive solutions for your car export needs.",
       "steps": {
         "chooseCar": {
           "title": "Choose your car",
@@ -535,5 +536,69 @@
     "close": "Close",
     "more": "More",
     "less": "Less"
+  },
+  "impressum": {
+    "title": "Legal Notice",
+    "link": "Legal Notice"
+  },
+  "landing": {
+    "services": {
+      "title": "Our Premium Services",
+      "subtitle": "We provide a hassle-free import experience, handling all legal and logistical details.",
+      "inspection": {
+        "title": "Vehicle Inspection",
+        "description": "Comprehensive vehicle inspection to ensure technical condition and accident-free status."
+      },
+      "customs": {
+        "title": "Customs & Paperwork",
+        "description": "Preparation of all necessary documentation for export and customs clearance in Germany."
+      },
+      "shipping": {
+        "title": "Fast Shipping",
+        "description": "Multiple secure shipping options to all major North African ports."
+      }
+    },
+    "whyChoose": {
+      "title": "Why Choose IV Export?",
+      "transparency": "Full price transparency",
+      "whatsapp": "Direct WhatsApp support",
+      "expertise": "German market expertise",
+      "language": "We speak your language",
+      "learnMore": "Learn More About Us",
+      "stats": {
+        "experience": "Years Experience",
+        "exported": "Cars Exported",
+        "satisfaction": "Customer Satisfaction"
+      }
+    },
+    "introService": {
+      "title": "Introducing Our Service",
+      "description": "Discover how we provide you with the best car import experience from Germany."
+    },
+    "testimonials": {
+      "title": "Client Testimonials",
+      "subtitle": "See why hundreds of clients trust us with their car exports."
+    },
+    "mohamed": {
+      "title": "Introducing Mohamed",
+      "description": "The expert who will guide you through your car buying journey from A to Z, ensuring quality and safety.",
+      "point1": "Personal Attention",
+      "point2": "Extensive Car Expertise",
+      "point3": "Your Trusted Partner in Germany",
+      "chatCta": "Chat with Mohamed",
+      "aboutCta": "More About Us"
+    }
+  },
+  "hero": {
+    "title": "IV Export Service - Premium German Car Exports",
+    "subtitle": "We ensure quality and reliability in every step of importing your car.",
+    "whatsappCta": "Contact on WhatsApp",
+    "servicesCta": "View Services"
+  },
+  "trustStrip": {
+    "carsExported": "Cars Exported",
+    "yearsExperience": "Years Experience",
+    "countriesServed": "Countries Served",
+    "clientSatisfaction": "Client Satisfaction"
   }
 }

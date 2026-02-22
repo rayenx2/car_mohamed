@@ -3,31 +3,31 @@ import { useLanguage } from '../contexts/LanguageContext';
 import { FaCar, FaCalendarAlt, FaGlobe, FaUserTie } from 'react-icons/fa';
 
 const TrustStrip: React.FC = () => {
-    const { t, language } = useLanguage();
+    const { t } = useLanguage();
 
     const stats = [
         {
             icon: FaCar,
             value: '1000+',
-            label: language === 'ar' ? 'سيارة مُصدرة' : 'Cars Exported',
+            label: t('trustStrip.carsExported'),
             color: 'blue'
         },
         {
             icon: FaCalendarAlt,
             value: '+20',
-            label: language === 'ar' ? 'سنوات خبرة' : 'Years Experience',
+            label: t('trustStrip.yearsExperience'),
             color: 'blue'
         },
         {
             icon: FaGlobe,
             value: '50+',
-            label: language === 'ar' ? 'دولة نخدمها' : 'Countries Served',
+            label: t('trustStrip.countriesServed'),
             color: 'blue'
         },
         {
             icon: FaUserTie,
             value: '100%',
-            label: language === 'ar' ? 'رضا العملاء' : 'Client Satisfaction',
+            label: t('trustStrip.clientSatisfaction'),
             color: 'blue'
         }
     ];

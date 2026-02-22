@@ -283,6 +283,7 @@
     },
     "process": {
       "title": "Notre Processus Complet - Basé sur 20 Ans d'Expérience",
+      "subtitle": "De la sélection du véhicule à la livraison finale, nous proposons des solutions complètes pour vos besoins d'exportation automobile.",
       "steps": {
         "chooseCar": {
           "title": "Choisissez votre voiture",
@@ -394,6 +395,16 @@
   "stock": {
     "title": "Stock Disponible",
     "subtitle": "Parcourez notre sélection de véhicules premium disponibles à l'exportation",
+    "availability": {
+      "message": "Nous n'avons actuellement aucun véhicule en ligne. Tous nos véhicules sont vendus directement à nos partenaires B2B ou à des clients individuels sur demande."
+    },
+    "contact": {
+      "title": "Vous recherchez un véhicule spécifique ?",
+      "description": "Contactez-nous avec vos critères et nous trouverons la voiture parfaite pour vous sur le marché allemand."
+    },
+    "response": {
+      "time": "Nous répondons généralement dans les 24 heures."
+    },
     "filters": {
       "brand": "Marque",
       "year": "Année",
@@ -519,5 +530,69 @@
     "close": "Fermer",
     "more": "Plus",
     "less": "Moins"
+  },
+  "impressum": {
+    "title": "Mentions légales",
+    "link": "Mentions légales"
+  },
+  "landing": {
+    "services": {
+      "title": "Nos services premium",
+      "subtitle": "Nous vous offrons une expérience d'importation sans tracas, en gérant tous les détails juridiques et logistiques.",
+      "inspection": {
+        "title": "Inspection des véhicules",
+        "description": "Inspection complète du véhicule pour garantir l'état technique et l'absence d'accident."
+      },
+      "customs": {
+        "title": "Douanes et documents",
+        "description": "Préparation de toute la documentation nécessaire pour l'exportation et le dédouanement en Allemagne."
+      },
+      "shipping": {
+        "title": "Expédition rapide",
+        "description": "Multiples options d'expédition sécurisées vers tous les principaux ports d'Afrique du Nord."
+      }
+    },
+    "whyChoose": {
+      "title": "Pourquoi choisir IV Export ?",
+      "transparency": "Transparence totale des prix",
+      "whatsapp": "Support WhatsApp direct",
+      "expertise": "Expertise du marché allemand",
+      "language": "Nous parlons votre langue",
+      "learnMore": "En savoir plus sur nous",
+      "stats": {
+        "experience": "Années d'expérience",
+        "exported": "Voitures exportées",
+        "satisfaction": "Satisfaction client"
+      }
+    },
+    "introService": {
+      "title": "Découvrez notre service",
+      "description": "Découvrez comment nous vous offrons la meilleure expérience d'importation automobile depuis l'Allemagne."
+    },
+    "testimonials": {
+      "title": "Témoignages clients",
+      "subtitle": "Découvrez pourquoi des centaines de clients nous font confiance pour leurs exportations de voitures."
+    },
+    "mohamed": {
+      "title": "Découvrez Mohamed",
+      "description": "L'expert qui vous guidera tout au long de votre parcours d'achat de voiture de A à Z, en garantissant qualité et sécurité.",
+      "point1": "Attention personnalisée",
+      "point2": "Vaste expertise automobile",
+      "point3": "Votre partenaire de confiance en Allemagne",
+      "chatCta": "Discuter avec Mohamed",
+      "aboutCta": "En savoir plus"
+    }
+  },
+  "hero": {
+    "title": "IV Export Service - Exportations automobiles allemandes premium",
+    "subtitle": "Nous garantissons qualité et fiabilité à chaque étape de l'importation de votre véhicule.",
+    "whatsappCta": "Contactez-nous sur WhatsApp",
+    "servicesCta": "Voir nos services"
+  },
+  "trustStrip": {
+    "carsExported": "Voitures exportées",
+    "yearsExperience": "Années d'expérience",
+    "countriesServed": "Pays desservis",
+    "clientSatisfaction": "Satisfaction client"
   }
 }

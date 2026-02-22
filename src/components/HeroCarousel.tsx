@@ -19,7 +19,7 @@ gsap.registerPlugin(ScrollTrigger);
 const backgrounds = [wallpaper1, wallpaper2, wallpaper3, wallpaper4, wallpaper5];
 
 const HeroCarousel: React.FC = () => {
-    const { t, language, isRTL } = useLanguage();
+    const { t } = useLanguage();
     const [currentBg, setCurrentBg] = useState(0);
     const [nextBg, setNextBg] = useState(1);
     const containerRef = useRef<HTMLDivElement>(null);
@@ -152,14 +152,12 @@ const HeroCarousel: React.FC = () => {
 
                     {/* Headline */}
                     <h1 className="hero-title text-white font-bold text-center mb-4 md:mb-6 text-2xl leading-tight sm:text-3xl md:text-5xl lg:text-7xl drop-shadow-lg">
-                        {language === 'ar' ? 'خدمة تصدير السيارات الألمانية المتميزة' : 'IV Export Service - Premium German Car Exports'}
+                        {t('hero.title')}
                     </h1>
 
                     {/* Subheadline */}
                     <p className="hero-subtitle text-white/90 text-center mb-8 max-w-2xl mx-auto text-sm leading-relaxed px-4 sm:text-base md:text-xl lg:text-2xl drop-shadow-md">
-                        {language === 'ar'
-                            ? 'نضمن لك الجودة والموثوقية في كل خطوة من خطوات استيراد سياراتك.'
-                            : 'We ensure quality and reliability in every step of importing your car.'}
+                        {t('hero.subtitle')}
                     </p>
 
                     {/* CTA Buttons - Stacked on mobile */}
@@ -172,7 +170,7 @@ const HeroCarousel: React.FC = () => {
                                 onClick={() => window.open('https://wa.me/4917669495526', '_blank')}
                             >
                                 <FaWhatsapp className="text-2xl" />
-                                {language === 'ar' ? 'تواصل عبر واتساب' : 'Contact on WhatsApp'}
+                                {t('hero.whatsappCta')}
                             </Button>
                         </div>
                         <div className="hero-btn w-full md:w-auto">
@@ -182,7 +180,7 @@ const HeroCarousel: React.FC = () => {
                                 className="w-full md:w-auto text-base md:text-lg px-8 py-4 bg-white/20 text-white border-2 border-white/60 hover:bg-white/30 backdrop-blur-sm min-h-[56px]"
                                 onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
                             >
-                                {language === 'ar' ? 'تصفح الخدمات' : 'View Services'}
+                                {t('hero.servicesCta')}
                             </Button>
                         </div>
                     </div>

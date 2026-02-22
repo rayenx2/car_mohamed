@@ -31,7 +31,7 @@ module.exports = {
         'car-yellow': 'hsl(39, 100%, 40%)',
       },
       fontFamily: {
-        sans: ['Inter', 'Segoe UI', '-apple-system', 'sans-serif'],
+        sans: ['Cairo', 'Tajawal', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
         arabic: ['Cairo', 'Tajawal', 'sans-serif'],
         mono: ['Courier New', 'monospace'],
         // Legacy font support

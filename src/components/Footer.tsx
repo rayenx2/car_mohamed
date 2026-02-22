@@ -9,7 +9,7 @@ export default function Footer() {
 	const currentYear = new Date().getFullYear();
 
 	const WHATSAPP_NUMBER = '4917669495526';
-	const EMAIL_ADDRESS = 'Iv.exportservice@gmail.com';
+	const EMAIL_ADDRESS = 'info@ivexportservice.com';
 
 	const whatsappHref = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Hello, I would like to inquire about your car export service.')}`;
 	const emailHref = `mailto:${EMAIL_ADDRESS}?subject=${encodeURIComponent('Car Export Inquiry')}`;
@@ -81,6 +81,7 @@ export default function Footer() {
 								<div>
 									<p className="font-semibold text-gray-900">Mohamed Zouinkhi</p>
 									<p>Hudekamp 15, 23558 Lübeck</p>
+
 								</div>
 							</div>
 							<div className="flex items-center gap-3">
@@ -118,15 +119,15 @@ export default function Footer() {
 					<div>
 						<h3 className="font-semibold text-gray-900 mb-4">Legal</h3>
 						<div className="space-y-3 text-sm">
-							<a href="#" className="block text-gray-600 hover:text-blue-600 transition-colors">
+							<button type="button" className="block text-gray-600 hover:text-blue-600 transition-colors text-sm text-left">
 								{t('footer.legal.privacy')}
-							</a>
-							<a href="#" className="block text-gray-600 hover:text-blue-600 transition-colors">
-								{t('footer.legal.imprint')}
-							</a>
-							<a href="#" className="block text-gray-600 hover:text-blue-600 transition-colors">
+							</button>
+							<NavLink to="/impressum" className="block text-gray-600 hover:text-blue-600 transition-colors">
+								Impressum
+							</NavLink>
+							<button type="button" className="block text-gray-600 hover:text-blue-600 transition-colors text-sm text-left">
 								{t('footer.legal.cookies')}
-							</a>
+							</button>
 						</div>
 					</div>
 				</div>
