@@ -3,7 +3,7 @@ import { useLanguage } from '../contexts/LanguageContext';
 import NorthAfricanPattern from '../components/NorthAfricanPattern';
 import {
   FaShip, FaPlane, FaTruck, FaShieldAlt, FaCheckCircle, FaGlobe,
-  FaCar, FaSearch, FaFileContract, FaShippingFast, FaUser, FaBuilding,
+  FaCar, FaSearch, FaFileContract, FaUser, FaBuilding,
   FaCarSide, FaUsers, FaInfoCircle, FaWhatsapp, FaMapMarkerAlt
 } from 'react-icons/fa';
 import { AccordionItem } from '../components/ui/Accordion';
