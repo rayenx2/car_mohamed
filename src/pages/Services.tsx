@@ -275,7 +275,7 @@ const Services: React.FC = () => {
           </h2>
 
           <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-            من اختيار المركبات إلى التسليم النهائي، نقدم حلولاً شاملة لاحتياجاتك في تصدير السيارات.
+            {t('services.process.subtitle')}
           </p>
 
           <div className="space-y-4">

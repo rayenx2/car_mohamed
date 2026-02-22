@@ -1,5 +1,4 @@
 import React from 'react';
-import { useLanguage } from '../contexts/LanguageContext';
 
 interface NorthAfricanPatternProps {
     className?: string;
@@ -10,7 +9,6 @@ const NorthAfricanPattern: React.FC<NorthAfricanPatternProps> = ({
     className = '',
     opacity = 0.05
 }) => {
-    const { language } = useLanguage();
 
 
 

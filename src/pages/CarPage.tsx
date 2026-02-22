@@ -7,7 +7,6 @@ import { useLanguage } from '../contexts/LanguageContext';
 import NorthAfricanPattern from '../components/NorthAfricanPattern';
 
 const strapiURL = 'https://kokpit.alfamotors.pl/';
-const apiURL = 'https://kokpit.alfamotors.pl/api/cars?sort=date&pagination[start]=12&pagination[limit]=100&populate=* ';
 
 // Local
 // const strapiURL = 'http://localhost:1337';
@@ -46,10 +45,7 @@ interface Car {
     attributes: CarAttributes;
 }
 
-interface StrapiCar {
-    0: string;
-    1: Car;
-}
+
 
 interface ImageAttributes {
     alternativeText: null;

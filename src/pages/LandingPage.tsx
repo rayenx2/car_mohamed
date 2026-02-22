@@ -12,7 +12,7 @@ import HeroCarousel from '../components/HeroCarousel';
 import { useNavigate } from 'react-router-dom';
 import { useRef, useState } from 'react';
 import useVideoAutoplay from '../hooks/useVideoAutoplay';
-import { FaPlay, FaPause, FaVolumeMute, FaVolumeUp } from 'react-icons/fa';
+import { FaVolumeMute, FaVolumeUp } from 'react-icons/fa';
 
 // Cloudinary CDN video URLs - permanent, optimized delivery
 const CLOUDINARY_BASE = 'https://res.cloudinary.com/dzaomtxj8/video/upload';
@@ -23,7 +23,7 @@ const mohamedIntroVideo = `${CLOUDINARY_BASE}/q_auto,f_auto/lv_0_20250912213631_
 const processVideo = `${CLOUDINARY_BASE}/q_auto,f_auto/MP4_20251029_232454VLOG_1_dkoagn.mp4`;
 
 const LandingPage: React.FC = () => {
-    const { t, language, isRTL } = useLanguage();
+    const { t, isRTL } = useLanguage();
     const navigate = useNavigate();
     const video1Ref = useRef<HTMLVideoElement>(null);
     const video2Ref = useRef<HTMLVideoElement>(null);
@@ -55,10 +55,6 @@ const LandingPage: React.FC = () => {
         console.error('Video failed to load:', e.currentTarget.src);
     };
 
-    const heroImage = '/WhatsApp Image 2025-08-19 à 16.31.08_eeee4154.jpg'; // Using the logo as placeholder/hero or maybe background? 
-    // Wait, the prompt said logo is at that path. For hero background we might need a car image.
-    // I will use a gradient or the wallpaper component's background style if possible, but let's stick to standard Tailwind for now.
-
     return (
         <div className={`min-h-screen bg-gray-50 text-gray-900 font-sans ${isRTL ? 'font-arabic' : ''}`} dir={isRTL ? 'rtl' : 'ltr'}>
             {/* Hero Section */}
@@ -72,43 +68,35 @@ const LandingPage: React.FC = () => {
                 <Container>
                     <div className="text-center max-w-3xl mx-auto mb-16">
                         <h2 className="text-h2 mb-4 text-deep-blue">
-                            {language === 'ar' ? 'خدماتنا المتميزة' : 'Our Premium Services'}
+                            {t('landing.services.title')}
                         </h2>
                         <p className="text-body text-gray-600">
-                            {language === 'ar'
-                                ? 'نقدم لك تجربة استيراد خالية من المتاعب، مع الاهتمام بجميع التفاصيل القانونية واللوجستية.'
-                                : 'We provide a hassle-free import experience, handling all legal and logistical details.'}
+                            {t('landing.services.subtitle')}
                         </p>
                     </div>
 
                     <div className="grid md:grid-cols-3 gap-8">
                         <SectionCard className="text-center group">
                             <IconContainer icon={<FaCar />} variant="primary" className="mx-auto mb-6 group-hover:bg-deep-blue" />
-                            <h3 className="text-h3 mb-3">{language === 'ar' ? 'فحص السيارات' : 'Vehicle Inspection'}</h3>
+                            <h3 className="text-h3 mb-3">{t('landing.services.inspection.title')}</h3>
                             <p className="text-gray-600">
-                                {language === 'ar'
-                                    ? 'فحص شامل للسيارة للتأكد من حالتها الفنية وخلوها من الحوادث.'
-                                    : 'Comprehensive vehicle inspection to ensure technical condition and accident-free status.'}
+                                {t('landing.services.inspection.description')}
                             </p>
                         </SectionCard>
 
                         <SectionCard className="text-center group">
                             <IconContainer icon={<FaFileContract />} variant="primary" className="mx-auto mb-6 group-hover:bg-deep-blue" />
-                            <h3 className="text-h3 mb-3">{language === 'ar' ? 'تخليص جمركي' : 'Customs & Paperwork'}</h3>
+                            <h3 className="text-h3 mb-3">{t('landing.services.customs.title')}</h3>
                             <p className="text-gray-600">
-                                {language === 'ar'
-                                    ? 'تجهيز جميع الأوراق اللازمة للتصدير والتخليص الجمركي في ألمانيا.'
-                                    : 'Preparation of all necessary documentation for export and customs clearance in Germany.'}
+                                {t('landing.services.customs.description')}
                             </p>
                         </SectionCard>
 
                         <SectionCard className="text-center group">
                             <IconContainer icon={<FaShippingFast />} variant="primary" className="mx-auto mb-6 group-hover:bg-deep-blue" />
-                            <h3 className="text-h3 mb-3">{language === 'ar' ? 'شحن سريع' : 'Fast Shipping'}</h3>
+                            <h3 className="text-h3 mb-3">{t('landing.services.shipping.title')}</h3>
                             <p className="text-gray-600">
-                                {language === 'ar'
-                                    ? 'خيارات شحن متعددة وآمنة إلى جميع موانئ شمال أفريقيا.'
-                                    : 'Multiple secure shipping options to all major North African ports.'}
+                                {t('landing.services.shipping.description')}
                             </p>
                         </SectionCard>
                     </div>
@@ -124,39 +112,39 @@ const LandingPage: React.FC = () => {
                             <div className="grid grid-cols-2 gap-4">
                                 <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
                                     <div className="text-4xl font-bold text-primary-blue mb-2">20+</div>
-                                    <div className="text-sm text-gray-600">{language === 'ar' ? 'سنوات خبرة' : 'Years Experience'}</div>
+                                    <div className="text-sm text-gray-600">{t('landing.whyChoose.stats.experience')}</div>
                                 </div>
                                 <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
                                     <div className="text-4xl font-bold text-primary-blue mb-2">1000+</div>
-                                    <div className="text-sm text-gray-600">{language === 'ar' ? 'سيارة تم تصديرها' : 'Cars Exported'}</div>
+                                    <div className="text-sm text-gray-600">{t('landing.whyChoose.stats.exported')}</div>
                                 </div>
                                 <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 col-span-2">
                                     <div className="text-4xl font-bold text-whatsapp-green mb-2">100%</div>
-                                    <div className="text-sm text-gray-600">{language === 'ar' ? 'رضا العملاء' : 'Customer Satisfaction'}</div>
+                                    <div className="text-sm text-gray-600">{t('landing.whyChoose.stats.satisfaction')}</div>
                                 </div>
                             </div>
                         </div>
 
                         <div className="order-1 lg:order-2">
                             <h2 className="text-h2 text-deep-blue mb-6">
-                                {language === 'ar' ? 'لماذا تختار IV Export؟' : 'Why Choose IV Export?'}
+                                {t('landing.whyChoose.title')}
                             </h2>
                             <ul className="space-y-4">
                                 {[
-                                    { ar: 'شفافية كاملة في الأسعار', en: 'Full price transparency' },
-                                    { ar: 'دعم مباشر عبر واتساب', en: 'Direct WhatsApp support' },
-                                    { ar: 'خبرة في السوق الألماني', en: 'German market expertise' },
-                                    { ar: 'نتحدث لغتك (العربية، الإنجليزية، الفرنسية)', en: 'We speak your language' },
+                                    t('landing.whyChoose.transparency'),
+                                    t('landing.whyChoose.whatsapp'),
+                                    t('landing.whyChoose.expertise'),
+                                    t('landing.whyChoose.language'),
                                 ].map((item, idx) => (
                                     <li key={idx} className="flex items-start gap-3">
                                         <IconContainer icon={<FaCheckCircle />} variant="whatsapp" size="sm" className="flex-shrink-0 w-6 h-6 text-sm mt-1" />
-                                        <span className="text-body-lg text-gray-700">{language === 'ar' ? item.ar : item.en}</span>
+                                        <span className="text-body-lg text-gray-700">{item}</span>
                                     </li>
                                 ))}
                             </ul>
                             <div className="mt-8">
                                 <Button variant="primary" onClick={() => navigate('/about')}>
-                                    {language === 'ar' ? 'تعرف علينا أكثر' : 'Learn More About Us'}
+                                    {t('landing.whyChoose.learnMore')}
                                 </Button>
                             </div>
                         </div>
@@ -183,13 +171,11 @@ const LandingPage: React.FC = () => {
                 <Container>
                     <div className="text-center mb-10">
                         <h2 className="text-h2 text-deep-blue mb-4">
-                            {language === 'ar' ? 'مقدمة عن خدماتنا' : 'Introducing Our Service'}
+                            {t('landing.introService.title')}
                         </h2>
                         <div className="max-w-2xl mx-auto">
                             <p className="text-body-lg text-gray-600">
-                                {language === 'ar'
-                                    ? 'تعرف على خدماتنا المتميزة وكيف نضمن لك تجربة استيراد سلسة وآمنة من ألمانيا.'
-                                    : 'Discover how we provide you with the best car import experience from Germany.'}
+                                {t('landing.introService.description')}
                             </p>
                         </div>
                     </div>
@@ -206,7 +192,7 @@ const LandingPage: React.FC = () => {
                             onError={handleVideoError}
                         >
                             <source src={processVideo} type="video/mp4" />
-                            Your browser does not support the video tag.
+                            {t('common.videoUnsupported')}
                         </video>
                         <div className="absolute bottom-4 right-4 z-10 transition-opacity duration-300 opacity-70 hover:opacity-100">
                             <button
@@ -240,12 +226,10 @@ const LandingPage: React.FC = () => {
                 <Container>
                     <div className="text-center mb-12">
                         <h2 className="text-h2 text-deep-blue mb-4">
-                            {language === 'ar' ? 'آراء عملائنا' : 'Client Testimonials'}
+                            {t('landing.testimonials.title')}
                         </h2>
                         <p className="text-body-lg text-gray-600">
-                            {language === 'ar'
-                                ? 'اكتشف لماذا يثق بنا مئات العملاء لاستيراد سياراتهم.'
-                                : 'See why hundreds of clients trust us with their car exports.'}
+                            {t('landing.testimonials.subtitle')}
                         </p>
                     </div>
 
@@ -261,7 +245,7 @@ const LandingPage: React.FC = () => {
                             onError={handleVideoError}
                         >
                             <source src={testimonialVideo} type="video/mp4" />
-                            Your browser does not support the video tag.
+                            {t('common.videoUnsupported')}
                         </video>
                         <div className="absolute bottom-4 right-4 z-10 transition-opacity duration-300 opacity-70 hover:opacity-100">
                             <button
@@ -308,7 +292,7 @@ const LandingPage: React.FC = () => {
                                 onError={handleVideoError}
                             >
                                 <source src={mohamedIntroVideo} type="video/mp4" />
-                                Your browser does not support the video tag.
+                                {t('common.videoUnsupported')}
                             </video>
                             <div className="absolute bottom-4 right-4 z-10 transition-opacity duration-300 opacity-70 hover:opacity-100">
                                 <button
@@ -324,33 +308,31 @@ const LandingPage: React.FC = () => {
                         {/* Content */}
                         <div>
                             <h2 className="text-h2 text-deep-blue mb-6">
-                                {language === 'ar' ? 'تعرف على محمد' : 'Introducing Mohamed'}
+                                {t('landing.mohamed.title')}
                             </h2>
                             <p className="text-body-lg text-gray-600 mb-8">
-                                {language === 'ar'
-                                    ? 'خبيرك الموثوق للإرشاد في كل خطوة من رحلة شراء سيارتك، لضمان الجودة وراحة البال.'
-                                    : 'The expert who will guide you through your car buying journey from A to Z, ensuring quality and safety.'}
+                                {t('landing.mohamed.description')}
                             </p>
                             <ul className="space-y-4 mb-8">
                                 <li className="flex items-center gap-3">
                                     <IconContainer icon={<FaCheckCircle />} variant="secondary" size="sm" />
-                                    <span className="text-gray-700 text-lg font-medium">{language === 'ar' ? 'عناية شخصية' : 'Personal Attention'}</span>
+                                    <span className="text-gray-700 text-lg font-medium">{t('landing.mohamed.point1')}</span>
                                 </li>
                                 <li className="flex items-center gap-3">
                                     <IconContainer icon={<FaHandshake />} variant="secondary" size="sm" />
-                                    <span className="text-gray-700 text-lg font-medium">{language === 'ar' ? 'خبير سيارات محترف' : 'Extensive Car Expertise'}</span>
+                                    <span className="text-gray-700 text-lg font-medium">{t('landing.mohamed.point2')}</span>
                                 </li>
                                 <li className="flex items-center gap-3">
                                     <IconContainer icon={<FaGlobeAfrica />} variant="secondary" size="sm" />
-                                    <span className="text-gray-700 text-lg font-medium">{language === 'ar' ? 'شريك موثوق في ألمانيا' : 'Your Trusted Partner in Germany'}</span>
+                                    <span className="text-gray-700 text-lg font-medium">{t('landing.mohamed.point3')}</span>
                                 </li>
                             </ul>
                             <div className="flex gap-4">
                                 <Button variant="whatsapp" onClick={() => window.open('https://wa.me/4917669495526', '_blank')}>
-                                    {language === 'ar' ? 'تحدث مع محمد' : 'Chat with Mohamed'}
+                                    {t('landing.mohamed.chatCta')}
                                 </Button>
                                 <Button variant="secondary" onClick={() => navigate('/about')}>
-                                    {language === 'ar' ? 'المزيد عنا' : 'More About Us'}
+                                    {t('landing.mohamed.aboutCta')}
                                 </Button>
                             </div>
                         </div>
