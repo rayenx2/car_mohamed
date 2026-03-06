@@ -1,6 +1,7 @@
 
 import { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import { LanguageProvider } from './contexts/LanguageContext';
 
 // Styling
@@ -11,6 +12,7 @@ import ScrollPagesTop from "./hooks/ScrollPagesTop";
 import SiteHeader from "./components/SiteHeader";
 import Footer from "./components/Footer";
 import WhatsAppSticky from './components/WhatsAppSticky';
+import StructuredData from './components/StructuredData';
 
 // Lazy loaded pages
 const LandingPage = lazy(() => import("./pages/LandingPage"));
@@ -33,31 +35,33 @@ const PageLoader = () => (
 
 function App() {
   return (
-    <LanguageProvider>
-      <Router>
-        <div className="App min-h-screen relative flex flex-col">
-          <ScrollPagesTop />
-          <SiteHeader />
-          {/* <Wallpaper /> Removing Wallpaper for new design compatibility on Home, keep for others if needed or handle inside pages */}
-          <main className="flex-grow">
-            <Suspense fallback={<PageLoader />}>
-              <Routes>
-                <Route path='/' element={<LandingPage />} />
-                <Route path='/home-legacy' element={<Home />} />
-                <Route path='/services' element={<Services />} />
-                <Route path='/stock' element={<Stock />} />
-                <Route path='/about' element={<About />} />
-                <Route path='/carpage/:id' element={<CarPage />} />
-                <Route path='/thanks' element={<Thanks />} />
-                <Route path='/impressum' element={<Impressum />} />
-              </Routes>
-            </Suspense>
-          </main>
-          <Footer />
-          <WhatsAppSticky />
-        </div>
-      </Router>
-    </LanguageProvider>
+    <HelmetProvider>
+      <LanguageProvider>
+        <Router>
+          <div className="App min-h-screen relative flex flex-col">
+            <StructuredData />
+            <ScrollPagesTop />
+            <SiteHeader />
+            <main className="flex-grow">
+              <Suspense fallback={<PageLoader />}>
+                <Routes>
+                  <Route path='/' element={<LandingPage />} />
+                  <Route path='/home-legacy' element={<Home />} />
+                  <Route path='/services' element={<Services />} />
+                  <Route path='/stock' element={<Stock />} />
+                  <Route path='/about' element={<About />} />
+                  <Route path='/carpage/:id' element={<CarPage />} />
+                  <Route path='/thanks' element={<Thanks />} />
+                  <Route path='/impressum' element={<Impressum />} />
+                </Routes>
+              </Suspense>
+            </main>
+            <Footer />
+            <WhatsAppSticky />
+          </div>
+        </Router>
+      </LanguageProvider>
+    </HelmetProvider>
   );
 }
 

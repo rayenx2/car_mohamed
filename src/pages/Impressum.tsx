@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 
@@ -14,6 +15,11 @@ const Impressum: React.FC = () => {
 
     return (
         <div className="min-h-screen bg-gray-50 pt-24 pb-16">
+            <Helmet>
+                <title>Impressum | IV Export Service | Legal Notice</title>
+                <meta name="description" content="Legal notice (Impressum) for IV Export Service - Car export company based in Germany. Contact information, company details, and legal disclaimers." />
+                <link rel="canonical" href="https://ivexportservice.com/impressum" />
+            </Helmet>
             <div className="container mx-auto px-4 max-w-4xl">
 
                 {/* Page Header */}

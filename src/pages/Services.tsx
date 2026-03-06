@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useLanguage } from '../contexts/LanguageContext';
 import NorthAfricanPattern from '../components/NorthAfricanPattern';
 import {
@@ -26,6 +27,12 @@ const Services: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <Helmet>
+        <title>Car Export Services | Vehicle Shipping, Customs Clearance, Documentation | International Auto Export</title>
+        <meta name="description" content="Complete car export services: international vehicle shipping, customs clearance, export documentation, freight forwarding. For individual buyers, dealerships, fleet importers. Door-to-door car shipping worldwide. Free export quote." />
+        <meta name="keywords" content="car export service, vehicle shipping service, international car shipping, customs clearance service, car export documentation, vehicle freight forwarding, door to door car shipping, auto transport international, car shipping worldwide, vehicle export logistics, dealership supply service, fleet export service, wholesale car export" />
+        <link rel="canonical" href="https://ivexportservice.com/services" />
+      </Helmet>
       {/* Hero Section - Blue Gradient */}
       <section className="relative pt-32 pb-20 md:pt-40 bg-gradient-to-br from-blue-700 to-blue-900 text-white overflow-hidden">
         <NorthAfricanPattern opacity={0.1} />

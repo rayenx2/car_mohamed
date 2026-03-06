@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useLanguage } from '../contexts/LanguageContext';
 import { FaCar, FaWhatsapp, FaEnvelope } from 'react-icons/fa';
 import NorthAfricanPattern from '../components/NorthAfricanPattern';
@@ -16,6 +17,12 @@ const Stock: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <Helmet>
+        <title>German Cars for Export | Available BMW Mercedes Audi Porsche | Used & New Vehicles Stock</title>
+        <meta name="description" content="Browse current stock of German cars available for export. Premium BMW, Mercedes-Benz, Audi, Porsche, Volkswagen for sale. New and used vehicles. Direct export from Germany to Tunisia, Algeria, Morocco. Request free quote." />
+        <meta name="keywords" content="German cars for export, BMW for export sale, Mercedes export stock, Audi vehicles for export, Porsche export available, VW export cars, used cars for export Germany, new cars export, premium vehicles for sale export, luxury cars export stock, German cars Tunisia, German cars Algeria, German cars Morocco" />
+        <link rel="canonical" href="https://ivexportservice.com/stock" />
+      </Helmet>
       {/* Hero Section - Blue Gradient */}
       <section className="relative pt-32 pb-20 md:pt-40 bg-gradient-to-br from-blue-700 to-blue-900 text-white overflow-hidden">
         <NorthAfricanPattern opacity={0.1} />

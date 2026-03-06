@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useLanguage } from '../contexts/LanguageContext';
 import {
     FaAward, FaShieldAlt, FaGlobe, FaUsers, FaCar, FaHandshake,
@@ -25,6 +26,12 @@ export default function About() {
 
     return (
         <div className="min-h-screen bg-gray-50">
+            <Helmet>
+                <title>About IV Export Service | Leading German Car Exporter | 20+ Years Experience | 1000+ Vehicles Exported</title>
+                <meta name="description" content="IV Export Service - Leading car export company from Germany since 2000. 20+ years experience exporting BMW, Mercedes, Audi to Tunisia, Algeria, Morocco. 1000+ satisfied customers, trusted by dealerships and individual buyers across North Africa and MENA region." />
+                <meta name="keywords" content="car export company Germany, vehicle exporter Bonn, German car export specialist, trusted car exporter, reliable vehicle export, established car export business, experienced vehicle exporter, professional car export, German auto export company, North Africa car importer, MENA vehicle supplier" />
+                <link rel="canonical" href="https://ivexportservice.com/about" />
+            </Helmet>
             {/* Hero Section - Blue Gradient */}
             <section className="relative pt-32 pb-20 md:pt-40 bg-gradient-to-br from-blue-700 to-blue-900 text-white overflow-hidden">
                 <NorthAfricanPattern opacity={0.1} />

@@ -1,3 +1,19 @@
-# https://www.robotstxt.org/robotstxt.html
+# Allow all search engines
 User-agent: *
-Disallow:
+Allow: /
+
+# Prioritize important pages
+Allow: /stock
+Allow: /services
+Allow: /about
+
+# Sitemap location
+Sitemap: https://ivexportservice.com/sitemap.xml
+
+# Crawl delay to prevent server overload
+Crawl-delay: 1
+
+# Google specific
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
