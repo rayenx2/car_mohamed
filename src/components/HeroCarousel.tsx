@@ -7,12 +7,12 @@ import Button from './design-system/Button';
 import Container from './design-system/Container';
 
 // Import local images directly
-import wallpaper1 from '../assets/backgrounds/hero-bg-1.png';
-import wallpaper2 from '../assets/backgrounds/hero-bg-2.png';
-import wallpaper3 from '../assets/backgrounds/hero-bg-3.png';
-import wallpaper4 from '../assets/backgrounds/hero-bg-4.png';
+import wallpaper1 from '../assets/backgrounds/hero-bg-1.webp';
+import wallpaper2 from '../assets/backgrounds/hero-bg-2.webp';
+import wallpaper3 from '../assets/backgrounds/hero-bg-3.webp';
+import wallpaper4 from '../assets/backgrounds/hero-bg-4.webp';
 // Using wallpaper1 as valid 5th element since user only provided 4
-import wallpaper5 from '../assets/backgrounds/hero-bg-1.png';
+import wallpaper5 from '../assets/backgrounds/hero-bg-1.webp';
 
 gsap.registerPlugin(ScrollTrigger);
 
