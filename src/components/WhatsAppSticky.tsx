@@ -29,7 +29,7 @@ const WhatsAppSticky: React.FC = () => {
                 shadow-2xl hover:shadow-green-600/50
                 flex items-center justify-center
                 transition-all duration-300 hover:scale-110
-                animate-pulse-subtle
+                animate-pulse-subtle will-change-transform
                 bottom-20 right-4
                 md:bottom-8 md:right-8
             "

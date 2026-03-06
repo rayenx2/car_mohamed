@@ -8,12 +8,11 @@ import IconContainer from '../components/design-system/IconContainer';
 import NorthAfricanPattern from '../components/NorthAfricanPattern';
 import TrustStrip from '../components/TrustStrip';
 
-import { FaCar, FaHandshake, FaGlobeAfrica, FaCheckCircle, FaShippingFast, FaFileContract, FaWhatsapp } from 'react-icons/fa';
+import { FaCar, FaCheckCircle, FaWhatsapp, FaHandshake, FaGlobeAfrica, FaShippingFast, FaFileContract, FaVolumeMute, FaVolumeUp } from 'react-icons/fa';
 import HeroCarousel from '../components/HeroCarousel';
 import { useNavigate } from 'react-router-dom';
 import { useRef, useState } from 'react';
 import useVideoAutoplay from '../hooks/useVideoAutoplay';
-import { FaVolumeMute, FaVolumeUp } from 'react-icons/fa';
 
 // Cloudinary CDN video URLs - permanent, optimized delivery
 const CLOUDINARY_BASE = 'https://res.cloudinary.com/dzaomtxj8/video/upload';

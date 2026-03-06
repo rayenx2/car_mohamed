@@ -98,3 +98,12 @@ html {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* Prevent layout shift during animations */
+.will-change-transform {
+  will-change: transform;
+}
+
+.will-change-opacity {
+  will-change: opacity;
+}

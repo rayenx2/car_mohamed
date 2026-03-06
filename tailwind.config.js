@@ -97,8 +97,8 @@ module.exports = {
           'to': { transform: 'rotate(360deg)' },
         },
         'pulse-subtle': {
-          '0%, 100%': { boxShadow: '0 0 0 0 rgba(5, 150, 105, 0.7)' },
-          '50%': { boxShadow: '0 0 0 15px rgba(5, 150, 105, 0)' },
+          '0%, 100%': { transform: 'scale(1)', opacity: '1' },
+          '50%': { transform: 'scale(1.05)', opacity: '0.9' },
         },
       },
       animation: {
