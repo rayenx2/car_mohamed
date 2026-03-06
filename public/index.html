@@ -39,16 +39,27 @@
   <link rel="dns-prefetch" href="//wa.me" />
   <link rel="dns-prefetch" href="//res.cloudinary.com" />
 
-  <!-- Fonts (display=swap already included) -->
+  <!-- Async font loading for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap"
-    rel="stylesheet" />
+    rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet" />
+  </noscript>
 </head>
 
 <body>
   <noscript>IV Export Service - Professional car export from Germany. Export BMW, Mercedes, Audi to Tunisia, Algeria,
     Morocco.</noscript>
   <div id="root"></div>
+  <script>
+    // Mark fonts as loaded to seamlessly transition from system fallback
+    document.fonts.ready.then(() => document.body.classList.add('fonts-loaded'));
+  </script>
 </body>
 
 </html>
