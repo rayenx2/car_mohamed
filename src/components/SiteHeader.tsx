@@ -70,8 +70,10 @@ export default function SiteHeader() {
                         <NavLink to='/' style={{ color: 'black' }} onClick={hideMenu}>
                             <div className='flex items-center gap-3'>
                                 <img
-                                    src={encodeURI('/WhatsApp Image 2025-08-19 à 16.31.08_eeee4154.jpg')}
+                                    src="/logo-optimized.webp"
                                     alt='IV Export Service logo'
+                                    width={80}
+                                    height={80}
                                     className={`
                                         w-auto transition-all duration-300
                                         ${isScrolled ? 'h-10 sm:h-12' : 'h-12 sm:h-16 lg:h-20'}

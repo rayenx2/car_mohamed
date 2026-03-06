@@ -13,6 +13,12 @@ code {
 @font-face {
   font-family: 'bebasFont';
   src: url(./fonts/BebasNeue-Regular.ttf);
+  font-display: swap;
+}
+
+/* Prevent footer layout shift */
+footer {
+  contain: layout;
 }
 
 /* Setting Segoe font for Safari */

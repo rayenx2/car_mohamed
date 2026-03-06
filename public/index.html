@@ -31,16 +31,18 @@
   <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
-  <!-- Preload critical resources -->
-  <link rel="preload"
-    href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap"
-    as="style">
-  <link rel="dns-prefetch" href="//wa.me">
+  <!-- Font preconnect (before stylesheet for speed) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-  <!-- Fonts -->
+  <!-- DNS prefetch -->
+  <link rel="dns-prefetch" href="//wa.me" />
+  <link rel="dns-prefetch" href="//res.cloudinary.com" />
+
+  <!-- Fonts (display=swap already included) -->
   <link
     href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap"
-    rel="stylesheet">
+    rel="stylesheet" />
 </head>
 
 <body>

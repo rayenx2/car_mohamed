@@ -109,6 +109,10 @@ const HeroCarousel: React.FC = () => {
                         src={bg}
                         alt="Hero background"
                         loading={index === 0 ? "eager" : "lazy"}
+                        decoding={index === 0 ? "sync" : "async"}
+                        {...(index === 0 ? { fetchPriority: "high" as any } : {})}
+                        width={1920}
+                        height={1080}
                         style={{
                             width: '100%',
                             height: '100%',
@@ -144,7 +148,7 @@ const HeroCarousel: React.FC = () => {
                     {/* Logo - Hidden on mobile */}
                     <div className="hidden md:block hero-logo mb-8">
                         <img
-                            src="/WhatsApp Image 2025-08-19 à 16.31.08_eeee4154.jpg"
+                            src="/logo-optimized.webp"
                             alt="IV Export Logo"
                             className="w-32 h-32 mx-auto rounded-full shadow-2xl border-4 border-white/20"
                         />

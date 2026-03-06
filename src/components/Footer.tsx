@@ -57,8 +57,10 @@ export default function Footer() {
 					<div className="md:col-span-2">
 						<NavLink to="/" className="inline-flex items-center gap-3 font-bold text-xl text-blue-600 mb-4">
 							<img
-								src={encodeURI('/WhatsApp Image 2025-08-19 à 16.31.08_eeee4154.jpg')}
+								src="/logo-optimized.webp"
 								alt="IV Export Service"
+								width={40}
+								height={40}
 								className="h-10 w-10 rounded-lg bg-white p-1 shadow-md"
 								onError={(e) => {
 									const img = e.currentTarget as HTMLImageElement;
@@ -138,10 +140,10 @@ export default function Footer() {
 						© {currentYear} IV EXPORT SERVICE. All rights reserved.
 					</p>
 					<div className="flex gap-4 mt-4 md:mt-0">
-						<a href={whatsappHref} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-green-600 transition-colors">
+						<a href={whatsappHref} target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp" className="text-gray-400 hover:text-green-600 transition-colors">
 							<FaWhatsapp className="h-5 w-5" />
 						</a>
-						<a href={emailHref} className="text-gray-400 hover:text-blue-600 transition-colors">
+						<a href={emailHref} aria-label="Send us an email" className="text-gray-400 hover:text-blue-600 transition-colors">
 							<FaEnvelope className="h-5 w-5" />
 						</a>
 					</div>
